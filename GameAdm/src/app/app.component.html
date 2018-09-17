@@ -1,0 +1,13 @@
+<div>
+  <div *ngFor="let game of games | async">
+    <!--<pre>{{ game | json }}</pre>-->
+    <div>
+      {{game.nome}}
+      <div *ngFor="let cat of game.categorias">
+        <span>{{cat}}</span>
+      </div>
+      <img src="{{game.img}}" />
+    </div>
+    -----------------------------------
+  </div>
+</div>
