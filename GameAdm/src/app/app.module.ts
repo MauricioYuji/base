@@ -6,16 +6,22 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
+import { TesteComponent } from './pages/teste/teste.component';
+import { CardComponent } from './components/card/card.component';
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TesteComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'Teste'),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

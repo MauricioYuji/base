@@ -12,7 +12,8 @@ class Game {
 })
 export class AppComponent {
   title = 'GameAdm';
-  public games: AngularFireList<Game[]>;
+  public games: Observable<{}[]>;
+  //public games: AngularFireList<Game[]>;
   constructor(db: AngularFireDatabase) {
     this.games = db.list('/Games').valueChanges();
     console.log("db", this.games);
