@@ -8,7 +8,7 @@ import { CardComponent } from '../../components/card/card.component'
 @Component({
   selector: 'app-root',
   templateUrl: './teste.component.html',
-  styleUrls: ['./teste.component.css']
+  styleUrls: ['./teste.component.scss']
 })
 export class TesteComponent {
   title = 'GameAdm';

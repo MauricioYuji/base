@@ -1,1 +1,8 @@
-<div>asd</div>
+<div>
+
+  {{myData.nome}}
+  <div *ngFor="let cat of myData.categorias">
+    <span>{{cat}}</span>
+  </div>
+  <img src="{{myData.img}}" />
+</div>
