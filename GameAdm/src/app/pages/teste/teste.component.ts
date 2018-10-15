@@ -6,7 +6,7 @@ import { CardComponent } from '../../components/card/card.component'
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'teste',
   templateUrl: './teste.component.html',
   styleUrls: ['./teste.component.scss']
 })

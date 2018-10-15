@@ -1,8 +1,7 @@
-<div>
-
-  {{myData.nome}}
+<div class="card-box">
+  <img src="{{myData.img}}" class="card-img" />
+  <h2>{{myData.nome}}</h2>
   <div *ngFor="let cat of myData.categorias">
     <span>{{cat}}</span>
   </div>
-  <img src="{{myData.img}}" />
 </div>

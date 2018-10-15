@@ -1,0 +1,107 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #5B008C;
+  position: relative;
+
+  .logo {
+    margin: 25px 0;
+  }
+
+  .menu-box {
+    position: relative;
+    width: 95px;
+    height: 100px;
+    float: left;
+
+    .menu-icon {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      width: 35px;
+      height: 40px;
+      margin: 30px;
+
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #FFF;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+
+    ul {
+
+      &.menu {
+        position: absolute;
+        top: 30px;
+        left: 85px;
+        padding: 0;
+        margin: 0;
+        display: block;
+        pointer-events: none;
+
+        li {
+          cursor: pointer;
+          padding: 5px 15px;
+          margin: 5px;
+          list-style: none;
+          white-space: nowrap;
+          background-color: #EEEEEE;
+          height: 40px;
+          display: block;
+          float: left;
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 40px;
+          box-shadow: rgba(0,0,0,0.6) 0px 0px 10px;
+          -webkit-transform: rotateY(-95deg);
+          transform: rotateY(-95deg);
+          -webkit-transform-origin: 98% 0;
+          -ms-transform-origin: 98% 0;
+          transform-origin: 98% 0;
+          transition: .3s all ease;
+          opacity: 0;
+
+          &:nth-of-type(1) {
+            transition-delay: .1s;
+          }
+
+          &:nth-of-type(2) {
+            transition-delay: .2s;
+          }
+        }
+      }
+    }
+
+    &.active {
+      .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+        transform: rotate(-45deg) translate(-8px, 7px);
+      }
+
+      .bar2 {
+        opacity: 0;
+      }
+
+      .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+
+      ul {
+        &.menu {
+          pointer-events: all;
+
+          li {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

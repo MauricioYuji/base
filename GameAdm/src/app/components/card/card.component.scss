@@ -1,0 +1,33 @@
+.card-box {
+
+  .card-img {
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    color: #5B008C;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background-color: #5B008C;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
+  span {
+    background-color: #5B008C;
+    color: #FFF;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+    font-weight: 300;
+  }
+}
