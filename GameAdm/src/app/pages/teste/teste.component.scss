@@ -1,6 +1,14 @@
 .teste {
-  display: inline-block;
-}
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 
-card {
+  card {
+    overflow: hidden;
+    flex: 1 0 21%;
+    margin: 15px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 }

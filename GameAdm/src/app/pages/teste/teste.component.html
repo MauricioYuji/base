@@ -1,6 +1,6 @@
 
 <div class="teste">
-  <div *ngFor="let game of games | async">
+  <ng-container *ngFor="let game of games | async">
     <card [myData]="game"></card>
     <!--<pre>{{ game | json }}</pre>-->
     <!--<div>
@@ -11,5 +11,5 @@
       </div>
       <img src="{{game.img}}" />
     </div>-->
-  </div>
+  </ng-container>
 </div>
