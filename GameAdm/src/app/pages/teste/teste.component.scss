@@ -2,6 +2,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: space-between;
 
   card {
     overflow: hidden;
@@ -10,5 +14,7 @@
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
+    max-width: 320px;
+    text-align: left;
   }
 }
