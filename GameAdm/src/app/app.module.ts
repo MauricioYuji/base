@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { gamesService } from './services/gamesService';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireDatabaseModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    gamesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

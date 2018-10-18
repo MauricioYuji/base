@@ -2,14 +2,5 @@
 <div class="teste">
   <ng-container *ngFor="let game of games | async">
     <card [myData]="game"></card>
-    <!--<pre>{{ game | json }}</pre>-->
-    <!--<div>
-
-      {{game.nome}}
-      <div *ngFor="let cat of game.categorias">
-        <span>{{cat}}</span>
-      </div>
-      <img src="{{game.img}}" />
-    </div>-->
   </ng-container>
 </div>
