@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 class Game {
   constructor(public nome) { }
 }
@@ -10,12 +10,16 @@ class Game {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'GameAdm';
-  public games: Observable<{}[]>;
-  //public games: AngularFireList<Game[]>;
-  constructor(db: AngularFireDatabase) {
-    this.games = db.list('/Games').valueChanges();
-    console.log("db", this.games);
+  constructor(public afAuth: AngularFireAuth) {
+  }
+  ngOnInit() {
+  }
+  login() {
+    this.afAuth.auth.signInWithPopup(new auth.EmailAuthProvider());
+  }
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
