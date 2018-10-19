@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+import { AuthService } from './auth/auth.service';
 class Game {
   constructor(public nome) { }
 }
@@ -12,14 +11,24 @@ class Game {
 })
 export class AppComponent implements OnInit {
   title = 'GameAdm';
-  constructor(public afAuth: AngularFireAuth) {
-  }
+  email: string;
+  password: string;
+
+  constructor(public authService: AuthService) { }
   ngOnInit() {
+
   }
+  signup() {
+    this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
+  }
+
   login() {
-    this.afAuth.auth.signInWithPopup(new auth.EmailAuthProvider());
+    this.authService.login(this.email, this.password);
+    this.email = this.password = '';
   }
+
   logout() {
-    this.afAuth.auth.signOut();
+    this.authService.logout();
   }
 }
