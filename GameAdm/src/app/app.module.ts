@@ -16,11 +16,13 @@ import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
+import { NgbdModalBasic } from './components/modal/modal.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { gamesService } from './services/gamesService';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './auth/auth.guard';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AuthGuard } from './auth/auth.guard';
     CardComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NgbdModalBasic
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { AuthGuard } from './auth/auth.guard';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    NgbModule
   ],
   providers: [
     gamesService,
