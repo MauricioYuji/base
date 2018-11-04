@@ -1,3 +1,7 @@
-LOGIN
+<input type="text" [(ngModel)]="email" placeholder="email">
+<input type="password" [(ngModel)]="password" placeholder="senha">
 
 
+<button (click)="login()" [disabled]="!email || !password">
+  Login
+</button>

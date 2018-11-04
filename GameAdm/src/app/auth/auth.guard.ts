@@ -9,6 +9,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate() {
     console.log('check login:', this.loginService.checklogin());
+    //console.log('check user:', this.loginService.user());
 
     if (this.loginService.checklogin()) {
       return true;

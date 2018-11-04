@@ -1,0 +1,6 @@
+
+<div class="teste">
+  <ng-container *ngFor="let game of games | async">
+    <card [myData]="game"></card>
+  </ng-container>
+</div>

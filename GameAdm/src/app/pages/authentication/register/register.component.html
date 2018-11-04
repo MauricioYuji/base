@@ -1,1 +1,6 @@
-REGISTER
+<input type="text" [(ngModel)]="email" placeholder="email">
+<input type="password" [(ngModel)]="password" placeholder="email">
+
+<button (click)="signup()" [disabled]="!email || !password">
+  Signup
+</button>
