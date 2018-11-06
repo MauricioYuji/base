@@ -4,11 +4,15 @@ import { Injectable } from "@angular/core";
 import { AuthService } from '../services/auth.service';
 
 @Injectable()
+
+
 export class AuthGuard implements CanActivate {
+
   constructor(private loginService: AuthService, private router: Router) { }
 
+  
   canActivate() {
-    console.log('check login:', this.loginService.checklogin());
+    //console.log('check login:', this.loginService.checklogin());
     //console.log('check user:', this.loginService.user());
 
     if (this.loginService.checklogin()) {
