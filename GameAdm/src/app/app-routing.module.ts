@@ -8,7 +8,7 @@ import { RegisterComponent } from './pages/authentication/register/register.comp
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   //{ path: 'user', component: UserComponent, resolve: { data: UserResolver } },
@@ -17,7 +17,7 @@ const routes: Routes = [
   //  component: HomeComponent,
   //},
   {
-    path: 'teste',
+    path: '',
     component: TesteComponent,
     canActivate: [AuthGuard],
     children: [
