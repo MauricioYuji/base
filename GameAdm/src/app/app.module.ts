@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TesteComponent } from './pages/teste/teste.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 import { ListComponent } from './pages/list/list.component';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     HomeComponent,
+    LayoutComponent,
     TesteComponent,
     ListComponent,
     CardComponent,

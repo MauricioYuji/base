@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { TesteComponent } from './pages/teste/teste.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 import { ListComponent } from './pages/list/list.component';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   //{ path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'teste', component: TesteComponent },
   //{ path: 'user', component: UserComponent, resolve: { data: UserResolver } },
   //{
   //  path: '',
@@ -18,7 +20,7 @@ const routes: Routes = [
   //},
   {
     path: '',
-    component: TesteComponent,
+    component: LayoutComponent,
     canActivate: [AuthGuard],
     children: [
       { path: 'home', component: HomeComponent },
