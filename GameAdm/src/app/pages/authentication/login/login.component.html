@@ -1,10 +1,16 @@
-<input type="text" [(ngModel)]="email" placeholder="email">
-<input type="password" [(ngModel)]="password" placeholder="senha">
+
+<div class="login-box">
+  <div class="logo">
+    <img src="/assets/logo.png" />
+  </div>
+  <input type="text" [(ngModel)]="email" placeholder="Email">
+  <input type="password" [(ngModel)]="password" placeholder="Senha">
 
 
-<button (click)="login()" [disabled]="!email || !password">
-  Login
-</button>
+  <button type="submit" (click)="login()">
+    Login
+  </button>
+</div>
 
 
 <video data-object-fit="cover" muted="" playsinline="" webkit-playsinline="" loop="" autoplay="" poster="//media.playstation.com/is/image/SCEA/playstation-accessories-flow-background-1920by1080-01-us-11jul17?$native_md_nt$" class="cover-video">

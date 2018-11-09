@@ -24,3 +24,60 @@
   background-image: url("/assets/pattern.png");
   background-repeat: repeat;
 }
+
+.login-box {
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+
+
+  .logo {
+    display: block;
+    margin: 20px auto 50px auto;
+    background-color: #5B008C;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    position: relative;
+
+    img {
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+
+  input {
+    display: block;
+    margin: 15px;
+    width: calc(100% - 40px);
+    height: 40px;
+    border-radius: 2px;
+    border: #CCC solid thin;
+    padding: 5px;
+  }
+
+  button {
+    display: block;
+    margin: 15px;
+    width: calc(100% - 40px);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    background-color: #5B008C;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+}
