@@ -105,4 +105,22 @@
       }
     }
   }
+
+  .user-box {
+    height: 100px;
+    color: #FFF;
+    float: right;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    button {
+      background: none;
+      color: #FFF;
+      margin: 20px;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
 }

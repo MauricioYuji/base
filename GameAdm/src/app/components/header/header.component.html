@@ -11,4 +11,10 @@
     </ul>
   </div>
   <img [src]="'../assets/logo.png'" class="logo">
+  <div class="user-box">
+    <span *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</span>
+    <button (click)="logout()" *ngIf="authService.user | async">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
 </div>

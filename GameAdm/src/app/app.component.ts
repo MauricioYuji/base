@@ -12,6 +12,7 @@ class Game {
 export class AppComponent implements OnInit {
   title = 'GameAdm';
 
+
   constructor(public authService: AuthService) { }
   ngOnInit() {
 
@@ -20,4 +21,5 @@ export class AppComponent implements OnInit {
   logout() {
     this.authService.logout();
   }
+  
 }

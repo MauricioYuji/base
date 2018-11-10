@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   public menuStatus: boolean = false;
-  constructor(private router: Router) {
+  constructor(private router: Router, public authService: AuthService) {
   }
   ngOnInit(): void {
   }
@@ -19,5 +20,9 @@ export class HeaderComponent implements OnInit {
   goToRoute(route: string) {
     this.router.navigateByUrl(route);
     this.toggleMenu();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

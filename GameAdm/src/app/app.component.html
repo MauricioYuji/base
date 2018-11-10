@@ -1,10 +1,5 @@
 <router-outlet></router-outlet>
 
 
-<h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
 
-
-<button (click)="logout()" *ngIf="authService.user | async">
-  Logout
-</button>
 
