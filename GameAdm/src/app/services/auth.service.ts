@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { FirebaseAuth } from 'angularfire2';
 import { Router } from '@angular/router';
+import { LoginUser } from '../models/user.model';
 
 
 @Injectable()
@@ -20,7 +21,6 @@ export class AuthService {
   checklogin(): boolean {
     this.user
       .subscribe(p => this.islogged = (p != null));
-    console.log("islogged:", this.islogged);
     //return this.user.pipe(map(p => {
     //  return p != null;
     //}));
@@ -39,10 +39,10 @@ export class AuthService {
       });
   }
 
-  login(email: string, password: string) {
+  login(obj: LoginUser) {
     this.firebaseAuth
       .auth
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(obj.email, obj.password)
       .then(value => {
         this.router.navigate(['/']);
         console.log('Nice, it worked!');

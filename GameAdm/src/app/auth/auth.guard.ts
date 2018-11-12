@@ -16,7 +16,6 @@ export class AuthGuard implements CanActivate {
     //console.log('check login:', this.loginService.checklogin());
     //console.log('check user:', this.loginService.user());
     return this.loginService.user.pipe(map(p => {
-      console.log("p != null:", p != null);
       if (p != null) {
         return true;
       } else {
