@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { Observable } from 'rxjs';
-import { Game } from '../../models/game.model.ts'
+import { Game } from '../../models/game.model'
 import { gamesService } from '../../services/gamesService'
 
 
