@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,9 @@ import { gamesService } from './services/gamesService';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './auth/auth.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DetailsUploadComponent } from './pages/details-upload/details-upload.component';
+import { FormUploadComponent } from './pages/form-upload/form-upload.component';
+import { ListUploadComponent } from './pages/list-upload/list-upload.component';
 
 
 @NgModule({
@@ -38,12 +42,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
-    NgbdModalBasic
+    NgbdModalBasic,
+    DetailsUploadComponent,
+    FormUploadComponent,
+    ListUploadComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'Teste'),
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     AngularFireAuthModule,
     AppRoutingModule,
     FormsModule,

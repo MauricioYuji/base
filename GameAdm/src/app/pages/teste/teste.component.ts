@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 })
 export class TesteComponent {
   title = 'GameAdm';
-  constructor() {
-    
-  }
+    constructor() { }
 }
