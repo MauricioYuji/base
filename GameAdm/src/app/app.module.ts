@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsUploadComponent } from './pages/details-upload/details-upload.component';
 import { FormUploadComponent } from './pages/form-upload/form-upload.component';
 import { ListUploadComponent } from './pages/list-upload/list-upload.component';
+import { CropImageComponent } from './pages/crop-image/crop-image.component';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { ListUploadComponent } from './pages/list-upload/list-upload.component';
     NgbdModalBasic,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent
+    ListUploadComponent,
+    CropImageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { ListUploadComponent } from './pages/list-upload/list-upload.component';
     ReactiveFormsModule,
     HttpClientModule,
     HttpModule,
-    NgbModule
+    NgbModule,
+    ImageCropperModule
   ],
   providers: [
     gamesService,
