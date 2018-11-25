@@ -7,12 +7,19 @@
   </div>
 </div>
 
-<label class="btn btn-default">
-  <input type="file"
-         (change)="selectFile($event)">
-</label>
+<input type="file" (change)="fileChangeEvent($event)" />
 
+<image-cropper [imageChangedEvent]="imageChangedEvent"
+               [maintainAspectRatio]="true"
+               [aspectRatio]="4 / 3"
+               [resizeToWidth]="400"
+               format="png, jpg, jpeg"
+               (imageCropped)="imageCropped($event)"
+               (imageLoaded)="imageLoaded()"
+               (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+<img [src]="croppedImage" />
 <button class="btn btn-success" [disabled]="!selectedFiles"
-        (click)="upload()">
+        (click)="imageSave()">
   Upload
 </button>

@@ -4,9 +4,11 @@
                [maintainAspectRatio]="true"
                [aspectRatio]="4 / 3"
                [resizeToWidth]="128"
-               format="png"
+               format="png, jpg, jpeg"
                (imageCropped)="imageCropped($event)"
                (imageLoaded)="imageLoaded()"
                (loadImageFailed)="loadImageFailed()"></image-cropper>
 
 <img [src]="croppedImage" />
+<button (click)="imageSave()">SAVE</button>
+

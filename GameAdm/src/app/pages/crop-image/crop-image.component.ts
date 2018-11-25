@@ -21,6 +21,9 @@ export class CropImageComponent implements OnInit {
   imageCropped(event: ImageCroppedEvent) {
     this.croppedImage = event.base64;
   }
+  imageSave(){
+    console.log("this.croppedImage: ", this.croppedImage);
+  }
   imageLoaded() {
     // show cropper
   }
