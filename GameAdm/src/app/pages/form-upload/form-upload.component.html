@@ -11,14 +11,14 @@
 
 <image-cropper [imageChangedEvent]="imageChangedEvent"
                [maintainAspectRatio]="true"
-               [aspectRatio]="4 / 3"
-               [resizeToWidth]="400"
+               [aspectRatio]="20 / 11"
+               [resizeToWidth]="320"
                format="png, jpg, jpeg"
                (imageCropped)="imageCropped($event)"
                (imageLoaded)="imageLoaded()"
-               (loadImageFailed)="loadImageFailed()"></image-cropper>
+               (loadImageFailed)="loadImageFailed()" *ngIf="imageChangedEvent" ></image-cropper>
 
-<img [src]="croppedImage" />
+<img [src]="croppedImage" *ngIf="preview" />
 <button class="btn btn-success" [disabled]="!selectedFiles"
         (click)="imageSave()">
   Upload

@@ -30,7 +30,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsUploadComponent } from './pages/details-upload/details-upload.component';
 import { FormUploadComponent } from './pages/form-upload/form-upload.component';
 import { ListUploadComponent } from './pages/list-upload/list-upload.component';
-import { CropImageComponent } from './pages/crop-image/crop-image.component';
 
 
 @NgModule({
@@ -47,8 +46,7 @@ import { CropImageComponent } from './pages/crop-image/crop-image.component';
     NgbdModalBasic,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent,
-    CropImageComponent
+    ListUploadComponent
   ],
   imports: [
     BrowserModule,

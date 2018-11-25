@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UploadFileService } from '../../services/uploadService';
 import { FileUpload } from '../../models/fileupload.model';
 import { ImageCroppedEvent } from 'ngx-image-cropper/src/image-cropper.component';
@@ -16,6 +16,7 @@ export class FormUploadComponent implements OnInit {
   croppedImage: any = '';
   croppedImagefile: any = '';
   progress: { percentage: number } = { percentage: 0 };
+  @Input() preview: boolean = false;
 
   constructor(private uploadService: UploadFileService) { }
 
