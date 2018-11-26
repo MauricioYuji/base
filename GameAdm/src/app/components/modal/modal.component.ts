@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NgbdModalBasic {
   closeResult: string;
+  @Input() Text: string = "";
 
   constructor(private modalService: NgbModal) { }
 
@@ -18,7 +19,10 @@ export class NgbdModalBasic {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
-
+  confirm() {
+    this.modalService.dismissAll("Confirm");
+    console.log("Confirm");
+  }
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';

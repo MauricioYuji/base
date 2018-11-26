@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { UploadFileService } from '../../services/uploadService';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'list-upload',
@@ -12,7 +13,8 @@ export class ListUploadComponent implements OnInit {
 
   fileUploads: any[];
 
-  constructor(private uploadService: UploadFileService) { }
+
+  constructor(private uploadService: UploadFileService, private modalService: NgbModal) { }
 
   ngOnInit() {
     // Use snapshotChanges().pipe(map()) to store the key
@@ -23,5 +25,19 @@ export class ListUploadComponent implements OnInit {
     ).subscribe(fileUploads => {
       this.fileUploads = fileUploads;
     });
+  }
+  open(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+    }, (reason) => {
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }
