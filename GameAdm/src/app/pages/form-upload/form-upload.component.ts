@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output  } from '@angular/core';
 import { UploadFileService } from '../../services/uploadService';
 import { FileUpload } from '../../models/fileupload.model';
 import { ImageCroppedEvent } from 'ngx-image-cropper/src/image-cropper.component';
@@ -17,6 +17,7 @@ export class FormUploadComponent implements OnInit {
   croppedImagefile: any = '';
   progress: { percentage: number } = { percentage: 0 };
   @Input() preview: boolean = false;
+  @Output() uploadsubmitted = new EventEmitter();
 
   constructor(private uploadService: UploadFileService) { }
 
@@ -45,9 +46,10 @@ export class FormUploadComponent implements OnInit {
 
     this.currentFileUpload = new FileUpload(file);
     const blob = this.blobToFile(this.croppedImagefile, this.currentFileUpload.file.name);
-    
+
     this.currentFileUpload.file = blob.file;
-    this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress);
+    this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress, this.uploadsubmitted);
+    //this.uploadsubmitted.emit(this.counter);
   }
   imageLoaded() {
     // show cropper

@@ -1,6 +1,11 @@
+<div class="top-bar">
+  <i class="fas fa-plus-square" (click)="open(content)"></i>
+</div>
 
-<div class="teste">
+<div class="panel panel-primary">
   <ng-container *ngFor="let game of games | async">
-    <card [myData]="game"></card>
+    <div class="panel-body">
+      <card [myData]="game"></card>
+    </div>
   </ng-container>
 </div>

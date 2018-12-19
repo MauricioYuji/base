@@ -8,7 +8,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./teste.component.scss']
 })
 export class TesteComponent implements OnInit {
-  title = 'GameAdm';
+  title = 'GameAdm 2';
   closeResult: string;
   constructor(private modalService: NgbModal) { }
 

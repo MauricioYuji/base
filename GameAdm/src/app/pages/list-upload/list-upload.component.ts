@@ -18,11 +18,12 @@ export class ListUploadComponent implements OnInit {
 
   ngOnInit() {
     // Use snapshotChanges().pipe(map()) to store the key
-    this.uploadService.getFileUploads(6).snapshotChanges().pipe(
+    this.uploadService.getFileUploadsall().snapshotChanges().pipe(
       map(changes =>
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )
     ).subscribe(fileUploads => {
+      console.log("fileUploads: ", fileUploads);
       this.fileUploads = fileUploads;
     });
   }
@@ -39,5 +40,9 @@ export class ListUploadComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+  private progressreturn(obj) {
+    console.log("obj: ", obj);
+    this.modalService.dismissAll();
   }
 }
