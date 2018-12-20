@@ -30,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsUploadComponent } from './pages/details-upload/details-upload.component';
 import { FormUploadComponent } from './pages/form-upload/form-upload.component';
 import { ListUploadComponent } from './pages/list-upload/list-upload.component';
+import { ConsolesComponent } from './pages/consoles/consoles.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ListUploadComponent } from './pages/list-upload/list-upload.component';
     NgbdModalBasic,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent
+    ListUploadComponent,
+    ConsolesComponent
   ],
   imports: [
     BrowserModule,

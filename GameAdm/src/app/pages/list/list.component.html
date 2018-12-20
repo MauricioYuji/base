@@ -1,5 +1,9 @@
 <div class="top-bar">
   <i class="fas fa-plus-square" (click)="open(content)"></i>
+  <form (ngSubmit)="changefilter()" class="login-box">
+    <input [(ngModel)]="search" name="search" />
+    <button type="submit">FILTRO</button>
+  </form>
 </div>
 
 <div class="panel panel-primary">

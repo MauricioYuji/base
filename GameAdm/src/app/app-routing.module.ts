@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TesteComponent } from './pages/teste/teste.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { ListComponent } from './pages/list/list.component';
+import { ConsolesComponent } from './pages/consoles/consoles.component';
 import { ListUploadComponent } from './pages/list-upload/list-upload.component';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'list', component: ListComponent },
       { path: 'listupload', component: ListUploadComponent },
+      { path: 'consoles', component: ConsolesComponent },
     ]
   },
 

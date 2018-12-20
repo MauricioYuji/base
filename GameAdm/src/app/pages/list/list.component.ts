@@ -15,12 +15,12 @@ import { map } from 'rxjs/operators';
 })
 export class ListComponent {
   title = 'GameAdm';
+  search = '';
   public games: Observable<Game[]>;
   //public games: AngularFireList<Game[]>;
   constructor(db: AngularFireDatabase, private service: gamesService, private uploadService: UploadFileService) {
 
     this.games = this.service.getgames();
-
 
 
     //console.log("games: ", this.games);
@@ -58,5 +58,25 @@ export class ListComponent {
     //  console.log(snapshots);
     //  this.list = snapshots as Game[];
     //});
+  }
+  changefilter() {
+    console.log("this.search: ", this.search);
+    var regex = new RegExp(this.search.toLowerCase(), 'g');
+    this.games = this.service.getgames().pipe(
+      map(a => a.filter(
+        function (item) {
+          var match = false;
+          match = item.nome.toLowerCase().match(regex) != null;
+          console.log(item);
+          for (var i = 0; i < item.categorias.length; i++) {
+            match = (item.categorias[i].toLowerCase().match(regex) != null || match)
+          }
+          if (match) {
+            return true;
+          }
+
+        }
+      ))
+    );
   }
 }

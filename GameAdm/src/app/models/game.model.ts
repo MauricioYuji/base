@@ -1,5 +1,5 @@
 export class Game {
   nome: string;
-  cat: string;
+  categorias: string;
   img: string;
 }
