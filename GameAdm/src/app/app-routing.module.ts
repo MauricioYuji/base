@@ -5,7 +5,8 @@ import { TesteComponent } from './pages/teste/teste.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { ListComponent } from './pages/list/list.component';
 import { ConsolesComponent } from './pages/consoles/consoles.component';
-import { ListUploadComponent } from './pages/list-upload/list-upload.component';
+import { CompaniesComponent } from './pages/companies/companies.component';
+import { ListUploadComponent } from './pages/uploads/list-upload/list-upload.component';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
@@ -28,7 +29,9 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'list', component: ListComponent },
       { path: 'listupload', component: ListUploadComponent },
+      { path: 'listupload/:category', component: ListUploadComponent },
       { path: 'consoles', component: ConsolesComponent },
+      { path: 'companies', component: CompaniesComponent },
     ]
   },
 

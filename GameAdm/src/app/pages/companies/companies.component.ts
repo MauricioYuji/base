@@ -1,29 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { ConsolesService } from '../../services/consoles.service';
+import { CompaniesService } from '../../services/companies.service';
 import { Observable } from 'rxjs';
-import { Console } from '../../models/consoles.model';
+import { Company } from '../../models/companies.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-consoles',
-  templateUrl: './consoles.component.html',
-  styleUrls: ['./consoles.component.scss']
+  selector: 'app-companies',
+  templateUrl: './companies.component.html',
+  styleUrls: ['./companies.component.scss']
 })
-export class ConsolesComponent implements OnInit {
-  public consoles: Observable<Console[]>;
+export class CompaniesComponent implements OnInit {
+  public companies: Observable<Company[]>;
   model: FormGroup;
   search = '';
 
-  constructor(private modalService: NgbModal, private consolesService: ConsolesService, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private companiesService: CompaniesService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.consoles = this.consolesService.getConsoles();
-
-    this.consolesService.getConsoles().subscribe(p => {
-      console.log("p: ", p);
-    });
-    console.log("this.consoles: ", this.consoles);
+    this.companies = this.companiesService.getCompanies();
     this.model = this.formBuilder.group({
       name: ['', [Validators.required]]
     });
@@ -51,7 +46,7 @@ export class ConsolesComponent implements OnInit {
     var obj = JSON.stringify(this.model.value);
     console.log('SUCCESS!! :-)\n\n' + obj)
 
-    this.consolesService.insertConsole(this.model.value.name);
+    this.companiesService.insertConsole(this.model.value.name);
     this.modalService.dismissAll();
   }
 

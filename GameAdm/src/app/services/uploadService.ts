@@ -5,6 +5,7 @@ import * as firebase from 'firebase/app';
 
 import { FileUpload } from '../models/fileupload.model';
 import { finalize, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -75,17 +76,22 @@ export class UploadFileService {
     this.db.list(`${this.basePath}/`).push(fileUpload);
   }
 
-  getFileUploads(numberItems): AngularFireList<FileUpload> {
+  public getFileUploads(numberItems): AngularFireList<FileUpload> {
     return this.db.list(this.basePath, ref =>
       ref.limitToLast(numberItems));
   }
 
-  getFileUploadsall(): AngularFireList<FileUpload> {
+  public getFileUploadsall(): AngularFireList<FileUpload> {
     return this.db.list(this.basePath, ref =>
       ref);
   }
 
-  deleteFileUpload(fileUpload: FileUpload) {
+  //public getFileUploadsall(): Observable<FileUpload[]> {
+    
+  //  return this.db.list(this.basePath).valueChanges() as Observable<FileUpload[]>;
+  //}
+
+  public deleteFileUpload(fileUpload: FileUpload) {
     this.deleteFileDatabase(fileUpload.key)
       .then(() => {
         this.deleteFileStorage(fileUpload.name);

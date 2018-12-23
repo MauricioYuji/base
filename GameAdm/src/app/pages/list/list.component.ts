@@ -22,7 +22,11 @@ export class ListComponent {
 
     this.games = this.service.getgames();
 
+    //this.service.insertgame();
 
+    //this.service.updategame();
+
+    //this.service.deletegame();
     //console.log("games: ", this.games);
 
     //this.uploadService.getFileUploadsall().snapshotChanges().pipe(
@@ -41,12 +45,13 @@ export class ListComponent {
     //    obj.name = (256 * (+new Date)).toString(36).toUpperCase();
     //    obj.url = p[i].img;
     //    obj.file = {};
+    //    obj.category = "thumb";
     //    var getimgname = p[i].img.replace('https://firebasestorage.googleapis.com/v0/b/teste-925f4.appspot.com/o/thumbs%2', '');
     //    var splitted = getimgname.split('?');
     //    getimgname = splitted[0];
     //    obj.file.name = getimgname;
 
-    //    this.uploadService.saveFileData(obj);
+    //    //this.uploadService.saveFileData(obj);
     //    console.log("obj: ", obj);
     //  }
     //})

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, EventEmitter, Output  } from '@angular/core';
-import { UploadFileService } from '../../services/uploadService';
-import { FileUpload } from '../../models/fileupload.model';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { UploadFileService } from '../../../services/uploadService';
+import { FileUpload, typeUpload } from '../../../models/fileupload.model';
 import { ImageCroppedEvent } from 'ngx-image-cropper/src/image-cropper.component';
 
 @Component({
@@ -15,7 +15,12 @@ export class FormUploadComponent implements OnInit {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   croppedImagefile: any = '';
+  aspect: number = 20 / 11;
+  maintainAspectRatio: boolean = true;
+  options: typeUpload = null;
   progress: { percentage: number } = { percentage: 0 };
+  typelist = [{ category: "thumb", aspect: 20 / 11, maintainAspectRatio: true }, { category: "logo", aspect: 1, maintainAspectRatio: false }];
+  category: any = null;
   @Input() preview: boolean = false;
   @Output() uploadsubmitted = new EventEmitter();
 
@@ -23,12 +28,16 @@ export class FormUploadComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  changeaspect() {
+    console.log("this.options: ", this.options);
+    this.aspect = this.options.aspect;
+    this.maintainAspectRatio = this.options.maintainAspectRatio;
+  }
   fileChangeEvent(event: any): void {
     this.imageChangedEvent = event;
 
     const file = event.target.files.item(0);
-    
+
     if (file.type.match('image.*')) {
       this.selectedFiles = event.target.files;
     } else {
@@ -41,13 +50,15 @@ export class FormUploadComponent implements OnInit {
   }
   imageSave() {
     const file = this.selectedFiles.item(0);
-    
+
     this.selectedFiles = undefined;
 
     this.currentFileUpload = new FileUpload(file);
+    this.currentFileUpload.category = this.options.category;
     const blob = this.blobToFile(this.croppedImagefile, this.currentFileUpload.file.name);
 
     this.currentFileUpload.file = blob.file;
+
     this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress, this.uploadsubmitted);
     //this.uploadsubmitted.emit(this.counter);
   }

@@ -10,15 +10,20 @@
 <input type="file" (change)="fileChangeEvent($event)" />
 
 <image-cropper [imageChangedEvent]="imageChangedEvent"
-               [maintainAspectRatio]="true"
-               [aspectRatio]="20 / 11"
+               [maintainAspectRatio]="maintainAspectRatio"
+               [aspectRatio]="aspect"
                [resizeToWidth]="320"
+               [onlyScaleDown]="true"
                format="png, jpg, jpeg"
                (imageCropped)="imageCropped($event)"
                (imageLoaded)="imageLoaded()"
-               (loadImageFailed)="loadImageFailed()" *ngIf="imageChangedEvent" ></image-cropper>
+               (loadImageFailed)="loadImageFailed()" *ngIf="imageChangedEvent"></image-cropper>
 
 <img [src]="croppedImage" *ngIf="preview" />
+<select  (change)="changeaspect($event)" [(ngModel)]="options" id="category">
+  <option value="" disabled selected>select a category</option>
+  <option *ngFor="let item of typelist" [ngValue]="item">{{item.category}}</option>
+</select>
 <button class="btn btn-success" [disabled]="!selectedFiles"
         (click)="imageSave()">
   Upload

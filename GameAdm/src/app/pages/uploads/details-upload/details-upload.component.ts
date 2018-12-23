@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UploadFileService } from '../../services/uploadService';
-import { FileUpload } from '../../models/fileupload.model';
+import { UploadFileService } from '../../../services/uploadService';
+import { FileUpload } from '../../../models/fileupload.model';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -15,6 +15,7 @@ export class DetailsUploadComponent implements OnInit {
   constructor(private uploadService: UploadFileService, private modalService: NgbModal) { }
 
   ngOnInit() {
+    //console.log("fileUpload: ", this.fileUpload);
   }
 
   open(content) {
@@ -33,6 +34,7 @@ export class DetailsUploadComponent implements OnInit {
   }
 
   deleteFileUpload(fileUpload) {
+    console.log("fileUpload: ", fileUpload);
     this.modalService.dismissAll("Confirm");
     this.uploadService.deleteFileUpload(fileUpload);
   }
