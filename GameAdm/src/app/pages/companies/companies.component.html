@@ -6,9 +6,12 @@
   </form>
 </div>
 <div class="panel panel-primary">
-  <ng-container *ngFor="let c of companies | async">
+  <ng-container *ngFor="let c of companies">
     <div class="panel-body">
       {{c.name}}
+      <image [key]='c.img'></image>
+      <span (click)="confirmdelete(c.key)">X</span>
+      <span (click)="setedit(c.key)">edit</span>
     </div>
   </ng-container>
 </div>
@@ -28,7 +31,8 @@
 
         <div class="form-group">
           <input type="text" formControlName="name" class="form-control" placeholder="Nome Empresa" />
-          <list-upload [categoryinput]="'logo'"></list-upload>
+          <input type="hidden" formControlName="img" class="form-control" />
+          <pick-upload [categoryinput]="'logo'" [selectedkey]="model.value.img" (uploadsubmitted)='progressreturn($event)'></pick-upload>
         </div>
 
       </div>
@@ -39,3 +43,25 @@
     </div>
   </form>
 </ng-template>
+
+
+<ng-template #confirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Atenção</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        Deseja Excluir este registro?
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancelar')">Cancelar</button>
+    <button type="button" class="btn btn-dark" (click)='deleteitem(model.value.key)'>Excluir</button>
+  </div>
+</ng-template>
+

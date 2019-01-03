@@ -25,6 +25,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { gamesService } from './services/gamesService';
 import { AuthService } from './services/auth.service';
+import { CompaniesService } from './services/companies.service';
 import { AuthGuard } from './auth/auth.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsUploadComponent } from './pages/uploads/details-upload/details-upload.component';
@@ -32,6 +33,8 @@ import { FormUploadComponent } from './pages/uploads/form-upload/form-upload.com
 import { ListUploadComponent } from './pages/uploads/list-upload/list-upload.component';
 import { ConsolesComponent } from './pages/consoles/consoles.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
+import { PickUploadComponent } from './components/uploads/pick-upload/pick-upload.component';
+import { ImageComponent } from './components/uploads/image/image.component';
 
 
 @NgModule({
@@ -50,7 +53,9 @@ import { CompaniesComponent } from './pages/companies/companies.component';
     FormUploadComponent,
     ListUploadComponent,
     ConsolesComponent,
-    CompaniesComponent
+    CompaniesComponent,
+    PickUploadComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,8 @@ import { CompaniesComponent } from './pages/companies/companies.component';
   providers: [
     gamesService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    CompaniesService
   ],
   bootstrap: [AppComponent]
 })

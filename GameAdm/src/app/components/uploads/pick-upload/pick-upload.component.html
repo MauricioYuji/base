@@ -1,0 +1,15 @@
+
+<div class="panel panel-primary">
+  <ng-container *ngFor="let file of fileUploads">
+    <div class="panel-body">
+      <div class="card-box" [ngClass]="{
+  active: selectedkey==file.key
+}" (click)="emitid(file.key)">
+
+        <div class="actions">
+        </div>
+        <img src="{{file.url}}" alt="{{file.name}}" class="upload-img" />
+      </div>
+    </div>
+  </ng-container>
+</div>

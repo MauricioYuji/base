@@ -85,9 +85,12 @@ export class UploadFileService {
     return this.db.list(this.basePath, ref =>
       ref);
   }
+  public getFileUploadsbykey(key: string): Observable<FileUpload> {
+    return this.db.object(this.basePath + "/" + key).valueChanges() as Observable<FileUpload>;
+  }
 
   //public getFileUploadsall(): Observable<FileUpload[]> {
-    
+
   //  return this.db.list(this.basePath).valueChanges() as Observable<FileUpload[]>;
   //}
 

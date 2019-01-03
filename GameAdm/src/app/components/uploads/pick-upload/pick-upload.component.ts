@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { UploadFileService } from '../../../services/uploadService';
@@ -9,24 +9,27 @@ import { FileUpload } from 'src/app/models/fileupload.model';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'list-upload',
-  templateUrl: './list-upload.component.html',
-  styleUrls: ['./list-upload.component.scss']
+  selector: 'pick-upload',
+  templateUrl: './pick-upload.component.html',
+  styleUrls: ['./pick-upload.component.scss']
 })
-export class ListUploadComponent implements OnInit {
+export class PickUploadComponent implements OnInit {
 
   //fileUploads: Observable<FileUpload[]>;
   fileUploads: FileUpload[];
   category: any = "";
   @Input() categoryinput: string;
+  @Input() selectedkey: string;
+  @Output() uploadsubmitted = new EventEmitter();
 
 
   constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("this.categoryinput : ", this.categoryinput);
+    //console.log("selectedkey: ", this.selectedkey);
+    //console.log("this.categoryinput : ", this.categoryinput);
     this.category = this.categoryinput != undefined ? this.categoryinput : this.route.snapshot.paramMap.get("category");
-    console.log("this.category: ", this.category);
+    //console.log("this.category: ", this.category);
     // Use snapshotChanges().pipe(map()) to store the key
     this.uploadService.getFileUploadsall().snapshotChanges().pipe(
       map(changes =>
@@ -35,7 +38,7 @@ export class ListUploadComponent implements OnInit {
     ).subscribe(fileUploads => {
       if (this.category != null) {
         var regex = new RegExp(this.category.toLowerCase(), 'g');
-        console.log("regex: ", regex);
+        //console.log("regex: ", regex);
         this.fileUploads = fileUploads.filter(
           function (item) {
             var match = false;
@@ -49,6 +52,7 @@ export class ListUploadComponent implements OnInit {
       } else {
         this.fileUploads = fileUploads;
       }
+      //console.log("this.fileUploads", this.fileUploads);
     });
     //this.fileUploads = this.uploadService.getFileUploadsall();
     //if (this.category != null) {
@@ -67,6 +71,11 @@ export class ListUploadComponent implements OnInit {
     //  );
     //}
 
+  }
+  emitid(id) {
+    this.selectedkey = id;
+    //console.log("id: ", id);
+    this.uploadsubmitted.emit(id);
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {

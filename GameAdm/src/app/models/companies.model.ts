@@ -1,3 +1,5 @@
 export class Company {
-  nome: string;
+  key: string;
+  name: string;
+  img: string;
 }

@@ -15,7 +15,7 @@ export class DetailsUploadComponent implements OnInit {
   constructor(private uploadService: UploadFileService, private modalService: NgbModal) { }
 
   ngOnInit() {
-    //console.log("fileUpload: ", this.fileUpload);
+    console.log("fileUpload: ", this.fileUpload);
   }
 
   open(content) {
