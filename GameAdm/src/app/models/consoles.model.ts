@@ -1,3 +1,5 @@
 export class Console {
-  nome: string;
+  key: string;
+  name: string;
+  keycompany: string;
 }

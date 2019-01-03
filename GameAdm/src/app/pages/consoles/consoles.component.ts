@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConsolesService } from '../../services/consoles.service';
 import { Observable } from 'rxjs';
 import { Console } from '../../models/consoles.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-consoles',
@@ -11,26 +12,29 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./consoles.component.scss']
 })
 export class ConsolesComponent implements OnInit {
-  public consoles: Observable<Console[]>;
-  model: FormGroup;
-  search = '';
+  public consoles: Console[];
+  public model: FormGroup;
+  public search = '';
+  @ViewChild('content') content: ElementRef;
+  @ViewChild('confirm') confirm: ElementRef;
 
   constructor(private modalService: NgbModal, private consolesService: ConsolesService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.consoles = this.consolesService.getConsoles();
-
-    this.consolesService.getConsoles().subscribe(p => {
-      console.log("p: ", p);
+    this.consolesService.getAll().subscribe(p => {
+      this.consoles = p;
     });
-    console.log("this.consoles: ", this.consoles);
     this.model = this.formBuilder.group({
-      name: ['', [Validators.required]]
+      key: [],
+      name: ['', [Validators.required]],
+      keycompany: ['', [Validators.required]]
     });
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.model.setValue({ name: "", keycompany: "", key: "" });
     }, (reason) => {
+      this.model.setValue({ name: "", keycompany: "", key: "" });
     });
   }
   private getDismissReason(reason: any): string {
@@ -47,33 +51,54 @@ export class ConsolesComponent implements OnInit {
     if (this.model.invalid) {
       return;
     }
+    
+    var obj = new Console();
+    obj.key = this.model.value.key;
+    obj.name = this.model.value.name;
+    obj.keycompany = this.model.value.keycompany;
 
-    var obj = JSON.stringify(this.model.value);
-    console.log('SUCCESS!! :-)\n\n' + obj)
+    if (obj.key == null || obj.key == "") {
+      this.consolesService.insert(obj);
+    } else {
+      this.consolesService.update(obj.key, obj);
+    }
 
-    this.consolesService.insertConsole(this.model.value.name);
     this.modalService.dismissAll();
   }
 
   changefilter() {
-    console.log("this.search: ", this.search);
-    //var regex = new RegExp(this.search.toLowerCase(), 'g');
-    //this.games = this.service.getgames().pipe(
-    //  map(a => a.filter(
-    //    function (item) {
-    //      var match = false;
-    //      match = item.nome.toLowerCase().match(regex) != null;
-    //      console.log(item);
-    //      for (var i = 0; i < item.categorias.length; i++) {
-    //        match = (item.categorias[i].toLowerCase().match(regex) != null || match)
-    //      }
-    //      if (match) {
-    //        return true;
-    //      }
+    var regex = new RegExp(this.search.toLowerCase(), 'g');
+    this.consolesService.getAll().pipe(
+      map(a => a.filter(
+        function (item) {
+          var match = false;
+          match = item.name.toLowerCase().match(regex) != null;
+          if (match) {
+            return true;
+          }
 
-    //    }
-    //  ))
-    //);
+        }
+      ))
+    ).subscribe(p => {
+      this.consoles = p;
+    });
   }
+  deleteitem(key) {
+    this.consolesService.delete(key);
+    this.modalService.dismissAll("Confirm");
+  }
+  private setedit(key: string) {
+    var obj = this.consoles.filter(p => p.key == key)[0];
+    this.model.setValue({ name: obj.name, keycompany: obj.keycompany, key: key });
+    this.open(this.content);
+  }
+  private progressreturn(obj) {
+    this.model.setValue({ name: this.model.value.name, keycompany: obj, key: this.model.value.key });
 
+  }
+  private confirmdelete(key: string) {
+    var obj = this.consoles.filter(p => p.key == key)[0];
+    this.model.setValue({ name: obj.name, keycompany: obj.keycompany, key: key });
+    this.open(this.confirm);
+  }
 }

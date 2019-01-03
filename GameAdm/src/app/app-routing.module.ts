@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { TesteComponent } from './pages/teste/teste.component';
 import { LayoutComponent } from './pages/layout/layout.component';
+import { GamesComponent } from './pages/games/games.component';
 import { ListComponent } from './pages/list/list.component';
 import { ConsolesComponent } from './pages/consoles/consoles.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'list', component: ListComponent },
+      { path: 'games', component: GamesComponent },
+      { path: 'lista', component: ListComponent },
       { path: 'listupload', component: ListUploadComponent },
       { path: 'listupload/:category', component: ListUploadComponent },
       { path: 'consoles', component: ConsolesComponent },

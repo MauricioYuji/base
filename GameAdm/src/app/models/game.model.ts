@@ -1,5 +1,7 @@
 export class Game {
-  nome: string;
+  key: string;
+  name: string;
   categorias: string;
   img: string;
+  keyconsole: string;
 }

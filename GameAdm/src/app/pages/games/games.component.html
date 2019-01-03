@@ -5,12 +5,11 @@
     <button type="submit">FILTRO</button>
   </form>
 </div>
+
 <div class="panel panel-primary">
-  <ng-container *ngFor="let c of consoles">
+  <ng-container *ngFor="let game of games">
     <div class="panel-body">
-      {{c.name}}
-      <span (click)="confirmdelete(c.key)">X</span>
-      <span (click)="setedit(c.key)">edit</span>
+      <card [myData]="game"></card>
     </div>
   </ng-container>
 </div>
@@ -29,10 +28,15 @@
       <div class="form-group">
 
         <div class="form-group">
-          <input type="text" formControlName="name" class="form-control" placeholder="Nome Console" />
+          <input type="text" formControlName="name" class="form-control" placeholder="Nome Game" />
+        </div>
+        <input type="hidden" formControlName="img" class="form-control" />
+        <div class="form-group">
+          <pick-upload [categoryinput]="'thumbs'" [selectedkey]="model.value.img" (uploadsubmitted)='progressreturn($event)'></pick-upload>
+
         </div>
         <div class="form-group">
-          <pick-company [selectedkey]="model.value.keycompany" (submitted)='progressreturn($event)'></pick-company>
+          <!--<pick-console [selectedkey]="model.value.keyconsole" (submitted)='progressreturn($event)'></pick-console>-->
         </div>
 
       </div>

@@ -1,40 +1,46 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { CompaniesService } from '../../services/companies.service';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { Observable } from 'rxjs';
-import { Company } from '../../models/companies.model';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Game } from '../../models/game.model'
+import { gamesService } from '../../services/gamesService'
+import { UploadFileService } from '../../services/uploadService'
+import { FileUpload } from '../../models/fileupload.model'
 import { map } from 'rxjs/operators';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
-  selector: 'app-companies',
-  templateUrl: './companies.component.html',
-  styleUrls: ['./companies.component.scss']
+  selector: 'games',
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.scss']
 })
-export class CompaniesComponent implements OnInit {
-  public companies: Company[];
+export class GamesComponent {
+  title = 'GameAdm';
+  public games: Game[];
   public model: FormGroup;
   public search = '';
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
 
-  constructor(private modalService: NgbModal, private companiesService: CompaniesService, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private service: gamesService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.companiesService.getAll().subscribe(p => {
-      this.companies = p;
+    this.service.getAll().subscribe(p => {
+      this.games = p;
     });
     this.model = this.formBuilder.group({
       key: [],
       name: ['', [Validators.required]],
+      keyconsole: ['', [Validators.required]],
       img: ['', [Validators.required]]
     });
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", img: "", key: "" });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole:"" });
     }, (reason) => {
-      this.model.setValue({ name: "", img: "", key: "" });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole: "" });
     });
   }
   private getDismissReason(reason: any): string {
@@ -55,15 +61,16 @@ export class CompaniesComponent implements OnInit {
 
     var objstring = JSON.stringify(this.model.value);
     //console.log('SUCCESS!! :-)\n\n' + objstring);
-    var obj = new Company();
+    var obj = new Game();
     obj.key = this.model.value.key;
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
+    obj.keyconsole = this.model.value.keyconsole
 
     if (obj.key == null || obj.key == "") {
-      this.companiesService.insert(obj);
+      this.service.insert(obj);
     } else {
-      this.companiesService.update(obj.key, obj);
+      this.service.update(obj.key, obj);
     }
 
     this.modalService.dismissAll();
@@ -72,7 +79,7 @@ export class CompaniesComponent implements OnInit {
   changefilter() {
     //console.log("this.search: ", this.search);
     var regex = new RegExp(this.search.toLowerCase(), 'g');
-    this.companiesService.getAll().pipe(
+    this.service.getAll().pipe(
       map(a => a.filter(
         function (item) {
           var match = false;
@@ -84,27 +91,27 @@ export class CompaniesComponent implements OnInit {
         }
       ))
     ).subscribe(p => {
-      this.companies = p;
+      this.games = p;
     });
   }
   deleteitem(key) {
     //console.log("DELETE: ", key);
-    this.companiesService.delete(key);
+    this.service.delete(key);
     this.modalService.dismissAll("Confirm");
   }
   private setedit(key: string) {
-    var obj = this.companies.filter(p => p.key == key)[0];
-    this.model.setValue({ name: obj.name, img: obj.img, key: key });
+    var obj = this.games.filter(p => p.key == key)[0];
+    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.content);
   }
   private progressreturn(obj) {
     //console.log("this.model: ", this.model);
-    this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key })
+    this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole })
 
   }
   private confirmdelete(key: string) {
-    var obj = this.companies.filter(p => p.key == key)[0];
-    this.model.setValue({ name: obj.name, img: obj.img, key: key });
+    var obj = this.games.filter(p => p.key == key)[0];
+    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.confirm);
   }
 }

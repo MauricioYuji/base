@@ -16,6 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TesteComponent } from './pages/teste/teste.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { ListComponent } from './pages/list/list.component';
+import { GamesComponent } from './pages/games/games.component';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -35,6 +36,7 @@ import { ConsolesComponent } from './pages/consoles/consoles.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
 import { PickUploadComponent } from './components/uploads/pick-upload/pick-upload.component';
 import { ImageComponent } from './components/uploads/image/image.component';
+import { PickCompanyComponent } from './components/dropdowns/pick-company/pick-company.component';
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { ImageComponent } from './components/uploads/image/image.component';
     LayoutComponent,
     TesteComponent,
     ListComponent,
+    GamesComponent,
     CardComponent,
     HeaderComponent,
     LoginComponent,
@@ -55,7 +58,8 @@ import { ImageComponent } from './components/uploads/image/image.component';
     ConsolesComponent,
     CompaniesComponent,
     PickUploadComponent,
-    ImageComponent
+    ImageComponent,
+    PickCompanyComponent
   ],
   imports: [
     BrowserModule,

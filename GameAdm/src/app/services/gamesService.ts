@@ -2,43 +2,34 @@ import { Injectable, Inject } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { Observable } from 'rxjs';
 import { Game } from '../models/game.model'
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class gamesService {
+  private basePath = '/Games';
   constructor(private db: AngularFireDatabase) {
   }
-  public getgames(): Observable<Game[]> {
-    return this.db.list('/Games').valueChanges() as Observable<Game[]>;
+  public getAll(): Observable<any> {
+
+    return this.db.list(this.basePath, ref =>
+      ref).snapshotChanges().pipe(
+        map(changes =>
+          changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+        )
+      );
   }
-  public insertgame() {
 
-
-    // db: AngularFireDatabase
-    const itemRef = this.db.list('items');
-
-    // set() for destructive updates
-    itemRef.push({ name: 'javasampleapproach' });
-    console.log("ITEM INSERTED");
+  public insert(obj: Game) {
+    const itemRef = this.db.list(this.basePath);
+    itemRef.push(obj);
   }
-  public updategame() {
-    // set(): destructive update
-    // delete everything currently in place, then save the new value
-    //let itemsRefa = this.db.list('items'); // db: AngularFireDatabase
-    //itemsRefa.set('key', { url: 'jsa.com' });
-
-    // update(): non-destructive update
-    // only updates the values specified
-    let itemsRef = this.db.list('items'); // db: AngularFireDatabase
-    itemsRef.update('key', { url: 'javasampleapp.com' });
-    console.log("ITEM UPDATED");
+  public update(key: string, value: Game) {
+    let itemsRef = this.db.list(this.basePath); 
+    delete value["key"];
+    itemsRef.update(key, value);
   }
-  public deletegame() {
-    // db: AngularFireDatabase
-    const itemsRef = this.db.list('items');
-    itemsRef.remove('key');
-
-    // delete entire list
-    //itemsRef.remove();
-    console.log("ITEM DELETED");
+  public delete(key: string) {
+    const itemsRef = this.db.list(this.basePath);
+    itemsRef.remove(key);
   }
 }
