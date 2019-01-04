@@ -37,7 +37,7 @@ export class GamesComponent {
     });
   }
   open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+    this.modalService.open(content, { size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.model.setValue({ name: "", img: "", key: "", keyconsole:"" });
     }, (reason) => {
       this.model.setValue({ name: "", img: "", key: "", keyconsole: "" });

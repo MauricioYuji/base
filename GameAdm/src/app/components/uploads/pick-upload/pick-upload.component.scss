@@ -20,22 +20,31 @@
 
 .panel {
   width: 100%;
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
   text-align: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  max-height: 300px;
+  overflow: auto;
 
   .panel-body {
     overflow: hidden;
-    flex: 1 0 21%;
+    /*flex: 1 0 21%;*/
     margin: 15px;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
-    max-width: 27%;
+    max-width: 20%;
     text-align: left;
+    display: inline-block;
+    background-color: #EEE;
+
+    &.active {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -43,11 +52,9 @@
   text-align: center;
   border: #CCC solid thin;
   border-radius: 10px;
-  min-height: 80px;
-  line-height: 80px;
+  overflow: hidden;
 
-  &.active {
-    background-color: #CCC;
-    border-radius: 10px;
+  img {
+    max-width: 100%;
   }
 }

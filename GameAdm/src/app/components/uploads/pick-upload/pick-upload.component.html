@@ -1,10 +1,10 @@
 
 <div class="panel panel-primary">
   <ng-container *ngFor="let file of fileUploads">
-    <div class="panel-body">
-      <div class="card-box" [ngClass]="{
+    <div class="panel-body" [ngClass]="{
   active: selectedkey==file.key
-}" (click)="emitid(file.key)">
+}">
+      <div class="card-box" (click)="emitid(file.key)">
 
         <div class="actions">
         </div>
