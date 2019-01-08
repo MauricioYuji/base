@@ -16,6 +16,9 @@ export class DetailsUploadComponent implements OnInit {
 
   ngOnInit() {
     console.log("fileUpload: ", this.fileUpload);
+
+
+    
   }
 
   open(content) {

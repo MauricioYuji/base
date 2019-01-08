@@ -28,6 +28,7 @@ export class GamesComponent {
   ngOnInit() {
     this.service.getAll().subscribe(p => {
       this.games = p;
+      //console.log(" this.games: ", this.games);
     });
     this.model = this.formBuilder.group({
       key: [],
@@ -61,7 +62,7 @@ export class GamesComponent {
 
     var objstring = JSON.stringify(this.model.value);
     //console.log('SUCCESS!! :-)\n\n' + objstring);
-    var obj = new Game();
+    var obj = new Game(this.model.value);
     obj.key = this.model.value.key;
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
@@ -100,7 +101,7 @@ export class GamesComponent {
     this.modalService.dismissAll("Confirm");
   }
   private setedit(key: string) {
-    var obj = this.games.filter(p => p.key == key)[0];
+    var obj = new Game(this.games.filter(p => p.key == key)[0]);
     this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.content);
   }
@@ -118,7 +119,7 @@ export class GamesComponent {
 
   }
   private confirmdelete(key: string) {
-    var obj = this.games.filter(p => p.key == key)[0];
+    var obj = new Game(this.games.filter(p => p.key == key)[0]);
     this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.confirm);
   }

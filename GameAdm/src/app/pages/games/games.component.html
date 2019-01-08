@@ -9,7 +9,22 @@
 <div class="panel panel-primary">
   <ng-container *ngFor="let game of games">
     <div class="panel-body">
-      <card [myData]="game"></card>
+      <!--<card [myData]="game"></card>-->
+      <div class="card-box">
+        <div class="actions">
+
+          <i class="fas fa-edit" (click)="setedit(game.key)"></i>
+          <i class="fas fa-trash-alt" (click)="confirmdelete(game.key)"></i>
+        </div>
+        <image [key]="game.img"></image>
+        <div class="card-info">
+          <h2>{{game.nome}}</h2>
+          <span *ngFor="let cat of game.keyconsole">
+            <console [key]="cat"></console>
+          </span>
+        </div>
+      </div>
+
     </div>
   </ng-container>
 </div>

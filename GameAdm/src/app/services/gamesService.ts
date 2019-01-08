@@ -9,14 +9,15 @@ export class gamesService {
   private basePath = '/Games';
   constructor(private db: AngularFireDatabase) {
   }
-  public getAll(): Observable<any> {
+  public getAll(): Observable<Game[]> {
 
-    return this.db.list(this.basePath, ref =>
+    var obj = this.db.list(this.basePath, ref =>
       ref).snapshotChanges().pipe(
         map(changes =>
           changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
         )
-      );
+    );
+    return obj as Observable<Game[]>;
   }
 
   public insert(obj: Game) {
