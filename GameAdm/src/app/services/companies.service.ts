@@ -60,8 +60,12 @@ export class CompaniesService {
   }
   public delete(key: string) {
     // db: AngularFireDatabase
-    const itemsRef = this.db.list(this.basePath);
-    itemsRef.remove(key);
+
+    console.log("key: ", key);
+    if (key != "") {
+      const itemsRef = this.db.list(this.basePath);
+      itemsRef.remove(key);
+    }
 
     // delete entire list
     //itemsRef.remove();

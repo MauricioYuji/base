@@ -32,9 +32,9 @@ export class ConsolesComponent implements OnInit {
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", keycompany: "", key: "" });
+      this.model.setValue({ name: "", keycompany: "", key: null });
     }, (reason) => {
-      this.model.setValue({ name: "", keycompany: "", key: "" });
+      this.model.setValue({ name: "", keycompany: "", key: null });
     });
   }
   private getDismissReason(reason: any): string {

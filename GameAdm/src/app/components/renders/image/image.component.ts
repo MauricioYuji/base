@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, SimpleChanges, OnChanges } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { UploadFileService } from '../../../services/uploadService';
@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.scss']
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent implements OnChanges {
 
   @Input() key: string;
   obj: FileUpload = new FileUpload(null);
@@ -21,10 +21,18 @@ export class ImageComponent implements OnInit {
 
   constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  //ngOnInit() {
 
-    this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
-      this.obj = p;
-    });
+  //  this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
+  //    this.obj = p;
+  //  });
+  //}
+  ngOnChanges(changes: SimpleChanges) {
+    // only run when property "data" changed
+    if (changes['key']) {
+      this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
+        this.obj = p;
+      });
+    }
   }
 }

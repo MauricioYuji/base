@@ -18,6 +18,7 @@ export class PickUploadComponent implements OnInit {
   //fileUploads: Observable<FileUpload[]>;
   fileUploads: FileUpload[];
   category: any = "";
+  allowselect: boolean = false;
   @Input() categoryinput: string;
   @Input() selectedkey: string;
   @Output() uploadsubmitted = new EventEmitter();
@@ -72,9 +73,13 @@ export class PickUploadComponent implements OnInit {
     //}
 
   }
+  showselect() {
+    this.allowselect = true;
+  }
   emitid(id) {
+    //console.log("selectedkey: ", this.selectedkey);
     this.selectedkey = id;
-    //console.log("id: ", id);
+    this.allowselect = false;
     this.uploadsubmitted.emit(id);
   }
 }

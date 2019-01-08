@@ -1,0 +1,7 @@
+
+<div class="panel panel-primary">
+  <select (change)="emitid($event)">
+    <option>Selecione um console</option>
+    <option *ngFor="let console of consoles" [value]="console.key">{{console.name}}</option>
+  </select>
+</div>

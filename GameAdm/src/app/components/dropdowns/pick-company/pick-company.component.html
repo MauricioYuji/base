@@ -1,15 +1,8 @@
 
 <div class="panel panel-primary">
-  <ng-container *ngFor="let company of companies">
-    <div class="panel-body">
-      <div class="card-box" [ngClass]="{
-  active: selectedkey==company.key
-}" (click)="emitid(company.key)">
+  <select (change)="emitid($event)">
+    <option *ngFor="let company of companies" [value]="company.key">{{company.name}}</option>
+    </select>
 
-        <div class="actions">
-        </div>
-        {{company.name}}
-      </div>
-    </div>
-  </ng-container>
+      
 </div>

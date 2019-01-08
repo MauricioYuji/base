@@ -1,5 +1,10 @@
+<div>
+  <button *ngIf="!allowselect" (click)="showselect()">Selecione uma imagem</button>
 
-<div class="panel panel-primary">
+  <image *ngIf="selectedkey!=''" [key]='selectedkey'></image>
+</div>
+
+<div class="panel panel-primary" *ngIf="allowselect">
   <ng-container *ngFor="let file of fileUploads">
     <div class="panel-body" [ngClass]="{
   active: selectedkey==file.key

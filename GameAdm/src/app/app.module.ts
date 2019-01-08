@@ -34,8 +34,10 @@ import { ListUploadComponent } from './pages/uploads/list-upload/list-upload.com
 import { ConsolesComponent } from './pages/consoles/consoles.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
 import { PickUploadComponent } from './components/uploads/pick-upload/pick-upload.component';
-import { ImageComponent } from './components/uploads/image/image.component';
+import { ImageComponent } from './components/renders/image/image.component';
+import { ConsoleComponent } from './components/renders/console/console.component';
 import { PickCompanyComponent } from './components/dropdowns/pick-company/pick-company.component';
+import { PickConsoleComponent } from './components/dropdowns/pick-console/pick-console.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { PickCompanyComponent } from './components/dropdowns/pick-company/pick-c
     CompaniesComponent,
     PickUploadComponent,
     ImageComponent,
-    PickCompanyComponent
+    ConsoleComponent,
+    PickCompanyComponent,
+    PickConsoleComponent
   ],
   imports: [
     BrowserModule,

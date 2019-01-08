@@ -1,29 +1,30 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { map } from 'rxjs/operators';
 
-import { CompaniesService } from '../../../services/companies.service';
+import { ConsolesService } from '../../../services/consoles.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from "@angular/router";
 import { AngularFireList } from 'angularfire2/database';
-import { Company } from 'src/app/models/companies.model';
+import { Console } from 'src/app/models/consoles.model';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'pick-company',
-  templateUrl: './pick-company.component.html',
-  styleUrls: ['./pick-company.component.scss']
+  selector: 'pick-console',
+  templateUrl: './pick-console.component.html',
+  styleUrls: ['./pick-console.component.scss']
 })
-export class PickCompanyComponent implements OnInit {
-  public companies: Company[];
+export class PickConsoleComponent implements OnInit {
+  category: any = "";
+  public consoles: Console[];
   @Input() selectedkey: string;
   @Output() submitted = new EventEmitter();
 
 
-  constructor(private service: CompaniesService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private service: ConsolesService, private modalService: NgbModal, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.service.getAll().subscribe(p => {
-      this.companies = p;
+      this.consoles = p;
     });
 
   }

@@ -3,5 +3,5 @@ export class Game {
   name: string;
   categorias: string;
   img: string;
-  keyconsole: string;
+  keyconsole: string[];
 }

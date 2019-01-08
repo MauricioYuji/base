@@ -24,6 +24,10 @@ export class ConsolesService {
       );
   }
 
+  public getbykey(key: string): Observable<Console> {
+    return this.db.object(this.basePath + "/" + key).valueChanges() as Observable<Console>;
+  }
+
   public insert(obj: Console) {
     const itemRef = this.db.list(this.basePath);
     itemRef.push(obj);

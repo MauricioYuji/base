@@ -32,9 +32,9 @@ export class CompaniesComponent implements OnInit {
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", img: "", key: "" });
+      this.model.setValue({ name: "", img: "", key: null });
     }, (reason) => {
-      this.model.setValue({ name: "", img: "", key: "" });
+      this.model.setValue({ name: "", img: "", key: null });
     });
   }
   private getDismissReason(reason: any): string {
@@ -60,6 +60,7 @@ export class CompaniesComponent implements OnInit {
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
 
+    console.log("obj: ", obj);
     if (obj.key == null || obj.key == "") {
       this.companiesService.insert(obj);
     } else {
@@ -70,7 +71,6 @@ export class CompaniesComponent implements OnInit {
   }
 
   changefilter() {
-    //console.log("this.search: ", this.search);
     var regex = new RegExp(this.search.toLowerCase(), 'g');
     this.companiesService.getAll().pipe(
       map(a => a.filter(
@@ -88,7 +88,6 @@ export class CompaniesComponent implements OnInit {
     });
   }
   deleteitem(key) {
-    //console.log("DELETE: ", key);
     this.companiesService.delete(key);
     this.modalService.dismissAll("Confirm");
   }
@@ -98,7 +97,6 @@ export class CompaniesComponent implements OnInit {
     this.open(this.content);
   }
   private progressreturn(obj) {
-    //console.log("this.model: ", this.model);
     this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key })
 
   }

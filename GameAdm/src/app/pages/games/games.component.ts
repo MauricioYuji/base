@@ -32,15 +32,15 @@ export class GamesComponent {
     this.model = this.formBuilder.group({
       key: [],
       name: ['', [Validators.required]],
-      keyconsole: ['', [Validators.required]],
+      keyconsole: [[], [Validators.required]],
       img: ['', [Validators.required]]
     });
   }
   open(content) {
     this.modalService.open(content, { size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole:"" });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole: [] });
     }, (reason) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole: "" });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole: [] });
     });
   }
   private getDismissReason(reason: any): string {
@@ -104,14 +104,27 @@ export class GamesComponent {
     this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.content);
   }
-  private progressreturn(obj) {
+  private progressreturnimg(obj) {
     //console.log("this.model: ", this.model);
     this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole })
+
+  }
+  private progressreturnimgconsole(obj) {
+    var array = this.model.value.keyconsole;
+    array.push(obj)
+    //console.log("array: ", array);
+    //console.log("this.model: ", this.model);
+    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: array })
 
   }
   private confirmdelete(key: string) {
     var obj = this.games.filter(p => p.key == key)[0];
     this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.confirm);
+  }
+  private excludeconsole(key:string) {
+    //console.log("exclude ID: ", key);
+    this.model.value.keyconsole.splice(this.model.value.keyconsole.indexOf('key'), 1);
+    //console.log("array: ", this.model.value.keyconsole);
   }
 }
