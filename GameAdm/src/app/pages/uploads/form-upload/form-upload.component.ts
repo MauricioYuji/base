@@ -15,11 +15,11 @@ export class FormUploadComponent implements OnInit {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   croppedImagefile: any = '';
-  aspect: number = 20 / 11;
+  aspect: number = 14 / 20;
   maintainAspectRatio: boolean = true;
   options: typeUpload = null;
   progress: { percentage: number } = { percentage: 0 };
-  typelist = [{ category: "thumb", aspect: 20 / 11, maintainAspectRatio: true }, { category: "logo", aspect: 1, maintainAspectRatio: false }];
+  typelist = [{ category: "thumb", aspect: 14 / 20, maintainAspectRatio: true }, { category: "logo", aspect: 1, maintainAspectRatio: false }];
   category: any = null;
   @Input() preview: boolean = false;
   @Output() uploadsubmitted = new EventEmitter();

@@ -95,6 +95,22 @@ export class GamesComponent {
       this.games = p;
     });
   }
+
+  checkAll(ev) {
+    this.games.forEach(x => x.state = ev.target.checked)
+  }
+
+  isAllChecked() {
+    if (this.games !== undefined)
+      return this.games.every(_ => _.state);
+  }
+  deleteselected() {
+    var games = this.games.filter(p => p.state);
+
+    games.forEach(x => {
+      this.deleteitem(x.key);
+    });
+  }
   deleteitem(key) {
     //console.log("DELETE: ", key);
     this.service.delete(key);
@@ -123,7 +139,7 @@ export class GamesComponent {
     this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
     this.open(this.confirm);
   }
-  private excludeconsole(key:string) {
+  private excludeconsole(key: string) {
     //console.log("exclude ID: ", key);
     this.model.value.keyconsole.splice(this.model.value.keyconsole.indexOf('key'), 1);
     //console.log("array: ", this.model.value.keyconsole);

@@ -6,6 +6,8 @@
   </form>
 </div>
 
+<button (click)="deleteselected()">DELETAR</button>
+<input type="checkbox" [checked]="isAllChecked()" (change)="checkAll($event)">
 <div class="panel panel-primary">
   <ng-container *ngFor="let game of games">
     <div class="panel-body">
@@ -15,6 +17,7 @@
 
           <i class="fas fa-edit" (click)="setedit(game.key)"></i>
           <i class="fas fa-trash-alt" (click)="confirmdelete(game.key)"></i>
+          <input type="checkbox" [value]="game.key" [(ngModel)]="game.state">
         </div>
         <image [key]="game.img"></image>
         <div class="card-info">

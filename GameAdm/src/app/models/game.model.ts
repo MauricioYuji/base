@@ -3,6 +3,7 @@ export class Game {
   name: string;
   img: string;
   keyconsole: string[];
+  state: false;
 
   constructor(obj: Game) {
     this.key = obj.key === undefined ? "" : obj.key;

@@ -27,14 +27,15 @@ export class ConsolesComponent implements OnInit {
     this.model = this.formBuilder.group({
       key: [],
       name: ['', [Validators.required]],
-      keycompany: ['', [Validators.required]]
+      keycompany: ['', [Validators.required]],
+      img: ['', [Validators.required]]
     });
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", keycompany: "", key: null });
+      this.model.setValue({ name: "", img: "", keycompany: "", key: null });
     }, (reason) => {
-      this.model.setValue({ name: "", keycompany: "", key: null });
+      this.model.setValue({ name: "", img: "", keycompany: "", key: null });
     });
   }
   private getDismissReason(reason: any): string {
@@ -55,6 +56,7 @@ export class ConsolesComponent implements OnInit {
     var obj = new Console();
     obj.key = this.model.value.key;
     obj.name = this.model.value.name;
+    obj.img = this.model.value.img;
     obj.keycompany = this.model.value.keycompany;
 
     if (obj.key == null || obj.key == "") {
@@ -89,16 +91,18 @@ export class ConsolesComponent implements OnInit {
   }
   private setedit(key: string) {
     var obj = this.consoles.filter(p => p.key == key)[0];
-    this.model.setValue({ name: obj.name, keycompany: obj.keycompany, key: key });
+    this.model.setValue({ name: obj.name, img: obj.img, keycompany: obj.keycompany, key: key });
     this.open(this.content);
   }
   private progressreturn(obj) {
-    this.model.setValue({ name: this.model.value.name, keycompany: obj, key: this.model.value.key });
+    this.model.setValue({ name: this.model.value.name, img: obj, keycompany: obj, key: this.model.value.key });
 
   }
   private confirmdelete(key: string) {
     var obj = this.consoles.filter(p => p.key == key)[0];
-    this.model.setValue({ name: obj.name, keycompany: obj.keycompany, key: key });
+    this.model.setValue({ name: obj.name, img: obj.img, keycompany: obj.keycompany, key: key });
     this.open(this.confirm);
   }
+
+  
 }
