@@ -6,6 +6,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from "@angular/router";
 import { AngularFireList } from 'angularfire2/database';
 import { Console } from 'src/app/models/consoles.model';
+import { Companies, Consoles } from 'src/app/helpers/enums';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,13 +22,26 @@ export class PickConsoleComponent implements OnInit {
   @Output() submitted = new EventEmitter();
 
 
-  constructor(private service: ConsolesService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private service: ConsolesService, private modalService: NgbModal, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
-    this.service.getAll().subscribe(p => {
-      this.consoles = p;
+    this.getJSON().subscribe(data => {
+      //console.log("data: ", data);
+      var result = Object.keys(data.Consoles).map(function (key) {
+        data.Consoles[key].key = key;
+        return data.Consoles[key];
+      });
+      this.consoles = result;
+      //console.log("this.consoles: ", this.consoles);
     });
+    //this.service.getAll().subscribe(p => {
+    //  this.consoles = p;
+    //});
 
+  }
+
+  public getJSON(): Observable<any> {
+    return this.http.get("./src/app/helpers/consoles.json")
   }
   emitid(event) {
     const id = event.target.value;

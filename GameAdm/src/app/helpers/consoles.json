@@ -1,0 +1,82 @@
+{
+  "Companies": {
+    "1": {
+      "img": "logo-ps.png",
+      "name": "Playstation"
+    },
+    "2": {
+      "img": "logo-nintendo.png",
+      "name": "Nintendo"
+    },
+    "3": {
+      "img": "logo-xbox.png",
+      "name": "Xbox"
+    },
+    "4": {
+      "img": "logo-pc.png",
+      "name": "Pc"
+    }
+  },
+  "Consoles": {
+    "1": {
+      "img": "logo-ps4.png",
+      "keycompany": "1",
+      "name": "Ps4"
+    },
+    "2": {
+      "img": "logo-ps3.png",
+      "keycompany": "1",
+      "name": "Ps3"
+    },
+    "3": {
+      "img": "logo-psvita.png",
+      "keycompany": "1",
+      "name": "Ps Vita"
+    },
+    "4": {
+      "img": "logo-switch.png",
+      "keycompany": "2",
+      "name": "Nintendo Switch"
+    },
+    "5": {
+      "img": "logo-wiiu.png",
+      "keycompany": "2",
+      "name": "Nintendo Wii U"
+    },
+    "6": {
+      "img": "logo-3ds.png",
+      "keycompany": "2",
+      "name": "Nintendo 3DS"
+    },
+    "7": {
+      "img": "logo-xboxone.png",
+      "keycompany": "3",
+      "name": "Xbox One"
+    },
+    "8": {
+      "img": "logo-xbox360.png",
+      "keycompany": "3",
+      "name": "Xbox 360"
+    },
+    "9": {
+      "img": "logo-steam.png",
+      "keycompany": "4",
+      "name": "Steam"
+    },
+    "10": {
+      "img": "logo-origin.png",
+      "keycompany": "4",
+      "name": "Origin"
+    },
+    "11": {
+      "img": "logo-battlenet.png",
+      "keycompany": "4",
+      "name": "Battle.Net"
+    },
+    "12": {
+      "img": "logo-uplay.png",
+      "keycompany": "4",
+      "name": "Uplay"
+    }
+  }
+}

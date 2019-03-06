@@ -61,9 +61,9 @@ export class GamesComponent {
     }
 
     var objstring = JSON.stringify(this.model.value);
-    //console.log('SUCCESS!! :-)\n\n' + objstring);
+    console.log('SUCCESS!! :-)\n\n' + objstring);
     var obj = new Game(this.model.value);
-    obj.key = this.model.value.key;
+    obj.key = null;
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
     obj.keyconsole = this.model.value.keyconsole

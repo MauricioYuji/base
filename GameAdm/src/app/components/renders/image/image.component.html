@@ -1,1 +1,3 @@
-<img src="{{obj.url}}" alt="{{obj.name}}" class="upload-img" />
+<ng-container *ngIf="obj!=null">
+  <img src="{{obj.url}}" alt="{{obj.name}}" class="upload-img" />
+</ng-container>

@@ -7,6 +7,7 @@ import { ActivatedRoute } from "@angular/router";
 import { AngularFireList } from 'angularfire2/database';
 import { Console } from 'src/app/models/consoles.model';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'console',
@@ -19,14 +20,22 @@ export class ConsoleComponent implements OnInit {
   obj: Console = new Console();
 
 
-  constructor(private service: ConsolesService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private service: ConsolesService, private modalService: NgbModal, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
-    //console.log("this.key: ", this.key);
-    this.service.getbykey(this.key).subscribe(p => {
-      this.obj = p;
-      //console.log("p ", p);
+    this.getJSON().subscribe(data => {
+      this.obj = data.Consoles[this.key];
+      //console.log("this.obj: ", this.obj);
     });
+    //console.log("this.key: ", this.key);
+    //this.service.getbykey(this.key).subscribe(p => {
+    //  this.obj = p;
+    //  //console.log("p ", p);
+    //});
+  }
+
+  public getJSON(): Observable<any> {
+    return this.http.get("./src/app/helpers/consoles.json")
   }
   //ngOnChanges(changes: SimpleChanges) {
   //  // only run when property "data" changed

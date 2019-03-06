@@ -18,13 +18,19 @@ export class UploadFileService {
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) { }
 
   pushFileToStorage(fileUpload: FileUpload, progress: { percentage: number }, emitfunction: any) {
+    //console.log("fileUpload: ", fileUpload);
     const storageRef = this.storage.ref('');
     const storageRefChild = storageRef.child(`${this.basePath}/${fileUpload.file.name}`);
     this.uploadTask = storageRefChild.put(fileUpload.file);
 
     this.uploadTask.snapshotChanges().subscribe(snap => {
-      progress.percentage = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
-      if (progress.percentage == 100) {
+      
+
+      var porcentage = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
+      progress.percentage = Math.round(porcentage);
+      if (porcentage == 100) {
+        //progress.percentage = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
+        //if (progress.percentage == 100) {
         //storageRefChild.getDownloadURL().pipe(map(p => {
         //    const downloadURL = p;
         //    console.log('File available at', downloadURL);
@@ -32,17 +38,33 @@ export class UploadFileService {
         //    fileUpload.name = fileUpload.file.name;
         //    this.saveFileData(fileUpload);
         //}));
-        storageRefChild.getDownloadURL().subscribe(p => {
-          const downloadURL = p;
+        console.log("UPLOAD CONCLUIDO");
+        var _self = this;
+        //console.log("storageRefChild: ", storageRefChild);
+        //storageRefChild.getDownloadURL().then(function (url) {
+        //  const downloadURL = url;
 
-          emitfunction.emit(true);
-          console.log('File available at', downloadURL);
-          fileUpload.url = downloadURL;
-          //fileUpload.name = fileUpload.file.name;
-          fileUpload.name = (256 * (+new Date)).toString(36).toUpperCase();
-          this.saveFileData(fileUpload);
-        });
+        //  console.log("downloadURL: ", downloadURL);
+        //  emitfunction.emit(true);
+        //  console.log('File available at', downloadURL);
+        //  fileUpload.url = downloadURL;
+        //  //fileUpload.name = (256 * (+new Date)).toString(36).toUpperCase();
+        //  _self.saveFileData(fileUpload);
+        //}).catch(function (error) {
+        //  // Handle any errors here
+        //});
+        setTimeout(function () {
+          storageRefChild.getDownloadURL().subscribe(p => {
+            const downloadURL = p;
 
+            console.log("downloadURL: ", downloadURL);
+            emitfunction.emit(true);
+            console.log('File available at', downloadURL);
+            fileUpload.url = downloadURL;
+            //fileUpload.name = (256 * (+new Date)).toString(36).toUpperCase();
+            _self.saveFileData(fileUpload);
+          });
+        }, 3000);
       }
     });
     //progress.percentage = uploadTask.percentageChanges();
@@ -95,9 +117,10 @@ export class UploadFileService {
   //}
 
   public deleteFileUpload(fileUpload: FileUpload) {
+    console.log("DELETE DATA: ", fileUpload);
     this.deleteFileDatabase(fileUpload.key)
       .then(() => {
-        this.deleteFileStorage(fileUpload.name);
+        this.deleteFileStorage(fileUpload.file.name);
       })
       .catch(error => console.log(error));
   }
@@ -107,7 +130,9 @@ export class UploadFileService {
   }
 
   private deleteFileStorage(name: string) {
-    const storageRef = firebase.storage().ref();
+    console.log("DELETE FILE: ", name);
+    //const storageRef = firebase.storage().ref();
+    const storageRef = this.storage.ref('');
     storageRef.child(`${this.basePath}/${name}`).delete();
   }
 }

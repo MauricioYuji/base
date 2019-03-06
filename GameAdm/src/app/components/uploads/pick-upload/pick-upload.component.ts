@@ -53,7 +53,7 @@ export class PickUploadComponent implements OnInit {
       } else {
         this.fileUploads = fileUploads;
       }
-      //console.log("this.fileUploads", this.fileUploads);
+      console.log("this.fileUploads", this.fileUploads);
     });
     //this.fileUploads = this.uploadService.getFileUploadsall();
     //if (this.category != null) {

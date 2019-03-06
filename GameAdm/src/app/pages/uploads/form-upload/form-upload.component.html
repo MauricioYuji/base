@@ -7,6 +7,7 @@
   </div>
 </div>
 
+<input type="text" [(ngModel)]="name" class="form-control" placeholder="Nome" />
 <input type="file" (change)="fileChangeEvent($event)" />
 
 <image-cropper [imageChangedEvent]="imageChangedEvent"
@@ -20,7 +21,7 @@
                (loadImageFailed)="loadImageFailed()" *ngIf="imageChangedEvent"></image-cropper>
 
 <img [src]="croppedImage" *ngIf="preview" />
-<select  (change)="changeaspect($event)" [(ngModel)]="options" id="category">
+<select (change)="changeaspect($event)" [(ngModel)]="options" id="category">
   <option value="" disabled selected>select a category</option>
   <option *ngFor="let item of typelist" [ngValue]="item">{{item.category}}</option>
 </select>

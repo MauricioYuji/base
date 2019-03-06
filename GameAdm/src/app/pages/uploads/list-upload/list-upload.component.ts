@@ -24,9 +24,9 @@ export class ListUploadComponent implements OnInit {
   constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("this.categoryinput : ", this.categoryinput);
+    //console.log("this.categoryinput : ", this.categoryinput);
     this.category = this.categoryinput != undefined ? this.categoryinput : this.route.snapshot.paramMap.get("category");
-    console.log("this.category: ", this.category);
+    //console.log("this.category: ", this.category);
     // Use snapshotChanges().pipe(map()) to store the key
     this.uploadService.getFileUploadsall().snapshotChanges().pipe(
       map(changes =>
