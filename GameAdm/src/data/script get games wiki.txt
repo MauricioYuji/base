@@ -1,0 +1,10 @@
+var elems = [];
+$("#softwarelist tbody tr").each(function(i, e){
+var elem = $(e).find("td:first-of-type").find("i");
+if($(elem).find("a").length > 0){
+elems.push($(elem).find("a").html());
+}else{
+elems.push($(elem).html());
+}
+});
+console.log(JSON.stringify(elems));

@@ -34,14 +34,15 @@ export class GamesComponent {
       key: [],
       name: ['', [Validators.required]],
       keyconsole: [[], [Validators.required]],
-      img: ['', [Validators.required]]
+      keygenre: [[], [Validators.required]],
+      img: ['']
     });
   }
   open(content) {
     this.modalService.open(content, { size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole: [] });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole: [], keygenre: [] });
     }, (reason) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole: [] });
+      this.model.setValue({ name: "", img: "", key: "", keyconsole: [], keygenre: [] });
     });
   }
   private getDismissReason(reason: any): string {
@@ -67,6 +68,7 @@ export class GamesComponent {
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
     obj.keyconsole = this.model.value.keyconsole
+    obj.keygenre = this.model.value.keygenre
 
     if (obj.key == null || obj.key == "") {
       this.service.insert(obj);
@@ -118,12 +120,12 @@ export class GamesComponent {
   }
   private setedit(key: string) {
     var obj = new Game(this.games.filter(p => p.key == key)[0]);
-    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
+    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
     this.open(this.content);
   }
   private progressreturnimg(obj) {
     //console.log("this.model: ", this.model);
-    this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole })
+    this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
 
   }
   private progressreturnimgconsole(obj) {
@@ -131,17 +133,30 @@ export class GamesComponent {
     array.push(obj)
     //console.log("array: ", array);
     //console.log("this.model: ", this.model);
-    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: array })
+    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: array, keygenre: this.model.value.keygenre })
+
+  }
+  private progressreturnimggenre(obj) {
+    var array = this.model.value.keygenre;
+    array.push(obj)
+    //console.log("array: ", array);
+    //console.log("this.model: ", this.model);
+    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: this.model.value.keyconsole, keygenre: array })
 
   }
   private confirmdelete(key: string) {
     var obj = new Game(this.games.filter(p => p.key == key)[0]);
-    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole });
+    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
     this.open(this.confirm);
   }
   private excludeconsole(key: string) {
     //console.log("exclude ID: ", key);
     this.model.value.keyconsole.splice(this.model.value.keyconsole.indexOf('key'), 1);
+    //console.log("array: ", this.model.value.keyconsole);
+  }
+  private excludegenre(key: string) {
+    //console.log("exclude ID: ", key);
+    this.model.value.keygenre.splice(this.model.value.keygenre.indexOf('key'), 1);
     //console.log("array: ", this.model.value.keyconsole);
   }
 }

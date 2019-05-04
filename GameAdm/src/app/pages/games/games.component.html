@@ -56,6 +56,11 @@
           <div *ngFor="let console of model.value.keyconsole"><console [key]="console"></console> <span (click)="excludeconsole(console)">X</span></div>
           <pick-console [selectedkey]="model.value.keyconsole" (submitted)='progressreturnimgconsole($event)'></pick-console>
         </div>
+        <div class="form-group">
+
+          <div *ngFor="let genre of model.value.keygenre"><genre [key]="genre"></genre> <span (click)="excludegenre(genre)">X</span></div>
+          <pick-genre [selectedkey]="model.value.keygenre" (submitted)='progressreturnimggenre($event)'></pick-genre>
+        </div>
       </div>
     </div>
     <div class="modal-footer">

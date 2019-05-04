@@ -3,6 +3,7 @@ export class Game {
   name: string;
   img: string;
   keyconsole: string[];
+  keygenre: string[];
   state: false;
 
   constructor(obj: Game) {
@@ -10,5 +11,6 @@ export class Game {
     this.name = obj.name === undefined ? "" : obj.name;
     this.img = obj.img === undefined ? "" : obj.img;
     this.keyconsole = obj.keyconsole === undefined ? [] : obj.keyconsole;
+    this.keygenre = obj.keygenre === undefined ? [] : obj.keygenre;
   }
 }

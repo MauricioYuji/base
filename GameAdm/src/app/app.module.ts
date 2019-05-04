@@ -36,8 +36,10 @@ import { CompaniesComponent } from './pages/companies/companies.component';
 import { PickUploadComponent } from './components/uploads/pick-upload/pick-upload.component';
 import { ImageComponent } from './components/renders/image/image.component';
 import { ConsoleComponent } from './components/renders/console/console.component';
+import { GenreComponent } from './components/renders/genre/genre.component';
 import { PickCompanyComponent } from './components/dropdowns/pick-company/pick-company.component';
 import { PickConsoleComponent } from './components/dropdowns/pick-console/pick-console.component';
+import { PickGenreComponent } from './components/dropdowns/pick-genre/pick-genre.component';
 
 
 @NgModule({
@@ -56,12 +58,14 @@ import { PickConsoleComponent } from './components/dropdowns/pick-console/pick-c
     FormUploadComponent,
     ListUploadComponent,
     ConsolesComponent,
+    GenreComponent,
     CompaniesComponent,
     PickUploadComponent,
     ImageComponent,
     ConsoleComponent,
     PickCompanyComponent,
-    PickConsoleComponent
+    PickConsoleComponent,
+    PickGenreComponent
   ],
   imports: [
     BrowserModule,
