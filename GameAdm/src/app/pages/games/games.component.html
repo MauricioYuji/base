@@ -19,6 +19,7 @@
           <i class="fas fa-trash-alt" (click)="confirmdelete(game.key)"></i>
           <input type="checkbox" [value]="game.key" [(ngModel)]="game.state">
         </div>
+        <!--<img src="{{game.image.url}}" alt="{{game.image.name}}" class="upload-img" />-->
         <image [key]="game.img"></image>
         <div class="card-info">
           <h2>{{game.nome}}</h2>

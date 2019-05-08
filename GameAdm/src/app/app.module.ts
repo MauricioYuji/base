@@ -9,6 +9,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
@@ -72,6 +73,7 @@ import { PickGenreComponent } from './components/dropdowns/pick-genre/pick-genre
     AngularFireModule.initializeApp(environment.firebase, 'Teste'),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    AngularFirestoreModule,
     AngularFireAuthModule,
     AppRoutingModule,
     FormsModule,

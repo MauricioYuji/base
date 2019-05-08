@@ -8,6 +8,7 @@ import { FileUpload } from '../../models/fileupload.model'
 import { map } from 'rxjs/operators';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 
 @Component({
@@ -22,14 +23,37 @@ export class GamesComponent {
   public search = '';
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
+  private itemDoc: AngularFirestoreCollection<any>;
 
-  constructor(private modalService: NgbModal, private service: gamesService, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private service: gamesService, private formBuilder: FormBuilder, private afs: AngularFirestore) { }
 
   ngOnInit() {
-    this.service.getAll().subscribe(p => {
+    //this.service.getAll().subscribe(p => {
+    //  this.games = p;
+    //  //console.log(" this.games: ", this.games);
+    //});
+
+
+
+    this.itemDoc = this.afs.collection<any>('Games');
+    this.itemDoc.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
+      )
+    ).subscribe(p => {
       this.games = p;
-      //console.log(" this.games: ", this.games);
-    });
+      //var games = [];
+      //for (var item in p) {
+      //  const game = p[item];
+      //  game.img.get().then(snap => {
+      //    game.image = snap.data()
+      //    console.log("game: ", game);
+      //    this.games.push(game)
+      //  })
+      //}
+    })
+
+
     this.model = this.formBuilder.group({
       key: [],
       name: ['', [Validators.required]],

@@ -15,24 +15,35 @@ import { Observable } from 'rxjs';
 })
 export class ImageComponent implements OnChanges {
 
-  @Input() key: string;
+  @Input() key: any;
   obj: FileUpload = new FileUpload(null);
+  url: string;
+  name: string;
 
 
-  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) {
+
+    //console.log("key: ", this.key);
+  }
 
   //ngOnInit() {
-
-  //  this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
-  //    this.obj = p;
-  //  });
+  //  //this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
+  //  //  this.obj = p;
+  //  //});
   //}
   ngOnChanges(changes: SimpleChanges) {
     // only run when property "data" changed
     if (changes['key']) {
-      this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
-        this.obj = p;
-      });
+      this.key.get().then(snap => {
+        var img = snap.data()
+
+        this.url = img.url;
+        this.name = img.name;
+      })
+
+      //this.uploadService.getFileUploadsbykey(this.key).subscribe(p => {
+      //  this.obj = p;
+      //});
     }
   }
 }

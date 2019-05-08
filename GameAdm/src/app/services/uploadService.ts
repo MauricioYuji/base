@@ -6,6 +6,7 @@ import * as firebase from 'firebase/app';
 import { FileUpload } from '../models/fileupload.model';
 import { finalize, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,10 @@ export class UploadFileService {
 
   private basePath = '/thumbs';
   private uploadTask: AngularFireUploadTask;
+  private itemDoc: AngularFirestoreCollection<any>;
+  private itemFile: AngularFirestoreDocument<any>;
 
-  constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) { }
+  constructor(private db: AngularFireDatabase, private storage: AngularFireStorage, private afs: AngularFirestore) { }
 
   pushFileToStorage(fileUpload: FileUpload, progress: { percentage: number }, emitfunction: any) {
     //console.log("fileUpload: ", fileUpload);
@@ -24,7 +27,7 @@ export class UploadFileService {
     this.uploadTask = storageRefChild.put(fileUpload.file);
 
     this.uploadTask.snapshotChanges().subscribe(snap => {
-      
+
 
       var porcentage = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
       progress.percentage = Math.round(porcentage);
@@ -95,7 +98,18 @@ export class UploadFileService {
   }
 
   public saveFileData(fileUpload: FileUpload) {
+    console.log("fileUpload: ", fileUpload);
     this.db.list(`${this.basePath}/`).push(fileUpload);
+    var _self = this;
+    var obj: any = {};
+    var blob: any = fileUpload.file;
+    obj.url = fileUpload.url;
+    obj.width = blob.width;
+    obj.height = blob.height;
+    obj.name = blob.name;
+    this.itemDoc = _self.afs.collection<any>('Assets');
+    this.itemDoc.add(Object.assign({}, obj));
+
   }
 
   public getFileUploads(numberItems): AngularFireList<FileUpload> {
@@ -120,12 +134,16 @@ export class UploadFileService {
     console.log("DELETE DATA: ", fileUpload);
     this.deleteFileDatabase(fileUpload.key)
       .then(() => {
-        this.deleteFileStorage(fileUpload.file.name);
+        this.deleteFileStorage(fileUpload.name);
       })
       .catch(error => console.log(error));
   }
 
   private deleteFileDatabase(key: string) {
+    console.log("key: ", key);
+    this.itemFile = this.afs.collection('Assets').doc(key);
+    console.log("this.itemFile: ", this.itemFile);
+    this.itemFile.delete();
     return this.db.list(`${this.basePath}/`).remove(key);
   }
 

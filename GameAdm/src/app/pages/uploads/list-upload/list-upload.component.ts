@@ -7,6 +7,7 @@ import { ActivatedRoute } from "@angular/router";
 import { AngularFireList } from 'angularfire2/database';
 import { FileUpload } from 'src/app/models/fileupload.model';
 import { Observable } from 'rxjs';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 @Component({
   selector: 'list-upload',
@@ -20,36 +21,55 @@ export class ListUploadComponent implements OnInit {
   category: any = "";
   @Input() categoryinput: string;
 
+  private itemDoc: AngularFirestoreCollection<any>;
 
-  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute, private afs: AngularFirestore) { }
 
   ngOnInit() {
     //console.log("this.categoryinput : ", this.categoryinput);
     this.category = this.categoryinput != undefined ? this.categoryinput : this.route.snapshot.paramMap.get("category");
     //console.log("this.category: ", this.category);
     // Use snapshotChanges().pipe(map()) to store the key
-    this.uploadService.getFileUploadsall().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      )
-    ).subscribe(fileUploads => {
-      if (this.category != null) {
-        var regex = new RegExp(this.category.toLowerCase(), 'g');
-        console.log("regex: ", regex);
-        this.fileUploads = fileUploads.filter(
-          function (item) {
-            var match = false;
-            match = item.category.toLowerCase().match(regex) != null;
-            if (match) {
-              return true;
-            }
+    //this.uploadService.getFileUploadsall().snapshotChanges().pipe(
+    //  map(changes =>
+    //    changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+    //  )
+    //).subscribe(fileUploads => {
+    //  if (this.category != null) {
+    //    var regex = new RegExp(this.category.toLowerCase(), 'g');
+    //    console.log("regex: ", regex);
+    //    this.fileUploads = fileUploads.filter(
+    //      function (item) {
+    //        var match = false;
+    //        match = item.category.toLowerCase().match(regex) != null;
+    //        if (match) {
+    //          return true;
+    //        }
 
-          }
-        );
-      } else {
-        this.fileUploads = fileUploads;
-      }
-    });
+    //      }
+    //    );
+    //  } else {
+    //    this.fileUploads = fileUploads;
+    //  }
+    //  console.log("this.fileUploads: ", this.fileUploads);
+    //});
+
+
+
+
+
+    this.itemDoc = this.afs.collection<any>('Assets');
+    this.itemDoc.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
+      )
+    ).subscribe(p => {
+      this.fileUploads = p;
+      console.log("p: ", p);
+    })
+
+
+
     //this.fileUploads = this.uploadService.getFileUploadsall();
     //if (this.category != null) {
     //  var regex = new RegExp(this.category.toLowerCase(), 'g');
