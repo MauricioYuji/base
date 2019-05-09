@@ -1,7 +1,7 @@
 export class Game {
   key: string;
   name: string;
-  img: string;
+  img: any;
   keyconsole: string[];
   keygenre: string[];
   state: false;

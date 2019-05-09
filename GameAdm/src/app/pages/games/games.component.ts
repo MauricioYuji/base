@@ -88,12 +88,13 @@ export class GamesComponent {
     var objstring = JSON.stringify(this.model.value);
     console.log('SUCCESS!! :-)\n\n' + objstring);
     var obj = new Game(this.model.value);
-    obj.key = null;
+    //obj.key = null;
     obj.name = this.model.value.name;
     obj.img = this.model.value.img;
     obj.keyconsole = this.model.value.keyconsole
     obj.keygenre = this.model.value.keygenre
 
+    console.log('obj.key' + obj.key);
     if (obj.key == null || obj.key == "") {
       this.service.insert(obj);
     } else {
@@ -148,7 +149,6 @@ export class GamesComponent {
     this.open(this.content);
   }
   private progressreturnimg(obj) {
-    //console.log("this.model: ", this.model);
     this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
 
   }

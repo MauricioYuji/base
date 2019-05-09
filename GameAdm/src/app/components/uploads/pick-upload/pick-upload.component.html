@@ -1,7 +1,8 @@
 <div>
   <button *ngIf="!allowselect" (click)="showselect()">Selecione uma imagem</button>
 
-  <image *ngIf="selectedkey!=''" [key]='selectedkey'></image>
+  <img src="{{selectedkey.url}}" alt="{{selectedkey.name}}" class="upload-img" />
+  <!--<image *ngIf="selectedkey!=''" [key]='selectedkey'></image>-->
 </div>
 
 <div class="panel panel-primary" *ngIf="allowselect">
@@ -9,7 +10,7 @@
     <div class="panel-body" [ngClass]="{
   active: selectedkey==file.key
 }">
-      <div class="card-box" (click)="emitid(file.key)">
+      <div class="card-box" (click)="emitid(file)">
 
         <div class="actions">
         </div>

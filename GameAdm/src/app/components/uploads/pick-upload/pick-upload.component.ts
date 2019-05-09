@@ -6,6 +6,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from "@angular/router";
 import { AngularFireList } from 'angularfire2/database';
 import { FileUpload } from 'src/app/models/fileupload.model';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,11 +21,13 @@ export class PickUploadComponent implements OnInit {
   category: any = "";
   allowselect: boolean = false;
   @Input() categoryinput: string;
-  @Input() selectedkey: string;
+  @Input() selectedkey: any;
   @Output() uploadsubmitted = new EventEmitter();
 
+  private itemImg: AngularFirestoreCollection<any>;
 
-  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(private uploadService: UploadFileService, private modalService: NgbModal, private route: ActivatedRoute, private afs: AngularFirestore) {
+  }
 
   ngOnInit() {
     //console.log("selectedkey: ", this.selectedkey);
@@ -55,6 +58,38 @@ export class PickUploadComponent implements OnInit {
       }
       console.log("this.fileUploads", this.fileUploads);
     });
+
+
+
+
+
+
+
+
+    this.itemImg = this.afs.collection<any>('Assets');
+    this.itemImg.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
+      )
+    ).subscribe(p => {
+      this.fileUploads = p;
+      //this.games = p;
+      //var games = [];
+      //for (var item in p) {
+      //  const game = p[item];
+      //  game.img.get().then(snap => {
+      //    game.image = snap.data()
+      //    console.log("game: ", game);
+      //    this.games.push(game)
+      //  })
+      //}
+    })
+
+
+
+
+
+
     //this.fileUploads = this.uploadService.getFileUploadsall();
     //if (this.category != null) {
     //  var regex = new RegExp(this.category.toLowerCase(), 'g');
@@ -77,7 +112,7 @@ export class PickUploadComponent implements OnInit {
     this.allowselect = true;
   }
   emitid(id) {
-    //console.log("selectedkey: ", this.selectedkey);
+    console.log("id: ", id);
     this.selectedkey = id;
     this.allowselect = false;
     this.uploadsubmitted.emit(id);

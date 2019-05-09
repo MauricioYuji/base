@@ -19,6 +19,11 @@
   }
 }
 
+.card-box {
+  overflow: hidden;
+  max-height: 320px;
+}
+
 .panel {
   width: 100%;
   display: flex;
