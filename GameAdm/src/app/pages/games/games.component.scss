@@ -19,9 +19,27 @@
   }
 }
 
+.actions {
+  background-color: #FFF;
+  padding: 5px;
+}
+
 .card-box {
   overflow: hidden;
   max-height: 320px;
+  height: 320px;
+  background-color: #000;
+  position: relative;
+  border: #CCC solid 2px;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.5);
+  padding: 10px;
 }
 
 .panel {

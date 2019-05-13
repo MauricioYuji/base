@@ -35,13 +35,18 @@ export class GamesComponent {
 
 
 
-    this.itemDoc = this.afs.collection<any>('Games');
+    this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAfter("12-Sai. Torokeru Puzzle Futari no Harmony").limit(24));
+
+    console.log("itemDoc: ", this.itemDoc);
     this.itemDoc.snapshotChanges().pipe(
       map(changes =>
         changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
       )
     ).subscribe(p => {
       this.games = p;
+      console.log("p: ", p);
+
+
       //var games = [];
       //for (var item in p) {
       //  const game = p[item];

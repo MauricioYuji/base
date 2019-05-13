@@ -20,9 +20,9 @@
           <input type="checkbox" [value]="game.key" [(ngModel)]="game.state">
         </div>
         <!--<img src="{{game.image.url}}" alt="{{game.image.name}}" class="upload-img" />-->
-        <image [key]="game.img"></image>
+        <image *ngIf="game.img!=''" [key]="game.img"></image>
         <div class="card-info">
-          <h2>{{game.nome}}</h2>
+          <h2>{{game.name}}</h2>
           <span *ngFor="let cat of game.keyconsole">
             <console [key]="cat"></console>
           </span>

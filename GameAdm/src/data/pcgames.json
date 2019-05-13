@@ -1,0 +1,4658 @@
+[
+  {
+    "name": "_summer",
+    "genre": "Visual novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "0 A.D.",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "007 Legends",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "007: Licence to Kill",
+    "genre": "Top-down shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "007: Quantum of Solace",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "1-0 Soccer Manager",
+    "genre": "Sports, management",
+    "console": [ 9 ]
+  },
+  {
+    "name": "101 Dalmatians: Escape from DeVil Manor",
+    "genre": "Action, adventure, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "102 Dalmatians: Puppies to the Rescue",
+    "genre": "Platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "10th Frame",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "140",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "18 Wheels of Steel: Haulin'",
+    "genre": "Vehicle simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "180",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "1830: Railroads & Robber Barons",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "1869",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "1914 Shells of Fury",
+    "genre": "Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "1942: The Pacific Air War",
+    "genre": "Flight simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "221B Baker Street",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "2400 A.D.",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3-D Bomberman",
+    "genre": "Arcade, maze, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3-Demon",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3D Construction Kit",
+    "genre": "Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3D Construction Kit II",
+    "genre": "Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3D Maze Man: Amazing Adventures",
+    "genre": "Arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3DiTeams",
+    "genre": "Serious game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "3Kingdoms",
+    "genre": "MUD",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4D Sports Boxing",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4D Sports Tennis",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4 Elements",
+    "genre": "Adventure Game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4Story",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4th & Inches",
+    "genre": "Sports, American football",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4x4 Hummer",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "4x4 Off-Road Racing",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "5",
+    "genre": "Eroge, visual novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "5 A Day Adventures",
+    "genre": "Education",
+    "console": [ 9 ]
+  },
+  {
+    "name": "50 Mission Crush",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "500cc Grand Prix",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "688(I) Hunter/Killer",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "7 Colors",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "7554",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "7th Legion",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "80 Days",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "8BitMMO",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "9: The Last Resort",
+    "genre": "Adventure game",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "A-10 Cuba!",
+    "genre": "Flight simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Girls Fabric Face",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Hat in Time",
+    "genre": "Platform, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Game of Thrones: Genesis",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ABC Sports Indy Racing",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Abomination: The Nemesis Project",
+    "genre": "Action, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ace Lightning",
+    "genre": "Action-adventure, third person shooter, platform game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ace of Spades",
+    "genre": "FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ace Online",
+    "genre": "MMO, 3D Space Shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ace Ventura: The CD-Rom Game",
+    "genre": "Graphic Adventure (Point-and-click)",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Aces of the Galaxy",
+    "genre": "Rail shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Aces of the Pacific",
+    "genre": "Combat flight simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Achtung Spitfire!",
+    "genre": "Strategy, Computer wargaming",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Act of War: Direct Action",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Act of War: High Treason",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Action Quake 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Activision Anthology",
+    "genre": "Compilation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Actua Ice Hockey",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Actua Pool",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Addiction Pinball",
+    "genre": "Pinball",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Advent Rising",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Adventure Pinball: Forgotten Island",
+    "genre": "Pinball",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Adventures of Pip",
+    "genre": "Action, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "AdvertCity",
+    "genre": "Tycoon game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Africa Trail",
+    "genre": "Adventure, Educational, Simulation, Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "After...",
+    "genre": "Visual novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Afterlife",
+    "genre": "God game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Agatha Christie: And Then There Were None",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Agatha Christie: Evil Under the Sun",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Agatha Christie: Murder on the Orient Express",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Booty",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Chivalry",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Conan",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires: The Rise of Rome",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires II: HD Edition",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires II: The African Kingdoms",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires II: The Age of Kings",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires II: The Conquerors",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires II: The Forgotten",
+    "genre": "Real-time strategy expansion pack",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires III",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires III: The Asian Dynasties",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Empires III: The WarChiefs",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Mythology",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Pirates: Captain Blood",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Pirates: Caribbean Tales",
+    "genre": "Role-playing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Pirates 2: City of Abandoned Ships",
+    "genre": "Role-playing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Wonders",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Wonders II: The Wizard's Throne",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Wonders III",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Age of Wonders: Shadow Magic",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Air Conflicts: Secret Wars",
+    "genre": "Flight simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Air Conflicts: Vietnam",
+    "genre": "Flight simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Airscape: The Fall of Gravity",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Alan Wake",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Alien Swarm",
+    "genre": "Shoot-em-up",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Alpha Prime",
+    "genre": "FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Amnesia: The Dark Descent",
+    "genre": "Horror game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Amnesia: A Machine for Pigs",
+    "genre": "Horror game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anno 1503",
+    "genre": "City-building game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anno 1602",
+    "genre": "City-building game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anno 1701",
+    "genre": "City-building game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anno 2070",
+    "genre": "City-building game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anno 2205",
+    "genre": "City-building game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anomaly: Warzone Earth",
+    "genre": "Reverse Tower Defense",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Antichamber",
+    "genre": "Puzzle platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Anubis II",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ARMA: Armed Assault",
+    "genre": "Tactical shooter, military simulation, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ARMA 2",
+    "genre": "Tactical shooter, military simulation, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ARMA 3",
+    "genre": "Tactical shooter, military simulation, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Assetto Corsa",
+    "genre": "Racing, simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Astebreed",
+    "genre": "Shoot em up",
+    "console": [ 9 ]
+  },
+  {
+    "name": "AstroFire[1]",
+    "genre": "Shoot em up",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Attack on Titan",
+    "genre": "Action, Hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Attack on Titan 2",
+    "genre": "Action, Hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Audiosurf",
+    "genre": "Music, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Audiosurf 2",
+    "genre": "Music, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Automation - The Car Company Tycoon Game",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Axis Assassin",
+    "genre": "Tube shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Bastard's Tale",
+    "genre": "Action, Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Bird Story",
+    "genre": "Adventure, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Blind Legend",
+    "genre": "Action, Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Bloody Night",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Boy and His Blob",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Butterfly in the District of Dreams",
+    "genre": "Visual Novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Chair in a Room: Greenwater",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A City Sleeps",
+    "genre": "Action, Shoot 'em up",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Date in the Park",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Day in the Woods",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A dead world's dream",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Demon's Game: Episode 1",
+    "genre": "Action, Adventure, Horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Detective's Novel",
+    "genre": "Visual Novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A dragon girl looks up at the endless sky",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Druid's Duel",
+    "genre": "Turn-Based Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Duel Hand Disaster: Trackher",
+    "genre": "Shoot 'em up",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Baldur's Gate",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Baldur's Gate: Tales of the Sword Coast",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Baldur's Gate II: Shadows of Amn",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Baldur's Gate II: Throne of Bhaal",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Banished",
+    "genre": "City building, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Bastion",
+    "genre": "Action, role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Batman: Arkham Asylum",
+    "genre": "Action, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Batman: Arkham City",
+    "genre": "Action, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Batman: Arkham Knight",
+    "genre": "Action, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Batman: Arkham Origins",
+    "genre": "Action, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "BattleBlock Theater",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 1942",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 1942: The Road to Rome",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 1942: Secret Weapons of WWII",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 2142",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 3",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield 4",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield Heroes",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield Play4Free",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlefield V",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleforge",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 2: Gettysburg",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 3: Waterloo",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 4: Shiloh",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 5: Antietam",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 6: Napoleon in Russia",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 7: Bull Run",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 8: Prelude to Waterloo",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 9: Chickamauga",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 10: Middle East",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleground 11: East Front",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battlehawks 1942",
+    "genre": "Flight simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battles in Time",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battles of Napoleon",
+    "genre": "Wargame",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Battleship: Surface Thunder",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Beam Breakers",
+    "genre": "Futuristic racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Beasts and Bumpkins",
+    "genre": "Real-time simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Beyond Divinity",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Billy the Wizard: Rocket Broomstick Racing",
+    "genre": "Racing, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "BioShock",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "BioShock 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "BioShock Infinite",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Black Mesa",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Blade Strangers",
+    "genre": "Fighting",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Blade Symphony",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Blades of Time",
+    "genre": "Hack and slash, platformer, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Blitzkrieg",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Borderlands",
+    "genre": "Action role-playing, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Borderlands 2",
+    "genre": "Action role-playing, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Borderlands 3",
+    "genre": "Action role-playing, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Borderlands: The Pre-Sequel!",
+    "genre": "Action role-playing, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Braid",
+    "genre": "Puzzle, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Bridge Project",
+    "genre": "Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Brothers in Arms: Earned in Blood",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Brothers in Arms: Hell's Highway",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Brothers in Arms: Road to Hill 30",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Burnout Paradise: The Ultimate Box",
+    "genre": "Racing",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Call of Cthulhu: Dark Corners of the Earth",
+    "genre": "Survival horror, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty 2",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty 4: Modern Warfare",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Black Ops",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Black Ops 2",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Black Ops 3",
+    "genre": "FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Black Ops 4",
+    "genre": "FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Ghosts",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Infinite Warfare",
+    "genre": "FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Modern Warfare 2",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: Modern Warfare 3",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty Online",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: United Offensive",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Call of Duty: World at War",
+    "genre": "Action, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "CarneyVale: Showtime",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Castlevania: Lords of Shadow",
+    "genre": "Action-adventure, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Champions of Krynn",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Chaos Island: The Lost World",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Chivalry: Medieval Warfare",
+    "genre": "Action, first-person slasher",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cities in Motion",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cities in Motion 2",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cities: Skylines",
+    "genre": "City-building, Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cities XL",
+    "genre": "City-building game, massively multiplayer online game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization III",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization III: Conquests",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization III: Play the World",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization IV",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization V",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization V: Brave New World",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization V: Gods & Kings",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Civilization VI",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Classic British Motor Racing",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Club",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cobalt",
+    "genre": "Action, sidescroller",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer: Generals",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer: Red Alert 2",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer: Renegade",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer: Tiberian Sun",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Command & Conquer 4: Tiberian Twilight",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Commandos: Behind Enemy Lines",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Commandos: Beyond the Call of Duty",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Commandos: Strike Force",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Commandos 2: Men of Courage",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Commandos 3: Destination Berlin",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Company of Heroes",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Company of Heroes 2",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Constantine",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Contagion",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cossacks II: Battle for Europe",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Counter-Strike",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Counter-Strike: Condition Zero",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Counter-Strike: Global Offensive",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Counter-Strike Online",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Counter-Strike: Source",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crusader Kings",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crusader Kings II",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Cryostasis: Sleep of Reason",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crysis",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crysis Warhead",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crysis 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Crysis 3",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Curse of the Azure Bonds",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Cursed Crusade",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Damnation",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Souls",
+    "genre": "action role-playing, Dungeon Crawler",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Souls II",
+    "genre": "action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Souls III",
+    "genre": "action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Sun Online: Crimson Sands",
+    "genre": "RPG, fantasy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Sun: Shattered Lands",
+    "genre": "RPG, fantasy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dark Sun: Wake of the Ravager",
+    "genre": "RPG, fantasy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Darksiders 2",
+    "genre": "Hack and slash, platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Darkstone: Evil Reigns",
+    "genre": "Action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Daryl F. Gates' Police Quest: SWAT",
+    "genre": "Interactive movie, simulation, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Day of Defeat",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Day of Defeat: Source",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "DayZ",
+    "genre": "Open-world, first-person shooter, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dead Island",
+    "genre": "Zombies, survival",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deadlight",
+    "genre": "Cinematic platformer, survival horror, sidescroller",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dear Esther",
+    "genre": "Art",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Death Knights of Krynn",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deathmatch Classic",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Defcon",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force 2",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Black Hawk Down",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Black Hawk Down: Team Sabre",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Land Warrior",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Task Force Dagger",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Xtreme",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Delta Force: Xtreme 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Democracy 3",
+    "genre": "Government simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Demon's Souls",
+    "genre": "Action role-playing, Dungeon Crawler",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deus Ex",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deus Ex: Human Revolution",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deus Ex: Invisible War",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Deus Ex: Mankind Divided",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Diablo",
+    "genre": "Action role-playing, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Diablo II",
+    "genre": "Action role-playing, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Digital Combat Simulator",
+    "genre": "Flight simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dino D-Day",
+    "genre": "Action, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dirt 3",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Divine Divinity",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dofus",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Doom",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Doom II: Hell on Earth",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Doom 3",
+    "genre": "Survival horror, First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "DOOM",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dota 2",
+    "genre": "MOBA",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon Age II",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon Age: Inquisition",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon Age: Origins",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon Age: Origins – Awakening",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon Quest X",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragon's Dogma",
+    "genre": "Action role-playing, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dragons of Flame",
+    "genre": "Action, RPG, fantasy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "DragonStrike",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "DRAMAtical Murder",
+    "genre": "BL game, visual novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Driver",
+    "genre": "Driving, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Driver 3",
+    "genre": "Racing, shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Driver: Parallel Lines",
+    "genre": "Racing, third-person shooter, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Driver: San Francisco",
+    "genre": "Action-adventure, racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Duke Nukem",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dune",
+    "genre": "Adventure, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dungeon Defenders",
+    "genre": "Tower defense, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dungeon Keeper",
+    "genre": "RTS, god game, dungeon management game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dungeon Keeper 2",
+    "genre": "RTS, god game, dungeon management game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dungeons & Dragons Online",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dungeons of Dredmor",
+    "genre": "Roguelike, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Dwarf Fortress",
+    "genre": "Action real-time strategy",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "The Elder Scrolls: Arena",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls Adventures: Redguard",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls II: Daggerfall",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls III: Bloodmoon",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls III: Morrowind",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls III: Tribunal",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls IV: Oblivion",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "An Elder Scrolls Legend: Battlespire",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Emily Wants to Play",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Empire: Total War",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Empire Earth",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Empire Earth II",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Empire Earth III",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Empires Apart",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Enclave",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Endless Space",
+    "genre": "4X",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Epic Battle Fantasy",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Epic Battle Fantasy 2",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Epic Battle Fantasy 3",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Epic Battle Fantasy 4",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Euro Truck Simulator",
+    "genre": "Simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Euro Truck Simulator 2",
+    "genre": "Simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Europa Universalis",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Europa Universalis II",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Europa Universalis III",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Europa Universalis IV",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Eve Online",
+    "genre": "Space flight simulator game, MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Event 0",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Eye of the Beholder",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Eye of the Beholder II: The Legend of Darkmoon",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Eye of the Beholder III: Assault on Myth Drannor",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Factorio",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Fairy Tale",
+    "genre": "Matching",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout 2",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout 3",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout 4",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout: New Vegas",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fallout Tactics: Brotherhood of Steel",
+    "genre": "TRPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry 3",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry 3: Blood Dragon",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry 4",
+    "genre": "First-person shooter, Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Far Cry Primal",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fez",
+    "genre": "Puzzle-platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fiesta Online",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Final Fantasy VII",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Final Fantasy VIII",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Final Fantasy XI",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Firefall",
+    "genre": "MMOFPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fistful of Frags",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Five Nights at Freddy's",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Five Nights at Freddy's 2",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Five Nights at Freddy's 3",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "FlatOut",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "FlatOut 2",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "FlatOut 3: Chaos & Destruction",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "FlatOut: Ultimate Carnage",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "For the Glory: A Europa Universalis Game",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Forest",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Fork in the Tale",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fortnite",
+    "genre": "co-op, sandbox, survival game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fragile Allegiance",
+    "genre": "4X, real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Fragmented[3]",
+    "genre": "Survival, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Freelancer",
+    "genre": "Space trading and combat simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "FTL: Faster Than Light",
+    "genre": "Indie, simulation, strategy",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Game Dev Tycoon",
+    "genre": "Casual, indie, simulation, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Garry's Mod",
+    "genre": "Nonlinear, sandbox physics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Goat Simulator",
+    "genre": "Nonlinear, sandbox physics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gone Home",
+    "genre": "Adventure, interactive fiction, point and click",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gothic",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gothic II",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gothic 3",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gothic 3: Forsaken Gods",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Arcania: Gothic 4",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Arcania: Fall of Setarrif",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: The Ballad of Gay Tony",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: London 1961",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: London 1969",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto 2",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto III",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto IV",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: The Lost and Damned",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: San Andreas",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto: Vice City",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grand Theft Auto V",
+    "genre": "Open world, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Grid 2",
+    "genre": "Racing, arcade",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ground Control",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ground Control II: Operation Exodus",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Growtopia",
+    "genre": "MMO",
+    "console": [ 9 ]
+  },
+  {
+    "name": "GTR Evolution",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Guild Wars",
+    "genre": "CORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Guild Wars 2",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Guild Wars Factions",
+    "genre": "CORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Guild Wars Nightfall",
+    "genre": "CORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Guitar Hero III: Legends of Rock",
+    "genre": "Music, Rhythm",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Gunpoint",
+    "genre": "Action, adventure, puzzle platformer",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Half-Life",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life: Blue Shift",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life Deathmatch: Source",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life: Opposing Force",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life: Source",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life 2: Deathmatch",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life 2: Episode One",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life 2: Episode Two",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Half-Life 2: Lost Coast",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Halo: Combat Evolved",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Halo 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hard Truck Apocalypse",
+    "genre": "Vehicular combat",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Harvester",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Hat in Time",
+    "genre": "Adventure, platforming",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hatoful Boyfriend: A School of Hope and White Wings",
+    "genre": "Visual novel, dating simulation, otome game, nakige",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hearts of Iron",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hearts of Iron II",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hearts of Iron III",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hello Neighbor",
+    "genre": "Stealth, survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Heroes of the Lance",
+    "genre": "RPG, fantasy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Heroes of Might and Magic: A Strategic Quest",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Heroes of Might and Magic II",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Heroes of Newerth",
+    "genre": "MOBA",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hitman: Absolution",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hitman: Blood Money",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hitman: Codename 47",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hitman: Contracts",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hitman 2: Silent Assassin",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hogs of War",
+    "genre": "Turn-based tactics, artillery",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Homeworld",
+    "genre": "Real-time strategy, real-time tactics, space simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Homeworld: Cataclysm",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Homeworld 2",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hotline Miami",
+    "genre": "Action, top-down shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hotline Miami 2: Wrong Number",
+    "genre": "Action, top-down shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Hugo's House of Horrors",
+    "genre": "Adventure, survival horror",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "I.G.I.-2: Covert Strike",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Icewind Dale",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Icewind Dale II",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Identity",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Insurgency",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Insurgency: Sandstorm",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Jade Empire",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "James Bond 007: Nightfire",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jazz Jackrabbit",
+    "genre": "Side-scrolling shooter, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jazz Jackrabbit 2",
+    "genre": "Side-scrolling shooter, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Judge Dredd: Dredd vs. Death",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Juiced 2: Hot Import Nights",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jurassic Park",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jurassic Park III: Danger Zone!",
+    "genre": "Action, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jurassic Park III: Dino Defender",
+    "genre": "Side-scrolling, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Jurassic Park: The Game",
+    "genre": "Graphic adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Just Cause",
+    "genre": "Open world, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Just Cause 2",
+    "genre": "Open world, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Just Cause 3",
+    "genre": "Open world, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Just Cause 4",
+    "genre": "Open world, action",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Katawa Shoujo",
+    "genre": "Visual novel, dating sim",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Kentucky Route Zero",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Kerbal Space Program",
+    "genre": "Sandbox",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Killing Floor",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Killing Floor 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Kingdom: New Lands",
+    "genre": "Strategy, Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Kingdoms of Amalur: Reckoning",
+    "genre": "Action role-playing, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "King Arthur: The Role-Playing Wargame",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "King Arthur II: The Role-Playing Wargame",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "kkrieger",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Knights and Merchants: The Shattered Kingdom",
+    "genre": "RTS",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "L.A. Noire",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lands of Lore: Guardians of Destiny",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lands of Lore: The Throne of Chaos",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lands of Lore III",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lara Croft and the Guardian of Light",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Layers of Fear",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "League of Legends",
+    "genre": "MOBA",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Legends of Callasia",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lego Batman: The Videogame",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lego Batman 2: DC Super Heroes",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lego Batman 3: Beyond Gotham",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lego Rock Raiders",
+    "genre": "Real-time strategy, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lego Star Wars: The Video Game",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Leisure Suit Larry series",
+    "genre": "Graphic adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lineage",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "London Taxi: Rush Hour",
+    "genre": "Driving",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Lovely Planet",
+    "genre": "First-person shooter, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Luftrausers",
+    "genre": "Shoot 'em Up",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "M.U.D. TV",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "M.U.G.E.N",
+    "genre": "Fighting",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Magicka",
+    "genre": "Fantasy, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mass Effect",
+    "genre": "RPG, Action, science fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mass Effect 2",
+    "genre": "RPG, action, science fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mass Effect 3",
+    "genre": "RPG, action, science fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Max Payne",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Max Payne 2: The Fall of Max Payne",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MDK",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MDK2",
+    "genre": "Third-person shooter, action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mechwarrior Online",
+    "genre": "Vehicular combat, action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Medal of Honor",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Medal of Honor: Warfighter",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Medieval: Total War",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Medieval II: Total War",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MegaRace",
+    "genre": "Racing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MegaRace 2",
+    "genre": "Racing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MegaRace 3",
+    "genre": "Racing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear 2: Solid Snake",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "'Metal Gear Rising: Revengeance",
+    "genre": "Action, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear Solid",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear Solid 2: Substance",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear Solid V: Ground Zeroes",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metal Gear Solid V: The Phantom Pain",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metro 2033",
+    "genre": "Post-apocalyptic, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Metro: Last Light",
+    "genre": "Post-apocalyptic, FPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Microsoft Minesweeper",
+    "genre": "",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Middle-earth: Shadow of Mordor",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Might & Magic X: Legacy",
+    "genre": "RPG, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Might and Magic VI",
+    "genre": "RPG, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Might and Magic VII",
+    "genre": "RPG, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "A Mind Forever Voyaging",
+    "genre": "Interactive fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Minecraft",
+    "genre": "RPG, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Minecraft: Story Mode",
+    "genre": "Graphic adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mirror's Edge",
+    "genre": "First-person action-adventure, platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Monaco: What's Yours Is Mine",
+    "genre": "Action, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mount & Blade",
+    "genre": "Action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mount & Blade: Warband",
+    "genre": "Action RPG, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Mount & Blade: With Fire & Sword",
+    "genre": "Action RPG, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MouseCraft",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "MVP Baseball 2005",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Myth Makers: Super Kart GP",
+    "genre": "Racing video game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Myth Makers: Trixie in Toyland",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Napoleon: Total War",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Natural Selection 2",
+    "genre": "First-person shooter, RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K10",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K11",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K12",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K13",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K14",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K15",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K16",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K17",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K18",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA 2K9",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Hangtime",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Inside Drive",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Jam Extreme",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 2000",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 2001",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 2003",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 2004",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 2005",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 06",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 07",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Live 99",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "NBA Playgrounds",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed II",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed III: Hot Pursuit",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed: High Stakes",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed: Hot Pursuit 2",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed: Porsche Unleashed",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Need for Speed: Underground",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Nether: Resurrected",
+    "genre": "Survival Horror, Open World, Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Neverhood",
+    "genre": "Point-and-click adventure game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Neverwinter Nights",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Neverwinter Nights 2",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Neverwinter Nights: Hordes of the Underdark",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Neverwinter Nights: Shadows of Undrentide",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Next Car Game: Wreckfest",
+    "genre": "Racing, destruction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Nickelodeon Party Blast",
+    "genre": "Party",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Nier: Automata",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Night in the Woods",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ninjabread Man",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Nioh",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "No More Room in Hell",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "OneShot",
+    "genre": "Adventure, Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Operation Flashpoint: Cold War Crisis",
+    "genre": "Tactical shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Operation Flashpoint: Resistance",
+    "genre": "Tactical shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Orcs Must Die 2",
+    "genre": "Action, Tower Defense",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Order of War",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "osu!",
+    "genre": "Rhythm, music",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Out of the Park Baseball",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Outcast",
+    "genre": "Adventure, Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Outlast",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Overgrowth",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Overwatch",
+    "genre": "Action",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Oxenfree",
+    "genre": "Graphic adventure",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Papers, Please",
+    "genre": "Puzzle, simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ParaWorld",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Path of Exile",
+    "genre": "Action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Payday: The Heist",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Payday 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Penumbra: Black Plague",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Penumbra: Overture",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Penumbra: Requiem",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pillars of Eternity",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pixel Piracy",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Planetarian: The Reverie of a Little Planet",
+    "genre": "Visual novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Planetary Annihilation",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "PlanetSide",
+    "genre": "MMOFPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "PlanetSide 2",
+    "genre": "MMOFPS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Playboy: The Mansion",
+    "genre": "Business simulation game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "PlayerUnknown's Battlegrounds",
+    "genre": "Multiplayer online game, Battle royale game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pokémon TCG Online",
+    "genre": "Digital collectible card game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pony Island",
+    "genre": "Indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pool of Radiance",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Pools of Darkness",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Portal",
+    "genre": "Puzzle-platform game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Portal 2",
+    "genre": "Puzzle-platform game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Postal",
+    "genre": "Top-down shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Postal 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Postal III",
+    "genre": "Third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Postal Redux",
+    "genre": "Shoot 'em up",
+    "console": [ 9 ]
+  },
+  {
+    "name": "PP: Pianissimo",
+    "genre": "Mystery",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Prince of Persia: The Sands of Time",
+    "genre": "Action-adventure, puzzle-platformer, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Prince of Persia: Warrior Within",
+    "genre": "Action-adventure, platform, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Prison Architect",
+    "genre": "Construction and management simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Project I.G.I.",
+    "genre": "Stealth game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Project Zomboid",
+    "genre": "Role-playing, survival horror",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Quake",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Quake II",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Quake III Arena",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Quake 4",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Rage",
+    "genre": "First-person shooter, action-adventure, vehicular combat, racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Railroad Tycoon",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Railroad Tycoon 3",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman 2: The Great Escape",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman 3: Hoodlum Havoc",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman Legends",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman M/Arena",
+    "genre": "Party",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rayman Origins",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Recettear: An Item Shop's Tale",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rec Room",
+    "genre": "Action RPG, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Red Orchestra: Ostfront 41-45",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Red Orchestra 2: Heroes of Stalingrad",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Reign of Kings",
+    "genre": "Sandbox, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil 2",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil 3: Nemesis",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil 4",
+    "genre": "Survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil 5",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil 6",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil: Operation Raccoon City",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil: Revelations",
+    "genre": "Action, survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Resident Evil: Revelations 2\nFebruary 24, 2015",
+    "genre": "Action, survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "",
+    "genre": "",
+    "console": [ 9 ]
+  },
+  {
+    "name": "February 24, 2015",
+    "genre": "March 17, 2015",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Retrobooster",
+    "genre": "Action, arcade, multidirectional shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Return of the Obra Dinn",
+    "genre": "Adventure, Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ricochet",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ride",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rise of Nations",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rise of Nations: Rise of Legends",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rise of Nations: Thrones and Patriots",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rise of the Tomb Raider",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Robot Roller-Derby Disco Dodgeball",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rock 'n' Roll Adventures",
+    "genre": "Platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rocket League\nJuly 7, 2015",
+    "genre": "Vehicular Soccer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "",
+    "genre": "",
+    "console": [ 9 ]
+  },
+  {
+    "name": "July 7, 2015",
+    "genre": "November 14, 2017",
+    "console": [ 9 ]
+  },
+  {
+    "name": "RollerCoaster Tycoon",
+    "genre": "Simulation game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "RollerCoaster Tycoon 2",
+    "genre": "Simulation game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "RollerCoaster Tycoon 3",
+    "genre": "Simulation game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rome: Total War",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rome: Total War: Alexander",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rome: Total War: Barbarian Invasion",
+    "genre": "Turn-based strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Roundabout",
+    "genre": "Open-world driving game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "RuneScape",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Rust",
+    "genre": "Open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Ryse: Son of Rome",
+    "genre": "Action-adventure, hack and slash",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Sacred",
+    "genre": "Action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Saints Row 2",
+    "genre": "Action-adventure, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Saints Row: The Third",
+    "genre": "Action-adventure, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Saints Row IV",
+    "genre": "Action-adventure, open world",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Scrapland",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Scrolls",
+    "genre": "Tactical CCG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Secret of the Silver Blades",
+    "genre": "Fantasy, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sengoku",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Shadow of the Tomb Raider",
+    "genre": "action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Shogun: Total War",
+    "genre": "Turn-based strategy, real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ShootMania Storm",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sid Meier's Railroads!",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silent Hunter",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silent Hunter II",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silent Hunter III",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silent Hunter 4: Wolves of the Pacific",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silent Hunter 5: Battle of the Atlantic",
+    "genre": "Submarine simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Silkroad Online",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SimCity",
+    "genre": "City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SimCity 2000",
+    "genre": "City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SimCity 3000",
+    "genre": "City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SimCity 4",
+    "genre": "City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SimCity Societies",
+    "genre": "City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sins of a Solar Empire",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sleeping Dogs",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Smite",
+    "genre": "MOBA",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sonic Heroes",
+    "genre": "platform",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sonic & Knuckles Collection",
+    "genre": "platform, compilation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Space Engineers",
+    "genre": "Sandbox, simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Space Station 13",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SpaceChem",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Spore",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Spore: Galactic Adventures",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "S.T.A.L.K.E.R.: Call of Pripyat",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "S.T.A.L.K.E.R.: Clear Sky",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Starbound",
+    "genre": "Action-adventure, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Citizen",
+    "genre": "Space trading and combat simulator, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Trek Online",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: Empire At War",
+    "genre": "Real-time strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars Galaxies",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: Knights of the Old Republic",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: Knights of the Old Republic II – The Sith Lords",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: Republic Commando",
+    "genre": "Tactical shooter, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: The Old Republic",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: TIE Fighter",
+    "genre": "Flight simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Star Wars: X-Wing",
+    "genre": "Flight simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "StarCraft",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "StarCraft: Brood War",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "StarCraft II: Heart of the Swarm",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "StarCraft II: Wings of Liberty",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stardew Valley",
+    "genre": "Farming simulation, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "StarDrive",
+    "genre": "4X, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Starsector",
+    "genre": "4X, strategy, action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Starsiege: Tribes",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "State of Decay",
+    "genre": "Stealth, survival horror, RPG, third-person shooter, simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stellar Monarch",
+    "genre": "4X, strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Street Racing Syndicate'",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold 2",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold 3",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold: Crusader",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold: Crusader Extreme",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold Kingdoms",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Stronghold Legends",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Sunset Overdrive",
+    "genre": "Action-adventure, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Super Meat Boy",
+    "genre": "Platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Supreme Commander",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Surf's Up",
+    "genre": "Sports",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SWAT 3: Close Quarters Battle",
+    "genre": "First-person shooter, tactical shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "SWAT 4",
+    "genre": "First-person shooter, tactical shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "System Shock",
+    "genre": "Action-adventure, RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "System Shock 2",
+    "genre": "Action RPG, survival horror",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Team Fortress 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Team Fortress Classic",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Terraria",
+    "genre": "Action-adventure, survival",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Thomas Was Alone",
+    "genre": "Puzzle-platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Adventures of Fatman",
+    "genre": "Point-and-click adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Adventures of Lomax",
+    "genre": "2D platformer",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Lord of the Rings Online",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Matrix Online",
+    "genre": "Massively multiplayer online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Punisher (2005 video game)",
+    "genre": "Action, third-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sacred Hero",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Secret World",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Ship",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: Apartment Life",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: Bon Voyage",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: FreeTime",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: Nightlife",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: Open for Business",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: Seasons",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 2: University",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Generations",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Into the Future",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Island Paradise",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Late Night",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Seasons",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Showtime",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: Supernatural",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims 3: University Life",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Hot Date",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: House Party",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Livin' Large",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Makin' Magic",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Superstar",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Unleashed",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sims: Vacation",
+    "genre": "Life simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Song of Seven : Overture",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Stanley Parable",
+    "genre": "Interactive fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Sting!",
+    "genre": "Strategy, adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Thief",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Thief II: The Metal Age",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Thief: The Dark Project",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Thief: Deadly Shadows",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Titan Quest",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Blacklist",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Chaos Theory",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Conviction",
+    "genre": "Action-adventure, stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Double Agent",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Pandora Tomorrow",
+    "genre": "Stealth",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tomb Raider",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tomb Raider: Anniversary",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tomb Raider: Legend",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Torchlight",
+    "genre": "Action RPG, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Torchlight II",
+    "genre": "Action RPG, hack and slash",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Total Annihilation",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Total War: Rome II",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Total War: Shogun 2",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania 2: Canyon",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania Forever",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania Nations ESWC",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania Nations Forever",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania Sunrise",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "TrackMania United",
+    "genre": "Racing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Train Simulator",
+    "genre": "Simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Transistor",
+    "genre": "Action RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Trespasser",
+    "genre": "Action-adventure, first-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tribes 2",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tribes: Ascend",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tribes: Vengeance",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico",
+    "genre": "Construction and management simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico 2: Pirate Cove",
+    "genre": "Construction and management simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico 3",
+    "genre": "Construction and management simulation , City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico 4",
+    "genre": "Construction and management simulation , City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico 5",
+    "genre": "Construction and management simulation , City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Tropico 6",
+    "genre": "Construction and management simulation , City-building",
+    "console": [ 9 ]
+  },
+  {
+    "name": "True Love",
+    "genre": "Visual novel",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "ÜberSoldier",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Undertale",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Universe Sandbox",
+    "genre": "Casual, simulation, indie",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal Tournament",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal Tournament 2003",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal Tournament 2004",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal Tournament 3",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unreal Tournament 4",
+    "genre": "First-person shooter",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Unturned",
+    "genre": "Open-world, first-person shooter, RPG",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Vampire: The Masquerade – Bloodlines",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Vampire: The Masquerade – Redemption",
+    "genre": "Role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Victoria: An Empire Under The Sun",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Victoria II",
+    "genre": "Grand strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Vivisector: Beast Within",
+    "genre": "First-person shooter, survival horror",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Voxatron",
+    "genre": "Action-adventure",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "War of the Lance",
+    "genre": "Strategy",
+    "console": [ 9 ]
+  },
+  {
+    "name": "War of the Roses",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Warcraft: Orcs & Humans",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Warcraft III: Reign of Chaos",
+    "genre": "RTS",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wargame: AirLand Battle",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wargame: European Escalation",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wargame: Red Dragon",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Warhammer 40,000: Dawn of War II",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wasteland",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wasteland 2",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wheels of Aurelia",
+    "genre": "Visual Novel",
+    "console": [ 9 ]
+  },
+  {
+    "name": "White Night",
+    "genre": "Survival horror, noir",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Widelands",
+    "genre": "Widelands",
+    "console": [ 9 ]
+  },
+  {
+    "name": "WildStar",
+    "genre": "MMORPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Witcher",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "The Witcher 3: Wild Hunt",
+    "genre": "Action role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Wizards & Warriors",
+    "genre": "RPG",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World in Conflict",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World in Conflict: Soviet Assault",
+    "genre": "Real-time tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Goo",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Tanks",
+    "genre": "Action, MMO",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warplanes",
+    "genre": "Action, MMO",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: The Burning Crusade",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: Cataclysm",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: Legion",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: Mists of Pandaria",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: Warlords of Draenor",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  },
+  {
+    "name": "World of Warcraft: Wrath of the Lich King",
+    "genre": "Online role-playing game",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "X3: Terran Conflict",
+    "genre": "Space simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "X-Plane",
+    "genre": "Flight simulator",
+    "console": [ 9 ]
+  },
+  {
+    "name": "XCOM: Enemy Unknown",
+    "genre": "Turn-based tactics, tactical role-playing",
+    "console": [ 9 ]
+  },
+  {
+    "name": "XCOM: Enemy Within",
+    "genre": "Turn-based tactics",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Xenonauts",
+    "genre": "Turn-based tactics",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Youtubers Life",
+    "genre": "Life simulation, business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Yury",
+    "genre": "Action",
+    "console": [ 9 ]
+  }
+,
+  {
+    "name": "Zombie Driver",
+    "genre": "Vehicular combat",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ZoMGman! Battle Arena",
+    "genre": "Co-op Battle Arena",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ZoMGman! 2",
+    "genre": "Co-op Battle Arena",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2: African Adventure",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2: Dino Danger Pack",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2: Endangered Species",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2: Extinct Animals",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Tycoon 2: Marine Mania",
+    "genre": "Business simulation",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zoo Vet",
+    "genre": "",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zork: Grand Inquisitor",
+    "genre": "Adventure",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zork Zero",
+    "genre": "interactive fiction",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zuma's Revenge!",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup!",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 2",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 3",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 4",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 5",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 6",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 7",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! 8",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! Arena",
+    "genre": "Action ,MMO",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! X",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! Zero",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "Zup! Zero 2",
+    "genre": "Puzzle",
+    "console": [ 9 ]
+  },
+  {
+    "name": "ZZT",
+    "genre": "Action-adventure, Puzzle",
+    "console": [ 9 ]
+  }
+]
