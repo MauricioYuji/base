@@ -191,7 +191,14 @@ export class HomeComponent {
         obj['keyconsole'] = fullarray[i].console;
 
         if (fullarray[i].genre != undefined) {
-          obj['keygenre'] = fullarray[i].genre;
+          var loop = fullarray[i].genre.split(",");
+          var genre = [];
+          for (var j = 0; j < loop.length; j++) {
+            if (!genre.includes(loop[j].trim())) {
+              genre.push(loop[j].trim());
+            }
+          }
+          obj['keygenre'] = genre;
         }
         obj['img'] = "";
         newarray.push(obj);
@@ -199,9 +206,21 @@ export class HomeComponent {
         var index = newarray.indexOf(check[0]);
         if (fullarray[i].genre != undefined) {
           if (newarray[index].keygenre != undefined) {
-            newarray[index].keygenre += ", " + fullarray[i].genre;
+            var loop = fullarray[i].genre.split(",");
+            for (var j = 0; j < loop.length; j++) {
+              if (!newarray[index].keygenre.includes(loop[j].trim())) {
+                newarray[index].keygenre.push(loop[j].trim());
+              }
+            }
           } else {
-            newarray[index].keygenre = fullarray[i].genre;
+            var loop = fullarray[i].genre.split(",");
+            var genre = [];
+            for (var j = 0; j < loop.length; j++) {
+              if (!genre.includes(loop[j].trim())) {
+                genre.push(loop[j].trim());
+              }
+            }
+            newarray[index].keygenre = genre;
           }
         }
         newarray[index].keyconsole.push(fullarray[i].console[0]);
@@ -209,9 +228,21 @@ export class HomeComponent {
     }
     //console.log(JSON.stringify(newarray));
     console.log("newarray: ", newarray);
-    //for (var i = 0; i < newarray.length; i++) {
-    //  this.itemDoc.add(newarray[i]);
-    //}
+    var genres = [];
+    for (var i = 0; i < newarray.length; i++) {
+      //this.itemDoc.add(newarray[i]);
+      var loop = newarray[i].keygenre;
+      if (loop != undefined) {
+        for (var j = 0; j < loop.length; j++) {
+          if (!genres.includes(loop[j].trim())) {
+            genres.push(loop[j].trim());
+          }
+        }
+      }
+    }
+
+    console.log("genres: ", genres);
+    console.log(JSON.stringify(genres.sort()));
     console.log("END");
 
   }
