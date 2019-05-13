@@ -226,7 +226,7 @@ export class HomeComponent {
         newarray[index].keyconsole.push(fullarray[i].console[0]);
       }
     }
-    //console.log(JSON.stringify(newarray));
+    console.log(JSON.stringify(newarray));
     console.log("newarray: ", newarray);
     var genres = [];
     for (var i = 0; i < newarray.length; i++) {
