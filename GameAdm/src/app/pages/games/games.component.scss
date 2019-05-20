@@ -78,3 +78,29 @@
     }
   }
 }
+
+.pagination {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+
+  li {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    background-color: #CCC;
+    border-radius: 2px;
+    margin: 5px;
+
+    &.active {
+      background-color: #5B008C;
+      color: #FFF;
+    }
+  }
+}

@@ -10,7 +10,9 @@ import * as xbox360 from '../../../data/xbox360games.json';
 import * as xone from '../../../data/xonegames.json';
 import * as nintendoswitch from '../../../data/switchgames.json';
 import * as pc from '../../../data/pcgames.json';
+import * as consoles from '../../helpers/consoles.json';
 import * as listgames from '../../../data/games.json';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 
@@ -23,13 +25,24 @@ export class HomeComponent {
   title = 'GameAdm';
   private itemDoc: AngularFirestoreCollection<any>;
   private itemImg: AngularFirestoreCollection<any>;
-  constructor(private afs: AngularFirestore) {
-    this.itemDoc = afs.collection<any>('Games');
-    this.itemImg = afs.collection<any>('Assets');
+  constructor(private afs: AngularFirestore, private http: HttpClient) {
+    //this.itemDoc = afs.collection<any>('Games');
+    //this.itemImg = afs.collection<any>('Assets');
     //this.itemDoc.valueChanges().subscribe(p=> {
     //  console.log("p: ", p);
     //})
 
+    //const httpOptions = {
+    //  headers: new HttpHeaders({
+    //    'Content-Type': 'application/json',
+    //    'Authorization': 'my-auth-token',
+    //    'user-key': 'fa8b8b32261fae59328b181b9d201123'
+    //  })
+    //};
+
+    //this.http.get("https://api-v3.igdb.com/platforms/?fields=*", httpOptions).subscribe(p => {
+    //  console.log("p: ", p);
+    //})
   }
   update() {
     //var item = Object();
@@ -223,26 +236,89 @@ export class HomeComponent {
             newarray[index].keygenre = genre;
           }
         }
-        newarray[index].keyconsole.push(fullarray[i].console[0]);
-      }
-    }
-    console.log(JSON.stringify(newarray));
-    console.log("newarray: ", newarray);
-    var genres = [];
-    for (var i = 0; i < newarray.length; i++) {
-      //this.itemDoc.add(newarray[i]);
-      var loop = newarray[i].keygenre;
-      if (loop != undefined) {
-        for (var j = 0; j < loop.length; j++) {
-          if (!genres.includes(loop[j].trim())) {
-            genres.push(loop[j].trim());
-          }
+        if (!newarray[index].keyconsole.includes(fullarray[i].console[0])) {
+          newarray[index].keyconsole.push(fullarray[i].console[0]);
         }
       }
     }
 
-    console.log("genres: ", genres);
-    console.log(JSON.stringify(genres.sort()));
+    //var genresbase = [];
+
+    //for (let obj in consoles.default.Genres) {
+    //  var o = {};
+    //  o["key"] = obj;
+    //  o["name"] = consoles.default.Genres[obj].name;
+    //  genresbase.push(o);
+    //}
+
+    //var genres = [];
+    //for (var i = 0; i < newarray.length; i++) {
+    //  var loop = Object.assign([], newarray[i].keygenre);
+    //  if (loop != undefined) {
+    //    var newgenre = [];
+    //    for (var j = 0; j < loop.length; j++) {
+
+
+
+    //      //console.log("loop[j]: ", loop[j]);
+    //      var check = genresbase.filter(p => loop[j].includes(p.name.toLowerCase()));
+    //      if (check.length > 0) {
+    //        console.log("name: ", newarray[i].name);
+    //        console.log("check: ", check);
+    //        console.log("genres[i]: ", loop[j]);
+    //        for (var a = 0; a < check.length; a++) {
+    //          var val = parseInt(check[a].key);
+    //          if (!newgenre.includes(val)) {
+    //            newgenre.push(val);
+    //          }
+    //        }
+    //      }
+    //      console.log("-------------");
+
+
+
+    //      //if (!genres.includes(loop[j].trim().toLowerCase()) && loop[j].trim().toLowerCase() != "") {
+    //      //  genres.push(loop[j].trim().toLowerCase());
+    //      //}
+
+
+
+    //    }
+    //    newarray[i].keygenre = newgenre;
+
+
+    //  this.itemDoc.add(newarray[i]);
+    //  }
+    //}
+    //genres.sort();
+
+    console.log("newarray: ", newarray);
+    console.log(JSON.stringify(newarray));
+    //console.log("genres: ", genres);
+    //console.log(JSON.stringify(genres.sort()));
+
+    //var genresbase = consoles.default.Genres;
+    //genresbase = Object.assign([], genresbase);
+    //console.log("genresbase: ", genresbase);
+    //for (var i = 0; i < genres.length; i++) {
+    //  var check = genresbase.filter(p => genres[i].includes(p.name.toLowerCase()));
+    //  if (check.length > 0) {
+    //    console.log("check: ", check);
+    //    console.log("genres[i]: ", genres[i]);
+    //  }
+
+    //}
+
+
+    //for (var i = 0; i < genres.length; i++) {
+    //  var check = genresbase.filter(p => genres[i].includes(p.name.toLowerCase()));
+    //  if (check.length > 0) {
+    //    console.log("check: ", check);
+    //    console.log("genres[i]: ", genres[i]);
+    //  }
+    //  console.log("-------------");
+    //}
+
     console.log("END");
 
   }

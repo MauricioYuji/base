@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { Observable } from 'rxjs';
 import { Game } from '../../models/game.model'
@@ -21,44 +21,72 @@ export class GamesComponent {
   public games: Game[];
   public model: FormGroup;
   public search = '';
+  public lastitem = '';
+  public limit = 24;
+  public pages = [];
+  public currentpage = 0;
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
   private itemDoc: AngularFirestoreCollection<any>;
 
+
   constructor(private modalService: NgbModal, private service: gamesService, private formBuilder: FormBuilder, private afs: AngularFirestore) { }
 
+  //@HostListener("window:scroll", ["$event"])
+  //onWindowScroll() {
+  //  //In chrome and some browser scroll is given to body tag
+  //  let pos = document.documentElement.scrollTop + document.documentElement.clientHeight;
+  //  let max = document.documentElement.scrollHeight;
+  //  // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
+
+  //  if (pos == max) {
+  //    console.log("END PAGE");
+  //    //Do your action here
+  //  }
+  //}
+
   ngOnInit() {
-    //this.service.getAll().subscribe(p => {
-    //  this.games = p;
-    //  //console.log(" this.games: ", this.games);
-    //});
-
-
-
-    this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAfter("12-Sai. Torokeru Puzzle Futari no Harmony").limit(24));
-
-    console.log("itemDoc: ", this.itemDoc);
-    this.itemDoc.snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
-      )
-    ).subscribe(p => {
+    this.service.getAll().subscribe(p => {
       this.games = p;
-      console.log("p: ", p);
+      console.log(" this.games: ", this.games);
+    });
+
+    //this.lastitem = 'Terraria';
+
+    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAfter(this.lastitem).limit(this.limit));
+
+    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff'));
+
+    ////var count = this.afs.collection<any>('Games').snapshotChanges().pipe(map(c => {
+    ////  return c.length;
+    ////}));
+    ////count.subscribe(p => {
+    ////  this.pages = new Array(Math.ceil(p / 218));
+    ////  console.log("count: ", this.pages.length);
+    ////});
 
 
-      //var games = [];
-      //for (var item in p) {
-      //  const game = p[item];
-      //  game.img.get().then(snap => {
-      //    game.image = snap.data()
-      //    console.log("game: ", game);
-      //    this.games.push(game)
-      //  })
-      //}
-    })
+    //this.search = "";
+    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff').where('keygenre', 'array-contains', 11).limit(24));
+    //console.log("itemDoc: ", this.itemDoc);
+    //this.itemDoc.snapshotChanges().pipe(
+    //  map(changes =>
+    //    changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
+    //  )
+    //).subscribe(p => {
+    //  this.games = p;
+    //  console.log("p: ", p);
 
-
+    //  //var games = [];
+    //  //for (var item in p) {
+    //  //  const game = p[item];
+    //  //  game.img.get().then(snap => {
+    //  //    game.image = snap.data()
+    //  //    console.log("game: ", game);
+    //  //    this.games.push(game)
+    //  //  })
+    //  //}
+    //})
     this.model = this.formBuilder.group({
       key: [],
       name: ['', [Validators.required]],
@@ -110,6 +138,21 @@ export class GamesComponent {
   }
 
   changefilter() {
+
+
+    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff'));
+    //console.log("itemDoc: ", this.itemDoc);
+    //this.itemDoc.snapshotChanges().pipe(
+    //  map(changes =>
+    //    changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
+    //  )
+    //).subscribe(p => {
+    //  this.games = p;
+    //  console.log("p: ", p);
+
+    //})
+
+
     //console.log("this.search: ", this.search);
     var regex = new RegExp(this.search.toLowerCase(), 'g');
     this.service.getAll().pipe(

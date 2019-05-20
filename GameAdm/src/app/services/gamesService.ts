@@ -15,9 +15,9 @@ export class gamesService {
     this.itemImg = afs.collection<any>('Assets');
   }
   public getAll(): Observable<Game[]> {
-
+    var name = "Terra"
     var obj = this.db.list(this.basePath, ref =>
-      ref).snapshotChanges().pipe(
+      ref.orderByChild('name').startAt(name).endAt(name + '\uf8ff').limitToFirst(20)).snapshotChanges().pipe(
         map(changes =>
           changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
         )
