@@ -2,27 +2,32 @@ import { Injectable, Inject } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { Game } from '../models/game.model'
+import { Game, GameModel } from '../models/game.model'
 import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class gamesService {
   private basePath = '/Games';
+  private baseUrl = 'http://localhost:3000';
   private itemDoc: AngularFirestoreCollection<any>;
   private itemImg: AngularFirestoreCollection<any>;
-  constructor(private db: AngularFireDatabase, private afs: AngularFirestore) {
+  constructor(private db: AngularFireDatabase, private afs: AngularFirestore, private http: HttpClient) {
     this.itemDoc = afs.collection<any>('Games');
     this.itemImg = afs.collection<any>('Assets');
   }
-  public getAll(): Observable<Game[]> {
-    var name = "Terra"
-    var obj = this.db.list(this.basePath, ref =>
-      ref.orderByChild('name').startAt(name).endAt(name + '\uf8ff').limitToFirst(20)).snapshotChanges().pipe(
-        map(changes =>
-          changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-        )
-      );
-    return obj as Observable<Game[]>;
+  public getAll(page: number = 1): Observable<GameModel> {
+    //var name = "Terra"
+    //var obj = this.db.list(this.basePath, ref =>
+    //  ref.orderByChild('name').startAt(name).endAt(name + '\uf8ff').limitToFirst(20)).snapshotChanges().pipe(
+    //    map(changes =>
+    //      changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+    //    )
+    //  );
+    //return obj as Observable<Game[]>;
+
+    return this.http.get(this.baseUrl + "/games/?page=" + page) as Observable<GameModel>;
+
   }
 
   public insert(obj: any) {

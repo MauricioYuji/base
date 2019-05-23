@@ -24,7 +24,7 @@ export class GamesComponent {
   public lastitem = '';
   public limit = 24;
   public pages = [];
-  public currentpage = 0;
+  public currentpage = 1;
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
   private itemDoc: AngularFirestoreCollection<any>;
@@ -46,8 +46,9 @@ export class GamesComponent {
   //}
 
   ngOnInit() {
-    this.service.getAll().subscribe(p => {
-      this.games = p;
+    this.service.getAll(this.currentpage).subscribe(p => {
+      this.games = p.List;
+      this.pages = new Array(Math.ceil(p.Total / 10));
       console.log(" this.games: ", this.games);
     });
 

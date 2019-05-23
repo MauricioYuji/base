@@ -32,7 +32,7 @@
     </div>
   </ng-container>
   <ul class="pagination">
-    <li *ngFor="let item of pages; let i = index" [attr.data-index]="i" [ngClass]="{'active': i==currentpage}">
+    <li *ngFor="let item of pages; let i = index" [attr.data-index]="i" [ngClass]="{'active': i+1==currentpage}">
       {{i + 1}}
     </li>
   </ul>
