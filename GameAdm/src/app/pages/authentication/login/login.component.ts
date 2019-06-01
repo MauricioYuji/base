@@ -3,6 +3,7 @@ import { AuthService } from '../../../services/auth.service';
 import { LoginUser } from '../../../models/user.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CheckEmail } from '../../../validators/common.validator';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class LoginComponent {
   submitted = false;
 
 
-  constructor(private formBuilder: FormBuilder, public authService: AuthService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, public authService: AuthService) { }
   ngOnInit() {
     this.model = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -40,7 +41,15 @@ export class LoginComponent {
     console.log('SUCCESS!! :-)\n\n' + obj)
     console.log(objLogin);
 
-    this.authService.login(objLogin);
+    this.authService.login(objLogin).then(() => {
+      this.authService.getToken().subscribe(p => {
+        var obj:any = p;
+        console.log("token: ", obj.token);
+        
+        localStorage.setItem('token', obj.token);
+        this.router.navigate(['/']);
+      })
+    });
   }
-  
+
 }

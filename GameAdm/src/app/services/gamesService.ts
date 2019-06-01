@@ -12,11 +12,23 @@ export class gamesService {
   private baseUrl = 'http://localhost:3000';
   private itemDoc: AngularFirestoreCollection<any>;
   private itemImg: AngularFirestoreCollection<any>;
+
+  private headerDict = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
+  };
+
+  private requestOptions = {
+    headers: this.headerDict,
+  };
+
   constructor(private db: AngularFireDatabase, private afs: AngularFirestore, private http: HttpClient) {
     this.itemDoc = afs.collection<any>('Games');
     this.itemImg = afs.collection<any>('Assets');
   }
-  public getAll(page: number = 1): Observable<GameModel> {
+  public getAll(page: number = 1, perpage: number = 10, p: any = null): Observable<GameModel> {
     //var name = "Terra"
     //var obj = this.db.list(this.basePath, ref =>
     //  ref.orderByChild('name').startAt(name).endAt(name + '\uf8ff').limitToFirst(20)).snapshotChanges().pipe(
@@ -25,42 +37,65 @@ export class gamesService {
     //    )
     //  );
     //return obj as Observable<Game[]>;
+    var params = "";
+    params += "?page=" + page;
+    params += "&perpage=" + perpage;
+    if (p != null) {
+      if (p.s != "" && p.s != undefined)
+        params += "&s=" + p.s;
+      if (p.g != "" && p.g != undefined)
+        params += "&g=" + p.g;
+      if (p.c != "" && p.c != undefined)
+        params += "&c=" + p.c;
+    }
+    console.log("params: ", params);
 
-    return this.http.get(this.baseUrl + "/games/?page=" + page) as Observable<GameModel>;
+
+    return this.http.get(this.baseUrl + "/games/" + params, this.requestOptions) as Observable<GameModel>;
 
   }
 
   public insert(obj: any) {
+    delete obj['_id'];
+    console.log("INSERT: ", obj);
+
+    //var item = Object.assign({}, obj);
+    //delete item["key"];
+    //if (obj.img.key != undefined)
+    //  item.img = this.itemImg.doc(obj.img.key).ref;
+    //this.itemDoc.add(item);
 
 
-    var item = Object.assign({}, obj);
-    delete item["key"];
-    if (obj.img.key != undefined)
-      item.img = this.itemImg.doc(obj.img.key).ref;
-    this.itemDoc.add(item);
+    //const itemRef = this.db.list(this.basePath);
+    //itemRef.push(obj);
 
 
-    const itemRef = this.db.list(this.basePath);
-    itemRef.push(obj);
+    return this.http.post(this.baseUrl + "/games/add/", obj, this.requestOptions) as Observable<any>;
   }
-  public update(key: string, value: Game) {
-    let itemsRef = this.db.list(this.basePath);
-    delete value["key"];
-    itemsRef.update(key, value);
+  public update(key: string, obj: Game) {
+    delete obj['_id'];
+    console.log("UPDATE: ", JSON.stringify(obj));
+    //let itemsRef = this.db.list(this.basePath);
+    //delete value["key"];
+    //itemsRef.update(key, value);
 
 
 
-    var item = Object.assign({}, value);
-    delete item["key"];
-    //item.img = this.itemImg.doc(key).ref;
-    this.itemDoc.doc(key).update(item);
+    //var item = Object.assign({}, value);
+    //delete item["key"];
+    ////item.img = this.itemImg.doc(key).ref;
+    //this.itemDoc.doc(key).update(item);
+    return this.http.put(this.baseUrl + "/games/edit/" + key, obj, this.requestOptions) as Observable<any>;
 
   }
   public delete(key: string) {
-    const itemsRef = this.db.list(this.basePath);
-    itemsRef.remove(key);
+    console.log("DELETE: ", key);
+    //const itemsRef = this.db.list(this.basePath);
+    //itemsRef.remove(key);
 
 
-    this.itemDoc.doc(key).delete();
+    //this.itemDoc.doc(key).delete();
+
+    return this.http.delete(this.baseUrl + "/games/delete/" + key, this.requestOptions) as Observable<any>;
   }
 }

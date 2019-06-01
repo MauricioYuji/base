@@ -17,6 +17,7 @@ import { Observable } from 'rxjs';
 export class PickGenreComponent implements OnInit {
   category: any = "";
   public genres: Genre[];
+  public genre: string;
   @Input() selectedkey: string;
   @Output() submitted = new EventEmitter();
 
@@ -43,9 +44,10 @@ export class PickGenreComponent implements OnInit {
     return this.http.get("./src/app/helpers/consoles.json")
   }
   emitid(event) {
-    const id = event.target.value;
-    //genre.log(id);
-    this.selectedkey = id;
-    this.submitted.emit(id);
+    //const id = event.target.value;
+    ////genre.log(id);
+    //this.selectedkey = id;
+    this.submitted.emit(this.genre);
+    this.genre = "";
   }
 }

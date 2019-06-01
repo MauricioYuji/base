@@ -13,8 +13,6 @@ export class AuthGuard implements CanActivate {
 
 
   canActivate(): Observable<boolean> {
-    //console.log('check login:', this.loginService.checklogin());
-    //console.log('check user:', this.loginService.user());
     return this.loginService.user.pipe(map(p => {
       if (p != null) {
         return true;
@@ -23,20 +21,5 @@ export class AuthGuard implements CanActivate {
         return false;
       }
     }));
-
-    //if (this.loginService.checklogin()) {
-    //  return true;
-    //}else{
-    //  this.router.navigate(['/login']);
-    //  return false;
-    //}
-    //return this.loginService.user().map(e => {
-    //  if (e) {
-    //    return true;
-    //  }
-    //}).catch(() => {
-    //  this.router.navigate(['/login']);
-    //  return false;
-    //});
   }
 }

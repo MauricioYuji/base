@@ -1,7 +1,10 @@
 
-<div class="panel panel-primary">
-  <select (change)="emitid($event)">
+  <div class="panel panel-primary">
+    <!--<select (change)="emitid($event)">
     <option>Selecione um genre</option>
     <option *ngFor="let genre of genres" [value]="genre.key">{{genre.name}}</option>
-  </select>
-</div>
+  </select>-->
+
+    <input [(ngModel)]="genre" name="genre" />
+    <button type="button" (click)="emitid($event)">></button>
+  </div>

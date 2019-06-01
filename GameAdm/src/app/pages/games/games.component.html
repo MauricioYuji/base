@@ -15,9 +15,9 @@
       <div class="card-box">
         <div class="actions">
 
-          <i class="fas fa-edit" (click)="setedit(game.key)"></i>
-          <i class="fas fa-trash-alt" (click)="confirmdelete(game.key)"></i>
-          <input type="checkbox" [value]="game.key" [(ngModel)]="game.state">
+          <i class="fas fa-edit" (click)="setedit(game._id)"></i>
+          <i class="fas fa-trash-alt" (click)="confirmdelete(game._id)"></i>
+          <input type="checkbox" [value]="game._id" [(ngModel)]="game.state">
         </div>
         <!--<img src="{{game.image.url}}" alt="{{game.image.name}}" class="upload-img" />-->
         <!--<image *ngIf="game.img!=''" [key]="game.img"></image>-->
@@ -32,9 +32,10 @@
     </div>
   </ng-container>
   <ul class="pagination">
-    <li *ngFor="let item of pages; let i = index" [attr.data-index]="i" [ngClass]="{'active': i+1==currentpage}">
-      {{i + 1}}
-    </li>
+    <ng-container *ngFor="let item of pages; let i = index" [attr.data-index]="item">
+      <li *ngIf="item!='...'" (click)="changepage(item)" [ngClass]="{'active': item+1==currentpage}">{{item + 1}}</li>
+      <li *ngIf="item=='...'" [ngClass]="{'active': item+1==currentpage}">{{item}}</li>
+    </ng-container>
   </ul>
 </div>
 
@@ -64,7 +65,7 @@
         </div>
         <div class="form-group">
 
-          <div *ngFor="let genre of model.value.keygenre"><genre [key]="genre"></genre> <span (click)="excludegenre(genre)">X</span></div>
+          <div *ngFor="let genre of model.value.keygenre">{{genre}} <span (click)="excludegenre(genre)">X</span></div>
           <pick-genre [selectedkey]="model.value.keygenre" (submitted)='progressreturnimggenre($event)'></pick-genre>
         </div>
       </div>
@@ -93,6 +94,6 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancelar')">Cancelar</button>
-    <button type="button" class="btn btn-dark" (click)='deleteitem(model.value.key)'>Excluir</button>
+    <button type="button" class="btn btn-dark" (click)='deleteitem(model.value._id)'>Excluir</button>
   </div>
 </ng-template>

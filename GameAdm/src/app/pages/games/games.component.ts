@@ -25,6 +25,7 @@ export class GamesComponent {
   public limit = 24;
   public pages = [];
   public currentpage = 1;
+  public totalpages = 0;
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
   private itemDoc: AngularFirestoreCollection<any>;
@@ -46,61 +47,54 @@ export class GamesComponent {
   //}
 
   ngOnInit() {
-    this.service.getAll(this.currentpage).subscribe(p => {
+    this.service.getAll(this.currentpage, this.limit).subscribe(p => {
       this.games = p.List;
-      this.pages = new Array(Math.ceil(p.Total / 10));
+      this.totalpages = Math.ceil(p.Total / this.limit) - 1;
+      this.generatePagination();
       console.log(" this.games: ", this.games);
     });
 
-    //this.lastitem = 'Terraria';
-
-    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAfter(this.lastitem).limit(this.limit));
-
-    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff'));
-
-    ////var count = this.afs.collection<any>('Games').snapshotChanges().pipe(map(c => {
-    ////  return c.length;
-    ////}));
-    ////count.subscribe(p => {
-    ////  this.pages = new Array(Math.ceil(p / 218));
-    ////  console.log("count: ", this.pages.length);
-    ////});
-
-
-    //this.search = "";
-    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff').where('keygenre', 'array-contains', 11).limit(24));
-    //console.log("itemDoc: ", this.itemDoc);
-    //this.itemDoc.snapshotChanges().pipe(
-    //  map(changes =>
-    //    changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
-    //  )
-    //).subscribe(p => {
-    //  this.games = p;
-    //  console.log("p: ", p);
-
-    //  //var games = [];
-    //  //for (var item in p) {
-    //  //  const game = p[item];
-    //  //  game.img.get().then(snap => {
-    //  //    game.image = snap.data()
-    //  //    console.log("game: ", game);
-    //  //    this.games.push(game)
-    //  //  })
-    //  //}
-    //})
     this.model = this.formBuilder.group({
-      key: [],
+      _id: [''],
       name: ['', [Validators.required]],
       keyconsole: [[], [Validators.required]],
       keygenre: [[], [Validators.required]],
       img: ['']
     });
   }
+  generatePagination() {
+
+    var pages = [];
+    var startI = (this.currentpage - 3) < 0 ? 0 : this.currentpage - 3;
+    var limitI = (this.currentpage + 3) > this.totalpages ? this.totalpages : this.currentpage + 3;
+    var diff = (startI == 0) ? 3 - this.currentpage : (limitI == this.totalpages ? (this.totalpages - this.currentpage) - 3 : 0);
+    if (startI > 0) {
+      pages.push(0);
+    }
+    if (startI > 1) {
+      pages.push('...');
+    }
+
+    for (var i = diff < 0 ? diff + startI : startI; i < this.currentpage; i++) {
+      pages.push(i);
+    }
+    for (var i = this.currentpage; i <= (diff > 0 ? diff + limitI : limitI); i++) {
+      pages.push(i);
+    }
+
+    if (limitI < this.totalpages - 1) {
+      pages.push('...');
+    }
+    if (limitI < this.totalpages) {
+      pages.push(this.totalpages);
+    }
+    this.pages = pages;
+  }
   open(content) {
     this.modalService.open(content, { size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole: [], keygenre: [] });
+      this.model.setValue({ name: "", img: "", _id: "", keyconsole: [], keygenre: [] });
     }, (reason) => {
-      this.model.setValue({ name: "", img: "", key: "", keyconsole: [], keygenre: [] });
+        this.model.setValue({ name: "", img: "", _id: "", keyconsole: [], keygenre: [] });
     });
   }
   private getDismissReason(reason: any): string {
@@ -120,55 +114,38 @@ export class GamesComponent {
     }
 
     var objstring = JSON.stringify(this.model.value);
-    console.log('SUCCESS!! :-)\n\n' + objstring);
+    //console.log('SUCCESS!! :-)\n\n' + objstring);
     var obj = new Game(this.model.value);
     //obj.key = null;
     obj.name = this.model.value.name;
-    obj.img = this.model.value.img;
+    obj.img = JSON.stringify(this.model.value.img);
     obj.keyconsole = this.model.value.keyconsole
     obj.keygenre = this.model.value.keygenre
 
-    console.log('obj.key' + obj.key);
-    if (obj.key == null || obj.key == "") {
-      this.service.insert(obj);
+    //console.log('obj._id' + obj._id);
+    if (obj._id == null || obj._id == "") {
+      this.service.insert(obj).subscribe(() => {
+        this.changefilter();
+      });
     } else {
-      this.service.update(obj.key, obj);
+      this.service.update(obj._id, obj).subscribe(() => {
+        this.changefilter();
+      });
     }
 
     this.modalService.dismissAll();
   }
 
   changefilter() {
-
-
-    //this.itemDoc = this.afs.collection<any>('Games', ref => ref.orderBy('name').startAt(this.search).endAt(this.search + '\uf8ff'));
-    //console.log("itemDoc: ", this.itemDoc);
-    //this.itemDoc.snapshotChanges().pipe(
-    //  map(changes =>
-    //    changes.map(c => ({ key: c.payload.doc.ref.id, ...c.payload.doc.data() }))
-    //  )
-    //).subscribe(p => {
-    //  this.games = p;
-    //  console.log("p: ", p);
-
-    //})
-
-
-    //console.log("this.search: ", this.search);
-    var regex = new RegExp(this.search.toLowerCase(), 'g');
-    this.service.getAll().pipe(
-      map(a => a.filter(
-        function (item) {
-          var match = false;
-          match = item.name.toLowerCase().match(regex) != null;
-          if (match) {
-            return true;
-          }
-
-        }
-      ))
-    ).subscribe(p => {
-      this.games = p;
+    var obj = {};
+    if (this.search != "")
+      obj['s'] = this.search;
+    console.log("obj: ", obj);
+    this.service.getAll(this.currentpage, this.limit, obj).subscribe(p => {
+      this.games = p.List;
+      var totalpages = Math.ceil(p.Total / this.limit);
+      this.generatePagination();
+      console.log(" this.games: ", this.games);
     });
   }
 
@@ -188,17 +165,21 @@ export class GamesComponent {
     });
   }
   deleteitem(key) {
-    //console.log("DELETE: ", key);
-    this.service.delete(key);
+    console.log("DELETE: ", key);
+    this.service.delete(key).subscribe(() => {
+      this.changefilter();
+    });;
     this.modalService.dismissAll("Confirm");
   }
   private setedit(key: string) {
-    var obj = new Game(this.games.filter(p => p.key == key)[0]);
-    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
+    console.log("key: ", key);
+    var obj = new Game(this.games.filter(p => p._id == key)[0]);
+    console.log("obj: ", obj);
+    this.model.setValue({ name: obj.name, img: obj.img, _id: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
     this.open(this.content);
   }
   private progressreturnimg(obj) {
-    this.model.setValue({ name: this.model.value.name, img: obj, key: this.model.value.key, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
+    this.model.setValue({ name: this.model.value.name, img: obj, _id: this.model.value._id, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
 
   }
   private progressreturnimgconsole(obj) {
@@ -206,7 +187,7 @@ export class GamesComponent {
     array.push(obj)
     //console.log("array: ", array);
     //console.log("this.model: ", this.model);
-    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: array, keygenre: this.model.value.keygenre })
+    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, _id: this.model.value._id, keyconsole: array, keygenre: this.model.value.keygenre })
 
   }
   private progressreturnimggenre(obj) {
@@ -214,12 +195,14 @@ export class GamesComponent {
     array.push(obj)
     //console.log("array: ", array);
     //console.log("this.model: ", this.model);
-    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, key: this.model.value.key, keyconsole: this.model.value.keyconsole, keygenre: array })
+    this.model.setValue({ name: this.model.value.name, img: this.model.value.img, _id: this.model.value._id, keyconsole: this.model.value.keyconsole, keygenre: array })
 
   }
   private confirmdelete(key: string) {
-    var obj = new Game(this.games.filter(p => p.key == key)[0]);
-    this.model.setValue({ name: obj.name, img: obj.img, key: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
+    console.log("key: ", key);
+    var obj = new Game(this.games.filter(p => p._id == key)[0]);
+    console.log("obj: ", obj);
+    this.model.setValue({ name: obj.name, img: obj.img, _id: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
     this.open(this.confirm);
   }
   private excludeconsole(key: string) {
@@ -231,5 +214,9 @@ export class GamesComponent {
     //console.log("exclude ID: ", key);
     this.model.value.keygenre.splice(this.model.value.keygenre.indexOf('key'), 1);
     //console.log("array: ", this.model.value.keyconsole);
+  }
+  private changepage(page: number) {
+    this.currentpage = page + 1;
+    this.changefilter();
   }
 }

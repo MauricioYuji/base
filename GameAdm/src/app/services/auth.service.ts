@@ -8,14 +8,16 @@ import { map } from 'rxjs/operators';
 import { FirebaseAuth } from 'angularfire2';
 import { Router } from '@angular/router';
 import { LoginUser } from '../models/user.model';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable()
 export class AuthService {
   user: Observable<firebase.User>;
   islogged: boolean = false;
+  private baseUrl = 'http://localhost:3000';
 
-  constructor(private firebaseAuth: AngularFireAuth, private router: Router) {
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router, private http: HttpClient) {
     this.user = firebaseAuth.authState;
   }
   checklogin(): boolean {
@@ -26,7 +28,11 @@ export class AuthService {
     //}));
     return true;
   }
+  public getToken(): Observable<string> {
+    var obj = { "password": "password", "username": "admin" };
+    return this.http.post(this.baseUrl + "/login", obj) as Observable<string>;
 
+  }
   signup(email: string, password: string) {
     this.firebaseAuth
       .auth
@@ -40,15 +46,17 @@ export class AuthService {
   }
 
   login(obj: LoginUser) {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(obj.email, obj.password)
-      .then(value => {
-        this.router.navigate(['/']);
+      .then(() => {
+        //this.router.navigate(['/']);
         console.log('Nice, it worked!');
+        return true;
       })
       .catch(err => {
         console.log('Something went wrong:', err.message);
+        return false;
       });
   }
 
