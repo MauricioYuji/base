@@ -1,4 +1,5 @@
 export class Game {
+    [x: string]: any;
   _id: string;
   name: string;
   img: any;

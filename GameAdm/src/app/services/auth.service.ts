@@ -9,16 +9,17 @@ import { FirebaseAuth } from 'angularfire2';
 import { Router } from '@angular/router';
 import { LoginUser } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from './base.service';
 
 
 @Injectable()
 export class AuthService {
-  user: Observable<firebase.User>;
+  user: Observable<any>;
   islogged: boolean = false;
   private baseUrl = 'http://localhost:3000';
 
-  constructor(private firebaseAuth: AngularFireAuth, private router: Router, private http: HttpClient) {
-    this.user = firebaseAuth.authState;
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router, private http: HttpClient, private base: BaseService) {
+    this.user = new Observable(o => o.next(sessionStorage.getItem('user')));
   }
   checklogin(): boolean {
     this.user
@@ -28,9 +29,16 @@ export class AuthService {
     //}));
     return true;
   }
-  public getToken(): Observable<string> {
-    var obj = { "password": "password", "username": "admin" };
-    return this.http.post(this.baseUrl + "/login", obj) as Observable<string>;
+  public getToken(): Observable<any> {
+    var storage = sessionStorage.getItem('user'));
+
+    console.log("storage: ", storage);
+    var obj = {};
+    if (storage != undefined && storage != null) {
+      obj = { "username": JSON.parse(storage).user };
+    }
+    console.log("obj: ", obj);
+    return this.base.post(this.baseUrl + "/token", obj) as Observable<any>;
 
   }
   signup(email: string, password: string) {
@@ -45,25 +53,42 @@ export class AuthService {
       });
   }
 
-  login(obj: LoginUser) {
-    return this.firebaseAuth
-      .auth
-      .signInWithEmailAndPassword(obj.email, obj.password)
-      .then(() => {
-        //this.router.navigate(['/']);
-        console.log('Nice, it worked!');
-        return true;
-      })
-      .catch(err => {
-        console.log('Something went wrong:', err.message);
-        return false;
-      });
+  login(obj: LoginUser): Observable<any> {
+
+    var obj = { "password": obj.password, "username": obj.username };
+    return this.http.post(this.baseUrl + "/login", obj).pipe(map((objResp) => {
+      var u: any = objResp;
+      console.log("token: ", u.token);
+
+
+
+      var user = { user: obj.username, token: u.token };
+      sessionStorage.setItem('user', JSON.stringify(user));
+      this.user = new Observable(o => o.next(user));
+
+
+      return this.user;
+    }));
+
+    //return this.firebaseAuth
+    //  .auth
+    //  .signInWithEmailAndPassword(obj.email, obj.password)
+    //  .then(() => {
+    //    //this.router.navigate(['/']);
+    //    console.log('Nice, it worked!');
+    //    return true;
+    //  })
+    //  .catch(err => {
+    //    console.log('Something went wrong:', err.message);
+    //    return false;
+    //  });
   }
 
   logout() {
-    this.firebaseAuth
-      .auth
-      .signOut();
+    //this.firebaseAuth
+    //  .auth
+    //  .signOut();
+    this.user = null;
     this.router.navigate(['/login']);
   }
 

@@ -31,11 +31,20 @@
 
     </div>
   </ng-container>
+
   <ul class="pagination">
+    <li *ngIf="currentpage > 0" class="page-item">
+      <a class="page-link" (click)="changepage(currentpage-1)"><</a>
+    </li>
+
     <ng-container *ngFor="let item of pages; let i = index" [attr.data-index]="item">
-      <li *ngIf="item!='...'" (click)="changepage(item)" [ngClass]="{'active': item+1==currentpage}">{{item + 1}}</li>
-      <li *ngIf="item=='...'" [ngClass]="{'active': item+1==currentpage}">{{item}}</li>
+      <li *ngIf="item!='...'" (click)="changepage(item)" class="page-item" [ngClass]="{'active': item==currentpage}"><a class="page-link">{{item + 1}} <span class="sr-only">(current)</span></a></li>
+      <li *ngIf="item=='...'" [ngClass]="{'active': item+1==currentpage}"><a class="page-link">{{item}} <span class="sr-only">(current)</span></a></li>
     </ng-container>
+
+    <li *ngIf="currentpage < totalpages" class="page-item">
+      <a class="page-link" (click)="changepage(currentpage+1)">></a>
+    </li>
   </ul>
 </div>
 

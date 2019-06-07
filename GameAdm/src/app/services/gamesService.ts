@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { Game, GameModel } from '../models/game.model'
+import { BaseService } from './base.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,18 +14,8 @@ export class gamesService {
   private itemDoc: AngularFirestoreCollection<any>;
   private itemImg: AngularFirestoreCollection<any>;
 
-  private headerDict = {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Authorization': 'Bearer ' + localStorage.getItem('token')
-  };
 
-  private requestOptions = {
-    headers: this.headerDict,
-  };
-
-  constructor(private db: AngularFireDatabase, private afs: AngularFirestore, private http: HttpClient) {
+  constructor(private db: AngularFireDatabase, private afs: AngularFirestore, private http: BaseService) {
     this.itemDoc = afs.collection<any>('Games');
     this.itemImg = afs.collection<any>('Assets');
   }
@@ -48,10 +39,10 @@ export class gamesService {
       if (p.c != "" && p.c != undefined)
         params += "&c=" + p.c;
     }
-    console.log("params: ", params);
+    //console.log("params: ", params);
 
 
-    return this.http.get(this.baseUrl + "/games/" + params, this.requestOptions) as Observable<GameModel>;
+    return this.http.get(this.baseUrl + "/games/" + params) as Observable<GameModel>;
 
   }
 
@@ -70,7 +61,7 @@ export class gamesService {
     //itemRef.push(obj);
 
 
-    return this.http.post(this.baseUrl + "/games/add/", obj, this.requestOptions) as Observable<any>;
+    return this.http.post(this.baseUrl + "/games/add/", obj) as Observable<any>;
   }
   public update(key: string, obj: Game) {
     delete obj['_id'];
@@ -85,7 +76,7 @@ export class gamesService {
     //delete item["key"];
     ////item.img = this.itemImg.doc(key).ref;
     //this.itemDoc.doc(key).update(item);
-    return this.http.put(this.baseUrl + "/games/edit/" + key, obj, this.requestOptions) as Observable<any>;
+    return this.http.put(this.baseUrl + "/games/edit/" + key, obj) as Observable<any>;
 
   }
   public delete(key: string) {
@@ -96,6 +87,6 @@ export class gamesService {
 
     //this.itemDoc.doc(key).delete();
 
-    return this.http.delete(this.baseUrl + "/games/delete/" + key, this.requestOptions) as Observable<any>;
+    return this.http.delete(this.baseUrl + "/games/delete/" + key) as Observable<any>;
   }
 }

@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "croppie": "^2.6.2",
     "firebase": "^5.5.0",
+    "moment": "^2.24.0",
     "ngx-image-cropper": "^1.2.2",
     "node-sass": "^4.9.3",
     "rxjs": "~6.2.0",

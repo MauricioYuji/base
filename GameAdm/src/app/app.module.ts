@@ -24,6 +24,7 @@ import { CardComponent } from './components/card/card.component';
 import { NgbdModalBasic } from './components/modal/modal.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { BaseService } from './services/base.service';
 import { gamesService } from './services/gamesService';
 import { AuthService } from './services/auth.service';
 import { CompaniesService } from './services/companies.service';
@@ -84,6 +85,7 @@ import { PickGenreComponent } from './components/dropdowns/pick-genre/pick-genre
     ImageCropperModule
   ],
   providers: [
+    BaseService,
     gamesService,
     AuthService,
     AuthGuard,

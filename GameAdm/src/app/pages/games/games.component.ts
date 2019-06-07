@@ -24,7 +24,7 @@ export class GamesComponent {
   public lastitem = '';
   public limit = 24;
   public pages = [];
-  public currentpage = 1;
+  public currentpage = 0;
   public totalpages = 0;
   @ViewChild('content') content: ElementRef;
   @ViewChild('confirm') confirm: ElementRef;
@@ -47,7 +47,7 @@ export class GamesComponent {
   //}
 
   ngOnInit() {
-    this.service.getAll(this.currentpage, this.limit).subscribe(p => {
+    this.service.getAll(this.currentpage+1, this.limit).subscribe(p => {
       this.games = p.List;
       this.totalpages = Math.ceil(p.Total / this.limit) - 1;
       this.generatePagination();
@@ -64,28 +64,59 @@ export class GamesComponent {
   }
   generatePagination() {
 
+    //var pages = [];
+    //var startI = (this.currentpage - 3) < 0 ? 0 : this.currentpage - 3;
+    //var limitI = (this.currentpage + 3) > this.totalpages ? this.totalpages : this.currentpage + 3;
+    //var diff = (startI == 0) ? 3 - this.currentpage : (limitI == this.totalpages ? (this.totalpages - this.currentpage) - 3 : 0);
+    //if (startI > 0) {
+    //  pages.push(0);
+    //}
+    //if (startI > 1) {
+    //  pages.push('...');
+    //}
+
+    //for (var i = diff < 0 ? diff + startI : startI; i < this.currentpage; i++) {
+    //  pages.push(i);
+    //}
+    //for (var i = this.currentpage; i <= (diff > 0 ? diff + limitI : limitI); i++) {
+    //  pages.push(i);
+    //}
+
+    //if (limitI < this.totalpages - 1) {
+    //  pages.push('...');
+    //}
+    //if (limitI < this.totalpages) {
+    //  pages.push(this.totalpages);
+    //}
+    //this.pages = pages;
+
+
     var pages = [];
-    var startI = (this.currentpage - 3) < 0 ? 0 : this.currentpage - 3;
-    var limitI = (this.currentpage + 3) > this.totalpages ? this.totalpages : this.currentpage + 3;
-    var diff = (startI == 0) ? 3 - this.currentpage : (limitI == this.totalpages ? (this.totalpages - this.currentpage) - 3 : 0);
-    if (startI > 0) {
+    if (this.totalpages < 9) {
+      for (var i = 0; i < this.totalpages; i++) {
+        pages.push(i);
+      }
+    } else {
       pages.push(0);
-    }
-    if (startI > 1) {
-      pages.push('...');
-    }
 
-    for (var i = diff < 0 ? diff + startI : startI; i < this.currentpage; i++) {
-      pages.push(i);
-    }
-    for (var i = this.currentpage; i <= (diff > 0 ? diff + limitI : limitI); i++) {
-      pages.push(i);
-    }
+      var startDiff = this.currentpage - 2;
+      var limitDiff = this.currentpage + 2;
+      var fator = startDiff < 0 ? startDiff : limitDiff - this.totalpages > 0 ? limitDiff - this.totalpages : 0;
+      var startI = startDiff < 0 ? 0 : fator > 0 ? startDiff - fator : startDiff;
+      var limitI = limitDiff > this.totalpages ? this.totalpages : fator < 0 ? limitDiff - fator : limitDiff;
+      if (startI > 1) {
+        pages.push("...");
+      }
 
-    if (limitI < this.totalpages - 1) {
-      pages.push('...');
-    }
-    if (limitI < this.totalpages) {
+      for (var i = startI; i <= limitI; i++) {
+        if (i != 0 && i != this.totalpages)
+          pages.push(i);
+      }
+
+      if (limitI < this.totalpages - 1) {
+        pages.push("...");
+      }
+
       pages.push(this.totalpages);
     }
     this.pages = pages;
@@ -94,7 +125,7 @@ export class GamesComponent {
     this.modalService.open(content, { size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.model.setValue({ name: "", img: "", _id: "", keyconsole: [], keygenre: [] });
     }, (reason) => {
-        this.model.setValue({ name: "", img: "", _id: "", keyconsole: [], keygenre: [] });
+      this.model.setValue({ name: "", img: "", _id: "", keyconsole: [], keygenre: [] });
     });
   }
   private getDismissReason(reason: any): string {
@@ -141,7 +172,7 @@ export class GamesComponent {
     if (this.search != "")
       obj['s'] = this.search;
     console.log("obj: ", obj);
-    this.service.getAll(this.currentpage, this.limit, obj).subscribe(p => {
+    this.service.getAll(this.currentpage+1, this.limit, obj).subscribe(p => {
       this.games = p.List;
       var totalpages = Math.ceil(p.Total / this.limit);
       this.generatePagination();
@@ -159,9 +190,9 @@ export class GamesComponent {
   }
   deleteselected() {
     var games = this.games.filter(p => p.state);
-
+    console.log("games: ", games);
     games.forEach(x => {
-      this.deleteitem(x.key);
+      this.deleteitem(x._id);
     });
   }
   deleteitem(key) {
@@ -216,7 +247,7 @@ export class GamesComponent {
     //console.log("array: ", this.model.value.keyconsole);
   }
   private changepage(page: number) {
-    this.currentpage = page + 1;
+    this.currentpage = page;
     this.changefilter();
   }
 }

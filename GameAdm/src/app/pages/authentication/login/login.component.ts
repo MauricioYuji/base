@@ -33,7 +33,7 @@ export class LoginComponent {
       return;
     }
     const objLogin: LoginUser = {
-      email: this.model.value.email,
+      username: this.model.value.email,
       password: this.model.value.password
     };
 
@@ -41,14 +41,10 @@ export class LoginComponent {
     console.log('SUCCESS!! :-)\n\n' + obj)
     console.log(objLogin);
 
-    this.authService.login(objLogin).then(() => {
-      this.authService.getToken().subscribe(p => {
-        var obj:any = p;
-        console.log("token: ", obj.token);
-        
-        localStorage.setItem('token', obj.token);
-        this.router.navigate(['/']);
-      })
+    this.authService.login(objLogin).subscribe(p => {
+      //this.authService.getToken().subscribe(p => {
+      this.router.navigate(['/']);
+      //})
     });
   }
 
