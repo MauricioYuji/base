@@ -1,11 +1,47 @@
 <div>
-  <button *ngIf="!allowselect" (click)="showselect()">Selecione uma imagem</button>
+  <button *ngIf="!allowselect" (click)="showselect()">Subir outra imagem</button>
 
-  <img src="{{selectedkey.url}}" alt="{{selectedkey.name}}" class="upload-img" />
+  <img *ngIf="img != null" src="{{img.img}}" class="upload-img" />
+
+
+  <!--<div *ngIf="currentFileUpload" class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped"
+         role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+         aria-valuemin="0" aria-valuemax="100"
+         [ngStyle]="{width:progress.percentage+'%'}">
+      {{progress.percentage}}%
+    </div>
+  </div>-->
+  <ng-container *ngIf="allowselect">
+
+    <!--<input type="text" [(ngModel)]="name" class="form-control" placeholder="Nome" />-->
+    <input type="file" (change)="fileChangeEvent($event)" />
+
+    <image-cropper [imageChangedEvent]="imageChangedEvent"
+                   [maintainAspectRatio]="maintainAspectRatio"
+                   [aspectRatio]="aspect"
+                   [resizeToWidth]="768"
+                   [onlyScaleDown]="true"
+                   format="png, jpg, jpeg"
+                   (imageCropped)="imageCropped($event)"
+                   (imageLoaded)="imageLoaded()"
+                   (loadImageFailed)="loadImageFailed()" *ngIf="imageChangedEvent"></image-cropper>
+
+    <img [src]="croppedImage" *ngIf="preview" />
+    <select (change)="changeaspect($event)" [(ngModel)]="options" id="category">
+      <option value="" disabled selected>select a category</option>
+      <option *ngFor="let item of typelist" [ngValue]="item">{{item.category}}</option>
+    </select>
+
+    <button class="btn btn-success" [disabled]="!selectedFiles"
+            (click)="imageSave()">
+      Upload
+    </button>
+  </ng-container>
   <!--<image *ngIf="selectedkey!=''" [key]='selectedkey'></image>-->
 </div>
 
-<div class="panel panel-primary" *ngIf="allowselect">
+<!--<div class="panel panel-primary" *ngIf="allowselect">
   <ng-container *ngFor="let file of fileUploads">
     <div class="panel-body" [ngClass]="{
   active: selectedkey==file.key
@@ -18,4 +54,4 @@
       </div>
     </div>
   </ng-container>
-</div>
+</div>-->

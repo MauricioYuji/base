@@ -80,7 +80,7 @@ export class BaseService {
     hd.set('Accept', 'application/json');
     hd.set('Access-Control-Allow-Headers', 'Content-Type');
     hd.set('Access-Control-Allow-Origin', '*');
-
+    
     return this.http.get(url, { headers: hd })
       .pipe(map((resp) => this.handleResponse(resp)))
       .pipe(catchError((error) => this.handleError(error)));

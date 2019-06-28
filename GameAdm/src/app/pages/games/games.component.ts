@@ -18,7 +18,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 })
 export class GamesComponent {
   title = 'GameAdm';
-  public games: Game[];
+  public games: Game[] = [];
   public model: FormGroup;
   public search = '';
   public lastitem = '';
@@ -47,21 +47,30 @@ export class GamesComponent {
   //}
 
   ngOnInit() {
-    this.service.getAll(this.currentpage+1, this.limit).subscribe(p => {
-      this.games = p.List;
+    this.service.getAll(this.currentpage + 1, this.limit).subscribe(p => {
+      p.List.map((item) => this.performSomething(item));
+
       this.totalpages = Math.ceil(p.Total / this.limit) - 1;
       this.generatePagination();
-      console.log(" this.games: ", this.games);
+      //console.log(" this.games: ", this.games);
     });
 
     this.model = this.formBuilder.group({
       _id: [''],
       name: ['', [Validators.required]],
       keyconsole: [[], [Validators.required]],
-      keygenre: [[], [Validators.required]],
+      keygenre: [[]],
       img: ['']
     });
   }
+  performSomething(item) {
+
+    //if (item.img != undefined && item.img != "")
+    //  item.img = JSON.parse(item.img);
+
+    //console.log("item: ", item);
+    this.games.push(item);
+  };
   generatePagination() {
 
     //var pages = [];
@@ -146,6 +155,7 @@ export class GamesComponent {
 
     var objstring = JSON.stringify(this.model.value);
     //console.log('SUCCESS!! :-)\n\n' + objstring);
+    console.log('SUCCESS!! :-)\n\n', this.model.value);
     var obj = new Game(this.model.value);
     //obj.key = null;
     obj.name = this.model.value.name;
@@ -171,12 +181,12 @@ export class GamesComponent {
     var obj = {};
     if (this.search != "")
       obj['s'] = this.search;
-    console.log("obj: ", obj);
-    this.service.getAll(this.currentpage+1, this.limit, obj).subscribe(p => {
+    //console.log("obj: ", obj);
+    this.service.getAll(this.currentpage + 1, this.limit, obj).subscribe(p => {
       this.games = p.List;
       var totalpages = Math.ceil(p.Total / this.limit);
       this.generatePagination();
-      console.log(" this.games: ", this.games);
+      //console.log(" this.games: ", this.games);
     });
   }
 
@@ -190,7 +200,7 @@ export class GamesComponent {
   }
   deleteselected() {
     var games = this.games.filter(p => p.state);
-    console.log("games: ", games);
+    //console.log("games: ", games);
     games.forEach(x => {
       this.deleteitem(x._id);
     });
@@ -203,14 +213,29 @@ export class GamesComponent {
     this.modalService.dismissAll("Confirm");
   }
   private setedit(key: string) {
-    console.log("key: ", key);
+    //console.log("key: ", key);
     var obj = new Game(this.games.filter(p => p._id == key)[0]);
-    console.log("obj: ", obj);
+    //console.log("obj: ", obj);
     this.model.setValue({ name: obj.name, img: obj.img, _id: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
+    console.log("this.model: ", this.model.value);
     this.open(this.content);
   }
   private progressreturnimg(obj) {
-    this.model.setValue({ name: this.model.value.name, img: obj, _id: this.model.value._id, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
+    console.log("obj: ", obj);
+
+    console.log("this.model: ", this.model.value.img);
+    var img = null;
+    if (this.model.value.img == null || this.model.value.img == "") {
+      img = {
+        _id: null,
+        img: obj.img
+      }
+    } else {
+      img = Object.assign({}, this.model.value.img[0]);
+      img["img"] = obj.img;
+    }
+    console.log("img: ", img);
+    this.model.setValue({ name: this.model.value.name, img: img, _id: this.model.value._id, keyconsole: this.model.value.keyconsole, keygenre: this.model.value.keygenre })
 
   }
   private progressreturnimgconsole(obj) {
@@ -232,7 +257,7 @@ export class GamesComponent {
   private confirmdelete(key: string) {
     console.log("key: ", key);
     var obj = new Game(this.games.filter(p => p._id == key)[0]);
-    console.log("obj: ", obj);
+    //console.log("obj: ", obj);
     this.model.setValue({ name: obj.name, img: obj.img, _id: key, keyconsole: obj.keyconsole, keygenre: obj.keygenre });
     this.open(this.confirm);
   }

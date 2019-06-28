@@ -45,6 +45,10 @@ export class gamesService {
     return this.http.get(this.baseUrl + "/games/" + params) as Observable<GameModel>;
 
   }
+  public getfull(): Observable<GameModel> {
+    return this.http.get(this.baseUrl + "/gamesimages/") as Observable<GameModel>;
+
+  }
 
   public insert(obj: any) {
     delete obj['_id'];

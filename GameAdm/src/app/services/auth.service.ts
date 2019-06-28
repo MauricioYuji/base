@@ -30,14 +30,14 @@ export class AuthService {
     return true;
   }
   public getToken(): Observable<any> {
-    var storage = sessionStorage.getItem('user'));
+    var storage = sessionStorage.getItem('user');
 
-    console.log("storage: ", storage);
+    //console.log("storage: ", storage);
     var obj = {};
     if (storage != undefined && storage != null) {
       obj = { "username": JSON.parse(storage).user };
-    }
-    console.log("obj: ", obj);
+    };
+    //console.log("obj: ", obj);
     return this.base.post(this.baseUrl + "/token", obj) as Observable<any>;
 
   }
@@ -58,7 +58,7 @@ export class AuthService {
     var obj = { "password": obj.password, "username": obj.username };
     return this.http.post(this.baseUrl + "/login", obj).pipe(map((objResp) => {
       var u: any = objResp;
-      console.log("token: ", u.token);
+      //console.log("token: ", u.token);
 
 
 
@@ -82,6 +82,22 @@ export class AuthService {
     //    console.log('Something went wrong:', err.message);
     //    return false;
     //  });
+  }
+
+
+  loginfirebase(obj: LoginUser) {
+    return this.firebaseAuth
+      .auth
+      .signInWithEmailAndPassword(obj.username, obj.password)
+      .then(() => {
+        //this.router.navigate(['/']);
+        console.log('Nice, it worked!');
+        return true;
+      })
+      .catch(err => {
+        console.log('Something went wrong:', err.message);
+        return false;
+      });
   }
 
   logout() {

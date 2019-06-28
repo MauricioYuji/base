@@ -26,6 +26,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { BaseService } from './services/base.service';
 import { gamesService } from './services/gamesService';
+import { imagesService } from './services/imagesService';
 import { AuthService } from './services/auth.service';
 import { CompaniesService } from './services/companies.service';
 import { AuthGuard } from './auth/auth.guard';
@@ -87,6 +88,7 @@ import { PickGenreComponent } from './components/dropdowns/pick-genre/pick-genre
   providers: [
     BaseService,
     gamesService,
+    imagesService,
     AuthService,
     AuthGuard,
     CompaniesService

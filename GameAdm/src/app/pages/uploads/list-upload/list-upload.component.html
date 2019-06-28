@@ -1,4 +1,4 @@
-<div class="top-bar">
+<!--<div class="top-bar">
   <i class="fas fa-plus-square" (click)="open(content)"></i>
 </div>
 <div class="panel panel-primary">
@@ -7,6 +7,59 @@
       <details-upload [fileUpload]='file'></details-upload>
     </div>
   </ng-container>
+</div>-->
+
+
+<div class="top-bar">
+  <i class="fas fa-plus-square" (click)="open(content)"></i>
+  <form (ngSubmit)="changefilter()" class="login-box">
+    <input [(ngModel)]="search" name="search" />
+    <button type="submit">FILTRO</button>
+  </form>
+</div>
+
+<button (click)="deleteselected()">DELETAR</button>
+<input type="checkbox" [checked]="isAllChecked()" (change)="checkAll($event)">
+<div class="panel panel-primary">
+  <ng-container *ngFor="let image of images">
+    <div class="panel-body">
+      <!--<card [myData]="image"></card>-->
+      <div class="card-box">
+        <div class="actions">
+
+          <i class="fas fa-edit" (click)="setedit(image._id)"></i>
+          <i class="fas fa-trash-alt" (click)="confirmdelete(image._id)"></i>
+          <input type="checkbox" [value]="image._id" id="{{image._id}}" [(ngModel)]="image.state">
+        </div>
+        <label for="{{image._id}}">
+          <img src="{{image.img}}" alt="" class="upload-img" />
+        </label>
+        <!--<image *ngIf="image.img!=''" [key]="image.img"></image>-->
+        <div class="card-info">
+          <h2>{{image.name}}</h2>
+          <span *ngFor="let cat of image.keyconsole">
+            <console [key]="cat"></console>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </ng-container>
+
+  <ul class="pagination">
+    <li *ngIf="currentpage > 0" class="page-item">
+      <a class="page-link" (click)="changepage(currentpage-1)"><</a>
+    </li>
+
+    <ng-container *ngFor="let item of pages; let i = index" [attr.data-index]="item">
+      <li *ngIf="item!='...'" (click)="changepage(item)" class="page-item" [ngClass]="{'active': item==currentpage}"><a class="page-link">{{item + 1}} <span class="sr-only">(current)</span></a></li>
+      <li *ngIf="item=='...'" [ngClass]="{'active': item+1==currentpage}"><a class="page-link">{{item}} <span class="sr-only">(current)</span></a></li>
+    </ng-container>
+
+    <li *ngIf="currentpage < totalpages" class="page-item">
+      <a class="page-link" (click)="changepage(currentpage+1)">></a>
+    </li>
+  </ul>
 </div>
 
 
@@ -29,4 +82,24 @@
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancelar')">Cancelar</button>
     <button type="button" class="btn btn-dark" (click)='deleteFileUpload(fileUpload)'>Excluir</button>
   </div>-->
+</ng-template>
+
+<ng-template #confirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Atenção</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        Deseja Excluir este registro?
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancelar')">Cancelar</button>
+    <button type="button" class="btn btn-dark" (click)='deleteitem(model.value._id)'>Excluir</button>
+  </div>
 </ng-template>

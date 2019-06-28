@@ -26,7 +26,7 @@ export class PickGenreComponent implements OnInit {
 
   ngOnInit() {
     this.getJSON().subscribe(data => {
-      console.log("data: ", data);
+      //console.log("data: ", data);
       var result = Object.keys(data.Genres).map(function (key) {
         data.Genres[key].key = key;
         return data.Genres[key];

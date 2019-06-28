@@ -22,6 +22,9 @@
 .actions {
   background-color: #FFF;
   padding: 5px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 
 .card-box {
@@ -31,6 +34,17 @@
   background-color: #000;
   position: relative;
   border: #CCC solid 2px;
+
+  .upload-img {
+    max-width: 150%;
+    max-height: 150%;
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    right: -999px;
+    bottom: -999px;
+    margin: auto;
+  }
 }
 
 .card-info {

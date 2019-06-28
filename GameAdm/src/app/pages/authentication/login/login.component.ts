@@ -38,9 +38,11 @@ export class LoginComponent {
     };
 
     var obj = JSON.stringify(this.model.value);
-    console.log('SUCCESS!! :-)\n\n' + obj)
-    console.log(objLogin);
-
+    //console.log('SUCCESS!! :-)\n\n' + obj)
+    //console.log(objLogin);
+    this.authService.loginfirebase(objLogin).then(p => {
+      console.log("p: ", p);
+    });
     this.authService.login(objLogin).subscribe(p => {
       //this.authService.getToken().subscribe(p => {
       this.router.navigate(['/']);

@@ -13,6 +13,9 @@ import { Observable } from 'rxjs';
 //import * as consoles from '../../helpers/consoles.json';
 //import * as listgames from '../../../data/games.json';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { gamesService } from '../../services/gamesService';
+import { Game, GameModel } from '../../models/game.model';
+import { BaseService } from '../../services/base.service';
 
 
 
@@ -25,9 +28,40 @@ export class HomeComponent {
   title = 'GameAdm';
   private itemDoc: AngularFirestoreCollection<any>;
   private itemImg: AngularFirestoreCollection<any>;
-  constructor(private afs: AngularFirestore, private http: HttpClient) {
+  constructor(private afs: AngularFirestore, private service: gamesService, private http: BaseService, private httpClient: HttpClient) {
+  }
+  getImage(imageUrl: string): Observable<Blob> {
+    return this.httpClient.get("https://cors-anywhere.herokuapp.com/" + imageUrl, { responseType: 'blob' });
+  }
+  downloadFile(data: Blob) {
+    const blob = new Blob([data], { type: 'application/octet-stream' });
+    const url = window.URL.createObjectURL(blob);
+    window.open(url);
   }
   update() {
+
+    this.service.getfull().subscribe(p => {
+
+      console.log(" this.games: ", p);
+      for (var i = 0; i < 1; i++) {
+        var _self = this;
+
+        setTimeout(function () {
+          var list = p.List[i];
+          console.log("URL: ", "https://api.qwant.com/api/search/images?count=50&q=" + encodeURIComponent(list.name) + "&t=images&locale=en_US&uiv=4&safesearch=1");
+          var obj = _self.httpClient.get("https://cors-anywhere.herokuapp.com/https://api.qwant.com/api/search/images?count=50&q=" + encodeURIComponent(list.name) + "&t=images&locale=en_US&uiv=4&safesearch=1") as Observable<GameModel>;
+          obj.subscribe(a => {
+            var item: any = a;
+            var url = item.data.result.items.filter(f => parseInt(f.height) > parseInt(f.width))[0].media;
+            _self.getImage(url).subscribe(blob => {
+              _self.downloadFile(blob);
+            });
+            console.log("item: ", url);
+          })
+        }, 1000 * i);
+      }
+
+    });
 
     //var listnintendo3ds: any = nintendo3ds;
     //var listps3: any = ps3;

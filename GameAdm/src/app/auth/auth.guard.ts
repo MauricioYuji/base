@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
     var user = sessionStorage.getItem("user");
     if (user != null) {
       return this.loginService.getToken().pipe(map(p => {
-        console.log("p: ", p);
+        //console.log("p: ", p);
         if (p != null) {
           var item: any = p;
           var obj = { user: JSON.parse(user).user, token: item.token };
@@ -28,7 +28,7 @@ export class AuthGuard implements CanActivate {
         }
       }));
     } else {
-      console.log("LOGOUT");
+      //console.log("LOGOUT");
 
       this.router.navigate(['/login']);
       return new Observable(o => o.next(false));
