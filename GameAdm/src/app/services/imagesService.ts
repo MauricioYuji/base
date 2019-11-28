@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { Game, GameModel } from '../models/game.model'
+import { ImageModel } from '../models/image.model'
 import { BaseService } from './base.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
@@ -59,9 +60,9 @@ export class imagesService {
 
     return this.http.post(this.baseUrl + "/images/add/", obj) as Observable<any>;
   }
-  public update(key: string, obj: Game) {
+  public update(key: string, obj: ImageModel) {
     delete obj['_id'];
-    console.log("UPDATE: ", JSON.stringify(obj));
+    //console.log("UPDATE: ", JSON.stringify(obj));
     //let itemsRef = this.db.list(this.basePath);
     //delete value["key"];
     //itemsRef.update(key, value);

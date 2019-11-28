@@ -73,6 +73,7 @@ export class BaseService {
 
   get(url: string): Observable<any> {
     const hd: Headers = this.headers;
+    console.log("this.token: ", this.token);
     if (this.token) {
       hd.set('Authorization', 'Bearer ' + this.token);
     }

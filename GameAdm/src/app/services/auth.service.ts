@@ -37,7 +37,7 @@ export class AuthService {
     if (storage != undefined && storage != null) {
       obj = { "username": JSON.parse(storage).user };
     };
-    //console.log("obj: ", obj);
+    console.log("obj: ", obj);
     return this.base.post(this.baseUrl + "/token", obj) as Observable<any>;
 
   }
@@ -59,10 +59,11 @@ export class AuthService {
     return this.http.post(this.baseUrl + "/login", obj).pipe(map((objResp) => {
       var u: any = objResp;
       //console.log("token: ", u.token);
+      //console.log("u: ", JSON.parse(u.data).id);
 
 
-
-      var user = { user: obj.username, token: u.token };
+      var token = JSON.parse(u.data).id + "\/" + u.token;
+      var user = { user: obj.username, token: token, id: JSON.parse(u.data).id };
       sessionStorage.setItem('user', JSON.stringify(user));
       this.user = new Observable(o => o.next(user));
 

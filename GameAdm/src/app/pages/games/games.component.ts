@@ -48,6 +48,7 @@ export class GamesComponent {
 
   ngOnInit() {
     this.service.getAll(this.currentpage + 1, this.limit).subscribe(p => {
+      console.log("list: ", p);
       p.List.map((item) => this.performSomething(item));
 
       this.totalpages = Math.ceil(p.Total / this.limit) - 1;
