@@ -2,8 +2,8 @@ import { Injectable, Inject } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
+import { ImageModel } from '../models/images.model';
 import { Game, GameModel } from '../models/game.model'
-import { ImageModel } from '../models/image.model'
 import { BaseService } from './base.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
