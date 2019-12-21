@@ -1,3 +1,9 @@
 
 <form-upload [preview]="false"></form-upload>
 
+<img src="{{img}}" alt="" class="upload-img" />
+<img src="{{imgoriginal}}" alt="" class="upload-img" />
+
+<ng-container *ngFor="let item of newimages; let i = index" [attr.data-index]="item">
+  <img src="{{item.img}}" alt="" class="upload-img" />
+</ng-container>
