@@ -28,7 +28,7 @@
     "firebase": "^5.5.0",
     "moment": "^2.24.0",
     "ngx-image-cropper": "^1.2.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
